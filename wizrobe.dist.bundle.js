@@ -10890,7 +10890,7 @@ var wizrobe = function(t) {
         yt = (i(88), Object(l.a)(gt, vt, [], !1, null, "193f0119", null));
     yt.options.__file = "src/ui/components/confirm.vue";
     var _t = yt.exports;
-    )), s.a.mixin({
+    ), s.a.mixin({
         components: {
             confirm: _t
         },
