@@ -8,7 +8,7 @@
         {
                 "id":"gold",
                 "desc":"gold",
-                "locked":true,
+                "locked":false,
                 "max":10
         },
         {
