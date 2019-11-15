@@ -1,4 +1,10 @@
 [
+		{
+		"id":"evt_intro",
+		"name":"Prologue",
+		"require":"hp",
+		"desc":"An idle waif with no prospects to speak of..."
+	},
 	{
 		"id":"repairedsuit",
 		"name":"Intact Suit",
