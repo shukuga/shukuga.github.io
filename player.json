@@ -12,7 +12,7 @@
 		"id":"suitstage",
 		"name":"life2",
 		"desc":"Wizard life-force",
-		"hidden":true
+		"hidden":true,
 		"max":10,
 		"unit":false,
 		"locked":false
