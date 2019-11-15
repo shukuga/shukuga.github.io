@@ -26,7 +26,7 @@
 		"mod":{
 			"stamina.max":4
 		}
-	},
+	,
 	{
 
 		"id":"evt_pestcontrol",
