@@ -18,22 +18,14 @@
                 "name":"Explore the wreckage",
                 "desc":"standard apprentice work.",
                 "perpetual":true,
+                "length":10
                 "verb":"Exploring",
                 "require":"g.suit>=10",
-                "at":{
-                        "50":{
-                                "effect.gold":0.1
-                        },
-                        "250":{
-                                "effect.gold":0.1
-                        }
-                },
                 "cost":{
-                        "stamina":0.17
+                        "stamina":0.1
                 },
                 "effect":{
-                        "virtue":0.03,
-                        "gold":0.3
+                       "findmedicalbay"
                 }
         },
         {
