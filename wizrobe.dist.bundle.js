@@ -100,7 +100,7 @@ var wizrobe = function(t) {
         return n.d(e, "a", e), e
     }, n.o = function(t, e) {
         return Object.prototype.hasOwnProperty.call(t, e)
-    }, n.p = "dist/", n.oe = function(t) {
+    }, n.p = "", n.oe = function(t) {
         throw console.error(t), t
     };
     var r = window.webpackJsonp_name_ = window.webpackJsonp_name_ || [],
