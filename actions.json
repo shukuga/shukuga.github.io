@@ -4,7 +4,7 @@
                 "name":"Stabilize suit",
                 "desc":"",
                 "verb":"Repairing",
-                "require":"suitlevel<1",
+                "require":"g.player.suitlevel<=0",
                 "locked":false,
                 "cost":{
                         "stamina":0.5
