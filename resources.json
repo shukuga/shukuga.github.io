@@ -1,15 +1,15 @@
 ﻿[
         {
-                "id":"suit",
-                "desc":"suit",
-                "locked":false,
-                "max":10
-        },
-        {
                 "id":"gold",
                 "desc":"Gold Coins",
                 "locked":false,
                 "max":5
+        },
+        {
+                "id":"suit",
+                "desc":"Gold Coins",
+                "locked":false,
+                "max":10
         },
         {
                 "id":"research",
