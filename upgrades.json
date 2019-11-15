@@ -3,9 +3,9 @@
                 "id":"finishsuit",
                 "name":"Finalize suit repairs",
                 "desc":"Purchase freedom from your apprenticeship. You will become an independent practitioner of magic.",
-                "require":"suit>=10",
+                "require":"g.suit>=10",
                 "repeat":false,
-                "cost":{"g.suit":10},
+                "cost":{"suit":10},
                 "disable":["Stabilize Suit"]
 
 
