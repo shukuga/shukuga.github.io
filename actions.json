@@ -18,7 +18,7 @@
                 "name":"Explore the wreckage",
                 "desc":"standard apprentice work.",
                 "perpetual":true,
-                "length":10
+                "length":10,
                 "verb":"Exploring",
                 "require":"g.suit>=10",
                 "cost":{
