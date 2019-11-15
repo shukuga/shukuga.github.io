@@ -6,7 +6,7 @@
                 "require":"g.suit>=10",
                 "repeat":false,
                 "cost":{"suit":10},
-                "lock":["Stabilize Suit"]
+                "lock":["Stabilize"]
 
 
         },
