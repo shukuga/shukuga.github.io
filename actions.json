@@ -14,14 +14,15 @@
                 }, "flavor":"it's stable employment"
         },
         {
-                "id":"chores",
-                "name":"do chores",
+                "id":"explore",
+                "name":"Explore the wreckage",
                 "desc":"standard apprentice work.",
-                "verb":"working",
-                "require":"apprentice",
+                "perpetual":true,
+                "verb":"Exploring",
+                "require":"repairedsuit",
                 "at":{
                         "50":{
-                                "effect.gold":0.1
+                                "findmedicalbay"
                         },
                         "250":{
                                 "effect.gold":0.1
