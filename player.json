@@ -9,11 +9,11 @@
 		"locked":false
 	},
 	{
-		"id":"suitstage",
+		"id":"suitlevel",
 		"name":"life2",
 		"desc":"Wizard life-force",
 		"hidden":true,
-		"val":10,
+		"val":1,
 		"unit":false,
 		"locked":false
 	},
