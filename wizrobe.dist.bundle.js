@@ -10971,13 +10971,11 @@ var wizrobe = function(t) {
             },
             setStateJSON(t) {
                 this.dispatch("pause");
-                try {
+                
                     this.game.loaded && this.renderKey++;
                     let e = t ? JSON.parse(t) : null;
                     this.game.load(e, st.a.getHallData()).then(this.gameLoaded, t => console.error(t.message + "\n" + t.stack))
-                } catch (t) {
-                    console.error(t.message + "\n" + t.stack)
-                }
+                 
             },
             save() {
                 this.game.loaded && st.a.saveActive(this.game.state)
