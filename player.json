@@ -13,7 +13,7 @@
 		"name":"life2",
 		"desc":"Wizard life-force",
 		"hidden":true,
-		"max":10,
+		"val":10,
 		"unit":false,
 		"locked":false
 	},
