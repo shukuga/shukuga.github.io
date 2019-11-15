@@ -6,5 +6,5 @@
                 "require":"g.suit>=10",
                 "repeat":false,
                 "effect":"repairedsuit"
-        },
+        }
 ]
