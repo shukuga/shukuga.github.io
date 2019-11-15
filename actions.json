@@ -19,7 +19,7 @@
                 "desc":"standard apprentice work.",
                 "perpetual":true,
                 "verb":"Exploring",
-                "require":"repairedsuit",
+                "require":"g.suit>=10",
                 "at":{
                         "50":{
                                 "findmedicalbay"
