@@ -4,10 +4,10 @@
                 "name":"Stabilize suit",
                 "desc":"",
                 "verb":"Repairing",
-                "require":"suitlevel<=0",
+                "require":"suitlevel<1",
                 "locked":false,
                 "cost":{
-                        "stamina":1
+                        "stamina":0.5
                 },
                 "effect":{
                         "suit":1
