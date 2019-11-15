@@ -1,7 +1,7 @@
 ﻿[
         {
                 "id":"Suit",
-                "desc":"Suit Integrity",
+                "desc":"Suit",
                 "locked":false,
                 "max":10
         },
