@@ -7,9 +7,9 @@
         },
         {
                 "id":"gold",
-                "desc":"gold",
+                "desc":"Gold Coins",
                 "locked":false,
-                "max":10
+                "max":5
         },
         {
                 "id":"research",
