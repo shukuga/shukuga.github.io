@@ -2,8 +2,7 @@
 	{
 		"id":"repairedsuit",
 		"name":"Intact Suit",
-		"desc":"In return for your new services, your master grants you a small allowance for your studies. The position does require of course, some initial fees...",
-		"disable":["stabilize"],
+		"desc":"Now that your suit is repaired, you can focus on your surroundings",
 		"mod":{
 			"stamina.max":4
 		}
