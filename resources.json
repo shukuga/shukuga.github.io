@@ -3,6 +3,7 @@
                 "id":"gold",
                 "desc":"Gold Coins",
                 "locked":false,
+                "hidden":true,
                 "max":5
         },
         {
