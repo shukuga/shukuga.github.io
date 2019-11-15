@@ -10,9 +10,9 @@
 	},
 	{
 		"id":"suitlevel",
-		"name":"life2",
+		"name":"Suit",
 		"desc":"Wizard life-force",
-		"hidden":true,
+		"hidden":false,
 		"val":1,
 		"unit":false,
 		"locked":false
