@@ -30,7 +30,7 @@ var wizrobe = function(t) {
                 e.push(i[2] = r);
                 var a, o = document.createElement("script");
                 o.charset = "utf-8", o.timeout = 120, n.nc && o.setAttribute("nonce", n.nc), o.src = function(t) {
-                    return n.p + "dist/" + ({
+                    return n.p + "" + ({
                         0: "bestiary-ui",
                         1: "choice-ui",
                         2: "enchant-ui",
