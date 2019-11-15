@@ -22,7 +22,7 @@
                 "require":"g.suit>=10",
                 "at":{
                         "50":{
-                                "findmedicalbay"
+                                "effect.gold":0.1
                         },
                         "250":{
                                 "effect.gold":0.1
