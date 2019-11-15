@@ -4,7 +4,7 @@
 		"id":"evt_intro",
 		"name":"Prologue",
 		"require":"hp",
-		"desc":"An idle waif with no prospects to speak of..."
+		"desc":"You awake on an unfamiliar world, surrounded by debris. Your space suit is damaged. Nothing else matters until you can stabilize your condition."
 	},
 	{
 		"id":"evt_scroll",
@@ -21,7 +21,7 @@
 	{
 		"id":"repairedsuit",
 		"name":"Intact Suit",
-		"desc":"f",
+		"desc":"With your suit intact you have a chance to breathe. You can remember the evacuation alarms. Were you the only one who didn't escape in time?",
 		"disable":["stabilize"],
 		"mod":{
 			"stamina.max":4
@@ -29,10 +29,10 @@
 	},
 	{
 
-		"id":"evt_pestcontrol",
-		"name":"Pest Control",
-		"desc":"After your daily castigation, your master mentions the rats in the basement have become a problem. Something about stolen shortswords and building barricades. You had better go down and deal with it.",
-		"require":"g.player.level>0&&(g.apprentice.value>0||g.neophyte.value>0)"
+		"id":"findmedicalbay",
+		"name":"Destroyed Medical Bay",
+		"desc":"",
+		"require":"repairedsuit"
 
 	},
 	{
