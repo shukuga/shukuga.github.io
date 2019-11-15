@@ -6,6 +6,12 @@
                 "max":10
         },
         {
+                "id":"gold",
+                "desc":"gold",
+                "locked":true,
+                "max":10
+        },
+        {
                 "id":"research",
                 "desc":"Research into the Arcane",
                 "max":10
