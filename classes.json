@@ -25,7 +25,7 @@
 	{
 		"id":"repairedsuit",
 		"name":"Intact Suit",
-		"desc":"In return for your new services, your master grants you a small allowance for your studies. The position does require of course, some initial fees...",
+		"desc":"",
 		"disable":["stabilize"],
 		"mod":{
 			"stamina.max":4
