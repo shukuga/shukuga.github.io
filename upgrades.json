@@ -5,7 +5,7 @@
                 "desc":"Purchase freedom from your apprenticeship. You will become an independent practitioner of magic.",
                 "require":"g.suit>=10",
                 "repeat":false,
-                "mod":{"g.player.suitlevel":1}
+                "effect":"repairedsuit"
 
 
         },
