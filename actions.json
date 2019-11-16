@@ -20,13 +20,13 @@
                 "name":"Explore the wreckage",
                 "desc":"",
                 "repeat":false,
-                "perpetual":true,
                 "verb":"Exploring",
                 "require":"repairedsuit",
+                "length":1,
                 "run":{
                         "stamina":0.1
                 },
-                "length":1,
+
                 
                 
         },
