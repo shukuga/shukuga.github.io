@@ -7,7 +7,7 @@
 		"max":10,
 		"mod":{
 			"g.stamina.rate":0.01
-		}
+		},
 		"unit":false,
 		"locked":false
 	},
