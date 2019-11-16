@@ -3,9 +3,7 @@
 		"id":"biology",
 		"need":"g.findmedicalbay",
 		"desc":"Medicine and biotechnology",
-		"buy":{
-			"research":20
-		},
+		"buy":{},
 		"run":{
 			"stamina":0.5
 		},
@@ -20,9 +18,22 @@
 		"id":"engineering",
 		"need":"g.findmaintenancescrap",
 		"desc":"an absolutely vital skill for an engineer to craft complicated objects.",
-		"buy":{
-			"research":20
+		"buy":{},
+		"run":{
+			"stamina":0.5
 		},
+		"result":{
+			"sp":0.1
+		},
+		"mod":{
+			"research.max":1
+		}
+	},
+		{
+		"id":"datanalysis",
+		"need":"g.findmaintenancescrap",
+		"desc":"Sythesizing large amounts of information doesn't come naturally",
+		"buy":{},
 		"run":{
 			"stamina":0.5
 		},
@@ -70,6 +81,7 @@
 	{
 		"id":"lore",
 		"school":"arcane",
+		"need":"voidsource"
 		"tags":"t_school",
 		"verb":"reading lore",
 		"desc":"nothing is more important to a wizard than the depth of their lore.",
