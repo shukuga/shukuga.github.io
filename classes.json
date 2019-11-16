@@ -22,15 +22,7 @@
 		}
 
 	},
-	{
-		"id":"repairedsuit",
-		"name":"Intact Suit",
-		"desc":"",
-		"disable":["stabilize"],
-		"mod":{
-			"stamina.max":4
-		}
-	},
+	
 	{
 		"id":"falconer",
 		"tags":"t_job",
