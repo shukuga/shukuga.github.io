@@ -3,8 +3,8 @@
 		"id":"hp",
 		"name":"life",
 		"desc":"Wizard life-force",
-		"val":10,
-		"max":10,
+		"val":1,
+		"max":1,
 		"mod":{
 			"stamina.rate":0.01
 		},
