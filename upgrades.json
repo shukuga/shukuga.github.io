@@ -14,6 +14,7 @@
                 "require":"g.findmaintenancescrap>0",
                 "cost":{
                         "scrap":2
+                }
          },
          {
                 "id":"firstaid",
