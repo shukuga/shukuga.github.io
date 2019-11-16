@@ -16,8 +16,20 @@
                 "flavor":"it's stable employment"
         },
         {
-                "id":"explore",
-                "name":"Explore the wreckage",
+                "id":"explorenorth",
+                "name":"Explore the wreckage to the north",
+                "desc":"",
+                "repeat":false,
+                "verb":"Exploring",
+                "require":"repairedsuit",
+                "length":1,
+                "run":{
+                        "stamina":0.1
+                }    
+        },
+                {
+                "id":"explorewest",
+                "name":"Explore the wreckage to the west",
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
