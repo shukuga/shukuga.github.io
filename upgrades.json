@@ -39,7 +39,7 @@
                 "require":"exploreescape>0",
                 "cost":{
                         "scrap":5
-                }
+                },
                 "effect":{
                         "alcove"
                 }
