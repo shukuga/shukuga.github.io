@@ -40,8 +40,8 @@
                 "cost":{
                         "scrap":5
                 },
-                "effect":{
+                "effect":
                         "alcove"
-                }
+                
          }
 ]
