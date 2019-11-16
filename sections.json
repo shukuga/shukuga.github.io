@@ -9,13 +9,13 @@
 	{
 		"id":"sect_skills",
 		"name":"skills",
-		"require":"apprentice"
+		"require":"repaired suit"
 
 	},
 	{
 		"id":"sect_house",
 		"name":"home",
-		"require":"apprentice"
+		"require":"exploreescape"
 
 	},
 	{
