@@ -9,7 +9,7 @@
 	{
 		"id":"sect_skills",
 		"name":"skills",
-		"require":"repaired suit"
+		"require":"repairedsuit"
 
 	},
 	{
