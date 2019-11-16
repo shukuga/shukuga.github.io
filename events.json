@@ -40,6 +40,12 @@
 		"require":"g.explorewest>0"
 	},
 	{
+		"id":"findescapepod",
+		"name":"Escape pod",
+		"desc":"",
+		"require":"g.explorescape>0"
+	},
+	{
 		"id":"evt_gobcamp",
 		"name":"Goblins, Goblins!",
 		"require":"g.tier0&&g.player.level>=4&&g.dist>=25",
