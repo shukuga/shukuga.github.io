@@ -27,14 +27,7 @@
 			"stamina.max":4
 		}
 	},
-	/*{
 
-		"id":"findmedicalbay",
-		"name":"Destroyed Medical Bay",
-		"desc":""
-		
-
-	},*/
 	{
 		"id":"evt_gobcamp",
 		"name":"Goblins, Goblins!",
