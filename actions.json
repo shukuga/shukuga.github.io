@@ -15,22 +15,7 @@
                 }, 
                 "flavor":"it's stable employment"
         },
-        {
-                "id":"explore",
-                "name":"Explore the wreckage",
-                "desc":"standard apprentice work.",
-                "perpetual":true,
-                "verb":"Exploring",
-                "require":"g.suit>=10",
-                "cost":{
-                        "stamina":0.1,
-                },
-                "length":10,
-                "result":{
-                        "gold":1
-                }
-                
-        },
+        
         {
                 "id":"study",
                 "perpetual":true,
