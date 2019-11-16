@@ -24,6 +24,7 @@
                 "require":{
                         "g.suit>=10",
                         "repairedsuit"
+                }
                 "run":{
                         "stamina":0.1
                 },
