@@ -52,11 +52,30 @@
                 }    
         },
         {
+                "id":"salvage",
+                "perpetual":true,
+                "verb":"salvaging",
+                "desc":"Collect useful objects",
+                "require":"repairedsuit",
+                "run":{
+                        "stamina":0.2
+                },
+                "every":{
+                        "100":{
+                                "effect.scrap":0.05
+                        }
+                },
+                "effect":{
+                        "scrap":1
+                        }
+                }
+        },
+        {
                 "id":"study",
                 "perpetual":true,
                 "verb":"studying scrolls",
                 "desc":"Study arcane scrolls",
-                "require":"g.scrolls>=1",
+                "require":"g.datasource>0",
                 "run":{
                         "stamina":0.2
                 },
