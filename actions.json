@@ -25,10 +25,7 @@
                 "length":1,
                 "run":{
                         "stamina":0.1
-                },
-
-                
-                
+                }    
         },
         {
                 "id":"study",
