@@ -81,7 +81,7 @@
 	{
 		"id":"lore",
 		"school":"arcane",
-		"need":"voidsource"
+		"need":"voidsource",
 		"tags":"t_school",
 		"verb":"reading lore",
 		"desc":"nothing is more important to a wizard than the depth of their lore.",
