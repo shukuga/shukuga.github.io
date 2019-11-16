@@ -24,7 +24,7 @@
                 "require":"g.suit>=10",
                 "cost":{
                         "stamina":0.1,
-                }
+                },
                 "result":{
                         "findmedicalbay"
                 }
