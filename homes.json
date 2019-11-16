@@ -1,9 +1,9 @@
 [
 	{
 		"id":"alcove",
-		"desc":"A small corner beneath the stairs of your Master's domicile.",
-		"flavor":"goodbye hayloft.",
-		"require":"apprentice",
+		"desc":"A small piece of your ship",
+		"flavor":"Better than dirt",
+		"require":"g.escaperepair>0",
 		"mod":{
 			"space.max":5
 		}
