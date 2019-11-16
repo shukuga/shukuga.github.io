@@ -19,6 +19,7 @@
                 "id":"explore",
                 "name":"Explore the wreckage",
                 "desc":"",
+                "repeat":false,
                 "perpetual":true,
                 "verb":"Exploring",
                 "require":"repairedsuit",
