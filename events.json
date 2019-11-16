@@ -34,8 +34,8 @@
 		"require":"g.explorenorth>0"
 	},
 	{
-		"id":"findmaintinancescrap",
-		"name":"Maintinance Room Scrap",
+		"id":"findmaintenancescrap",
+		"name":"Maintenance Room Scrap",
 		"desc":"",
 		"require":"g.explorewest>0"
 	},
