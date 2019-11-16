@@ -8,7 +8,7 @@
                 "effect":"repairedsuit"
         }
          {
-                "id":"firstaid".
+                "id":"firstaid",
                 "name":"First Aid Kit",
                 "desc":"Supplies to help you return to a healthier state",
                 "require":"findmedicalbay",
