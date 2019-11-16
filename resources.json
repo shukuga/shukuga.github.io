@@ -8,14 +8,15 @@
         },
         {
                 "id":"suit",
-                "desc":"Gold Coins",
+                "desc":"Integrity of your space suit",
                 "locked":false,
                 "hidden":true,
-                "max":10
+                "value":1
+                "max":5
         },
         {
                 "id":"research",
-                "desc":"Research into the Arcane",
+                "desc":"Research into the technical",
                 "max":10
         },
         {
@@ -26,11 +27,11 @@
         },
         {
                 "id":"scrap",
-                "desc":"miscellaneous of dubious use",
+                "desc":"miscellaneous objects of dubious use",
                 "max":10
         },
         {       "id":"datasource",
-                "desc":"Scroll of arcane lore",
+                "desc":"May contain useful information",
                 "max":10,
                 "mod":{
                         "research.rate":0.005,
