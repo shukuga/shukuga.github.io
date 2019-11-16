@@ -1,7 +1,7 @@
 [
 	{
 		"id":"biology",
-		"need":"findmedicalbay",
+		"need":"g.findmedicalbay",
 		"desc":"Medicine and biotechnology",
 		"buy":{
 			"research":20
