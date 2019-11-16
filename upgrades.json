@@ -11,7 +11,7 @@
                 "id":"firstaid",
                 "name":"First Aid Kit",
                 "desc":"Supplies to help you return to a healthier state",
-                "require":"findmedicalbay",
+                "require":"g.findmedicalbay",
                 "repeat":false,
                 "mod":{
                         "hp.max":4
