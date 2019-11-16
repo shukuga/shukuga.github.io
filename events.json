@@ -14,8 +14,8 @@
 	{
 		"id":"evt_alcove",
 		"name":"Moving In",
-		"desc":"After taking your savings, your new master grants you a small nook under the stairs.",
-		"require":"alcove"
+		"desc":"A small space where you can take off your helmet and plan your next move.",
+		"require":"alcove&&g.scrubbers>0"
 
 	},
 	{
