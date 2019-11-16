@@ -12,10 +12,10 @@
 		"desc":"You buy a strange scroll from a travelling peddlar. If you could only decipher the cryptic symbols."
 	},
 	{
-		"id":"evt_alcove",
-		"name":"Moving In",
+		"id":"evt_podhome",
+		"name":"Repressurized escape pod",
 		"desc":"A small space where you can take off your helmet and plan your next move.",
-		"require":"g.alcove&&g.scrubbers>0"
+		"require":"g.escapepod&&g.scrubbers>0"
 
 	},
 	{
