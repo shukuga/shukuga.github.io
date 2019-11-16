@@ -22,8 +22,12 @@
                 "length":10,
                 "verb":"Exploring",
                 "require":"g.suit>=10",
-                "cost":"stamina":0.1,
-                "result":"findmedicalbay"
+                "cost":{
+                        "stamina":0.1,
+                }
+                "result":{
+                        "findmedicalbay"
+                }
         },
         {
                 "id":"study",
