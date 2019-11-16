@@ -32,7 +32,7 @@
 		"id":"findmedicalbay",
 		"name":"Destroyed Medical Bay",
 		"desc":"",
-		"require":"explore>0"
+		"require":"g.explore>0"
 	},
 	{
 		"id":"evt_gobcamp",
