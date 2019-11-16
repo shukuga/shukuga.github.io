@@ -28,11 +28,16 @@
 		}
 	},
 	{
-
 		"id":"findmedicalbay",
 		"name":"Destroyed Medical Bay",
 		"desc":"",
-		"require":"g.explore>0"
+		"require":"g.explorenorth>0"
+	},
+	{
+		"id":"findmaintinancescrap",
+		"name":"Maintinance Room Scrap",
+		"desc":"",
+		"require":"g.explorewest>0"
 	},
 	{
 		"id":"evt_gobcamp",
