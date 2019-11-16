@@ -13,7 +13,24 @@
                 "desc":"Supplies to help you return to a healthier state",
                 "require":"g.findmedicalbay>0",
                 "mod":{
-                        "hp.max":4
+                        "hp.max":2
+                }
+         },
+         {      "id":"antirad",
+                "name":"Anti-radiation medicine",
+                "desc":"Stop your body from melting in the cosmic radiation",
+                "require":"firstaid>0&&biology>0",
+                "mod":{
+                        "hp.max":2
+                }
+         },
+         {      "id":"amps",
+                "name":"Stimulants",
+                "desc":"You can sleep when you're dead",
+                "require":"firstaid>0&&biology>1",
+                "mod":{
+                        "stamina.rate":0.5,
+                        "rest.effect.stamina":-0.8
                 }
          }
 ]
