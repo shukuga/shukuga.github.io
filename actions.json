@@ -78,10 +78,7 @@
                 "length":5,
                  "cost":{
                         "scrap":5
-                },
-                "effect":[
-                        "escapepod"
-                ]
+                }
          },
         {
                 "id":"study",
