@@ -73,6 +73,7 @@
         },
                  {      "id":"escaperepair",
                 "name":"Airproof escape pod",
+                "repeat":false,
                 "desc":"Some place where you can take off your suit",
                 "require":"g.exploreescape>0",
                 "length":5,
