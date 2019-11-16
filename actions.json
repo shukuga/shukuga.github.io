@@ -23,7 +23,7 @@
                 "verb":"Exploring",
                 "require":{
                         "g.suit>=10&&g.repairedsuit>0"
-                }
+                },
                 "run":{
                         "stamina":0.1
                 },
