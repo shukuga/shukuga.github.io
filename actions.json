@@ -22,12 +22,12 @@
                 "perpetual":true,
                 "verb":"Exploring",
                 "require":"g.suit>=10",
-                "cost":{
+                "run":{
                         "stamina":0.1,
                 },
                 "length":1,
                 "result":{
-                        "gold":1
+                        "stamina":1
                 }
                 
         },
