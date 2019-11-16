@@ -15,7 +15,7 @@
 		"id":"evt_podhome",
 		"name":"Repressurized escape pod",
 		"desc":"A small space where you can take off your helmet and plan your next move.",
-		"require":"g.escapepod&&g.scrubbers>0"
+		"require":"g.escaperepair>0&&g.scrubbers>0"
 
 	},
 	{
