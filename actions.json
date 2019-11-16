@@ -25,7 +25,9 @@
                 "cost":{
                         "stamina":0.1,
                 },
-                "result":"findmedicalbay"
+                "result":{
+                        "gold":1
+                }
                 
         },
         {
