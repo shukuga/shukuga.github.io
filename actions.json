@@ -43,6 +43,7 @@
                 "id":"exploreescape",
                 "name":"Explore the remains of the escape pod",
                 "desc":"",
+                "locked":false,
                 "repeat":false,
                 "verb":"Exploring",
                 "length":3,
@@ -54,6 +55,7 @@
                 "id":"salvage",
                 "perpetual":true,
                 "verb":"salvaging",
+                "locked":false,
                 "desc":"Collect useful objects",
                 "run":{
                         "stamina":0.5,
