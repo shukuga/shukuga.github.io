@@ -10,6 +10,7 @@
                 "id":"suit",
                 "desc":"Gold Coins",
                 "locked":false,
+                "hidden":true,
                 "max":10
         },
         {
@@ -24,13 +25,22 @@
                 "max":0
         },
         {
-
-
+                "id":"scrap",
+                "desc":"miscellaneous of dubious use",
+                "max":10
+        },
+        {       "id":"datasource",
+                "desc":"Scroll of arcane lore",
+                "max":10,
+                "mod":{
+                        "research.rate":0.005,
+                        "research.max":1
+                }
+        },
+        {
                 "id":"bones",
                 "desc":"human bones.",
                 "max":10
-
-
         },
         {
 
