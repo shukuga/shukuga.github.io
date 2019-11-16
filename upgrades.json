@@ -6,8 +6,8 @@
                 "require":"g.suit>=10",
                 "repeat":false,
                 "effect":"repairedsuit"
-        }
-         {
+        },
+        {
                 "id":"firstaid",
                 "name":"First Aid Kit",
                 "desc":"Supplies to help you return to a healthier state",
