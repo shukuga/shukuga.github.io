@@ -48,7 +48,7 @@
 	{
 		"id":"cot",
 		"desc":"Slightly better than sleeping on the floor",
-		"require":"apprentice",
+		"locked":false,
 		"tags":"bed",
 		"slot":"bed",
 		"max":1,
@@ -353,7 +353,7 @@
 		"id":"birdcage",
 		"desc":"Perfect for robins.",
 		"tags":"t_pets",
-		"require":"apprentice",
+		"locked":false,
 		"repeat":true,
 		"cost":{
 			"gold":25,
