@@ -21,12 +21,15 @@
                 "desc":"standard apprentice work.",
                 "perpetual":true,
                 "verb":"Exploring",
-                "require":"g.suit>=10",
+                "require":{
+                        "g.suit>=10",
+                        "repairedsuit"
                 "run":{
                         "stamina":0.1
                 },
                 "length":1,
                 "result":{
+                        "
                         "stamina":1
                 }
                 
