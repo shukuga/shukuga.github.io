@@ -11,14 +11,14 @@
                         "stamina":0.5
                 },
                 "effect":{
-                        "suit":1
+                        "suit":10
                 }, 
                 "flavor":"it's stable employment"
         },
         {
                 "id":"explore",
                 "name":"Explore the wreckage",
-                "desc":"standard apprentice work.",
+                "desc":"",
                 "perpetual":true,
                 "verb":"Exploring",
                 "require":"repairedsuit",
@@ -26,8 +26,6 @@
                         "stamina":0.1
                 },
                 "length":1,
-                "result":{
-                        "findmedicalbay":1
                 }
                 
         },
