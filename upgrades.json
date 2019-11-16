@@ -19,7 +19,7 @@
          {      "id":"antirad",
                 "name":"Anti-radiation medicine",
                 "desc":"Stop your body from melting in the cosmic radiation",
-                "require":"g.firstaid>0&&g.biology>0",
+                "require":"firstaid>0&&g.biology>0",
                 "mod":{
                         "hp.max":2
                 }
@@ -27,7 +27,7 @@
          {      "id":"amps",
                 "name":"Stimulants",
                 "desc":"You can sleep when you're dead",
-                "require":"g.firstaid>0&&g.biology>1",
+                "require":"firstaid>0&&g.biology>1",
                 "mod":{
                         "stamina.rate":0.5,
                         "rest.effect.stamina":-0.8
