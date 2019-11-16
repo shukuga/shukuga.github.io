@@ -25,9 +25,8 @@
                 "cost":{
                         "stamina":0.1,
                 },
-                "result":{
-                        "findmedicalbay"
-                }
+                "result":"findmedicalbay"
+                
         },
         {
                 "id":"study",
