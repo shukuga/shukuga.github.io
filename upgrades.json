@@ -32,5 +32,16 @@
                         "stamina.rate":0.5,
                         "rest.effect.stamina":-0.8
                 }
+         },
+         {      "id":"escaperepair",
+                "name":"Airproof escape pod",
+                "desc":"Some place where you can take off your suit",
+                "require":"exploreescape>0",
+                "cost":{
+                        "scrap":5
+                }
+                "effect":{
+                        "alcove"
+                }
          }
 ]
