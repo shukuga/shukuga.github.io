@@ -27,9 +27,21 @@
                         "stamina":0.1
                 }    
         },
-                {
+        {
                 "id":"explorewest",
                 "name":"Explore the wreckage to the west",
+                "desc":"",
+                "repeat":false,
+                "verb":"Exploring",
+                "require":"repairedsuit",
+                "length":1,
+                "run":{
+                        "stamina":0.1
+                }    
+        },
+                {
+                "id":"exploreescape",
+                "name":"Explore the remains of the escape pod",
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
