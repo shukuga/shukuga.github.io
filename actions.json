@@ -22,15 +22,14 @@
                 "perpetual":true,
                 "verb":"Exploring",
                 "require":{
-                        "g.suit>=10"&&
-                        "repairedsuit"
+                        "g.suit>=10"&&"g.repairedsuit">0
                 }
                 "run":{
                         "stamina":0.1
                 },
                 "length":1,
                 "result":{
-                        "
+                        
                         "stamina":1
                 }
                 
