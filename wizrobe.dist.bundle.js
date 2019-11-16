@@ -4213,7 +4213,7 @@ var wizrobe = function(t) {
         n = i(3),
         r = i(2);
     const a = .35,
-        o = t => 50 * Math.pow(1 + a, t);
+        o = t => 10 * Math.pow(1 + a, t);
     class l extends s.a {
         get exp() {
             return super.exp
