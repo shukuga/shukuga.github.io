@@ -35,7 +35,7 @@
 	},
 		{
 		"id":"crafting",
-		"need":"research":100000,
+		"need":"research":"voidsource",
 		"desc":"Medicine and biotechnology",
 		"buy":{
 			"research":10
@@ -52,7 +52,7 @@
 	},
 		{
 		"id":"crafting",
-		"need":"research":1000000,
+		"need":"voidsource",
 		"desc":"Medicine and biotechnology",
 		"buy":{
 			"research":20
