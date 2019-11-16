@@ -15,7 +15,7 @@
 		"id":"evt_alcove",
 		"name":"Moving In",
 		"desc":"A small space where you can take off your helmet and plan your next move.",
-		"require":"alcove&&g.scrubbers>0"
+		"require":"g.alcove&&g.scrubbers>0"
 
 	},
 	{
