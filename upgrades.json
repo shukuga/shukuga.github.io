@@ -8,6 +8,14 @@
                 "effect":"repairedsuit"
         },
         {
+                "id":"scrubbers",
+                "name":"Portable CO2 scrubber",
+                "desc":"With a little work, this device will allow you to breath in small areas",
+                "require":"g.findmaintenancescrap>0",
+                "cost":{
+                        "scrap":2
+         },
+         {
                 "id":"firstaid",
                 "name":"First Aid Kit",
                 "desc":"Supplies to help you return to a healthier state",
@@ -21,7 +29,8 @@
                 "desc":"Stop your body from melting in the cosmic radiation",
                 "require":"firstaid>0&&g.biology>0",
                 "mod":{
-                        "hp.max":2
+                        "hp.max":2,
+                        "stamina.max":2
                 }
          },
          {      "id":"amps",
@@ -29,19 +38,9 @@
                 "desc":"You can sleep when you're dead",
                 "require":"firstaid>0&&g.biology>1",
                 "mod":{
-                        "stamina.rate":0.5,
-                        "rest.effect.stamina":-0.8
+                        "stamina.rate":0.2,
+                        "rest.effect.stamina":-0.4
                 }
          },
-         {      "id":"escaperepair",
-                "name":"Airproof escape pod",
-                "desc":"Some place where you can take off your suit",
-                "require":"g.exploreescape>0",
-                "cost":{
-                        "scrap":5
-                },
-                "effect":[
-                        "alcove"
-                ]
-         }
+
 ]
