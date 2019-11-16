@@ -9,9 +9,10 @@
                 "cost":{
                         "stamina":0.5
                 },
-                "effect":{
+                "result":{
                         "suit":1
-                }, "flavor":"it's stable employment"
+                }, 
+                "flavor":"it's stable employment"
         },
         {
                 "id":"explore",
@@ -21,12 +22,8 @@
                 "length":10,
                 "verb":"Exploring",
                 "require":"g.suit>=10",
-                "cost":{
-                        "stamina":0.1
-                },
-                "effect":{
-                       "findmedicalbay"
-                }
+                "cost":"stamina":0.1,
+                "result":"findmedicalbay"
         },
         {
                 "id":"study",
