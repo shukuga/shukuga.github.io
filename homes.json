@@ -6,7 +6,7 @@
 		"require":"g.escaperepair>0&&g.scrubbers>0",
 		"mod":{
 			"space":0,
-			"space.max":5,
+			"space.max":100,
 			"rest.stamina.rate":0.5,
 			"rest.hp.rate":0.1
 		}
