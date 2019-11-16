@@ -3,7 +3,7 @@
 		"id":"alcove",
 		"desc":"A small piece of your ship",
 		"flavor":"Better than dirt",
-		"require":"escaperepair>0",
+		"require":"",
 		"mod":{
 			"space.max":5
 		}
