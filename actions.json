@@ -88,6 +88,9 @@
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of medicine",
+                "cost":{
+                        "stamina":1
+                },
                 "run":{
                         "stamina":0.2
                 },
