@@ -1,7 +1,7 @@
 [
 	{
 		"id":"biology",
-		"need":"g.findmedicalbay",
+		"need":"g.medicalbook>0",
 		"desc":"Medicine and biotechnology",
 		"buy":{},
 		"run":{
@@ -16,7 +16,7 @@
 	},
 	{
 		"id":"engineering",
-		"need":"g.findmaintenancescrap",
+		"need":"g.engineeringbook>0",
 		"desc":"an absolutely vital skill for an engineer to craft complicated objects.",
 		"buy":{},
 		"run":{
@@ -31,7 +31,7 @@
 	},
 		{
 		"id":"datanalysis",
-		"need":"g.findmaintenancescrap",
+		"need":"g.computerbook>0",
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
 		"run":{
