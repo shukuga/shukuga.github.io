@@ -52,6 +52,16 @@
                 "max":20
         },
         {
+                "id":"electronics",
+                "desc":"robot bones.",
+                "max":10
+        },
+        {
+                "id":"processing",
+                "desc":"Processing power",
+                "max":0
+        },
+        {
                 "id":"bones",
                 "desc":"human bones.",
                 "max":10
