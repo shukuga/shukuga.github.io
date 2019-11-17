@@ -10,9 +10,8 @@
 	"run":{
 		"stamina":0.2
 	},
-	"result":{
-		"g.medicalbook":1,
-		"research":10
+	"loot":{
+		"g.medicalbook":1
 	},
 	"encs":[
 		"rubble1"
