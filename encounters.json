@@ -31,7 +31,7 @@
 	},
 	{
 		"id":"toolbox",
-		"name":"mangled toolbox"
+		"name":"mangled toolbox",
 		"desc":"a tree by a magic spring exhibits surprising qualities",
 		"effect":{
 			"scrap":"0~2"
