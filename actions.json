@@ -89,6 +89,9 @@
                 "desc":"Learn the basics of medicine",
                 "run":{
                         "stamina":0.2
+                },
+                "mod":{
+                        "biology.rate":0.1
                 }
         },
         {
