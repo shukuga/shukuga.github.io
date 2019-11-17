@@ -43,7 +43,7 @@
                         "stamina.rate":-0.1,
                         "rest.effect.stamina":0.4
                 }
-         }
+         },
          {      "id":"amps",
                 "name":"Stimulants",
                 "desc":"You can sleep when you're dead",
