@@ -47,6 +47,11 @@
                 }
         },
         {
+                "id":"medicalsupploes",
+                "name":"medical data",
+                "max":20
+        },
+        {
                 "id":"bones",
                 "desc":"human bones.",
                 "max":10
