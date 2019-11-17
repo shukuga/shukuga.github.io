@@ -1,21 +1,18 @@
 [
 {
-	"id":"mustylibrary",
-	"name":"musty library",
+	"id":"loc_medical",
+	"name":"Medical bay wreckage",
 	"level":1,
-	"length":10,
+	"length":1,
 	"sym":"📖",
-	"require":"apprentice",
+	"require":"g.explorenorth>0",
 	"desc":"a good apprentice spends all their free time in the library. after doing chores, of course.",
 	"run":{
 		"stamina":0.2
 	},
 	"result":{
-		"arcana":0.1,
+		"firstaid":true,
 		"research":10
-	},
-	"loot":{
-		"scrolls":"1~4"
 	},
 	"encs":[
 		"enc_tapestry",
