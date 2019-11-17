@@ -11,7 +11,7 @@
 		"stamina":0.2
 	},
 	"result":{
-		"medicalbook":1,
+		"g.medicalbook":1,
 		"research":10
 	},
 	"encs":[
