@@ -34,7 +34,7 @@
 		"name":"mangled toolbox",
 		"desc":"a tree by a magic spring exhibits surprising qualities",
 		"effect":{
-			"scrap":"0~2"
+			"scrap":"0~2",
 			"engineering.exp":0.1
 		}
 	},
