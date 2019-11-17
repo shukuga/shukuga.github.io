@@ -41,7 +41,8 @@
                 "require":"g.firstaid>0&&g.biology>1",
                 "mod":{
                         "stamina.rate":-0.1,
-                        "rest.effect.stamina":0.4
+                        "rest.effect.stamina":0.4,
+                        "amps":0
                 }
          },
          {      "id":"amps",
@@ -50,7 +51,8 @@
                 "require":"g.firstaid>0&&g.biology>1",
                 "mod":{
                         "stamina.rate":0.2,
-                        "rest.effect.stamina":-0.4
+                        "rest.effect.stamina":-0.4,
+                        "zzz":0
                 }
          }
 
