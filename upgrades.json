@@ -42,7 +42,7 @@
                 "mod":{
                         "stamina.rate":-0.1,
                         "rest.effect.stamina":0.4,
-                        "amps":false
+                        "disable":"amps"
                 }
          },
          {      "id":"amps",
@@ -52,7 +52,7 @@
                 "mod":{
                         "stamina.rate":0.2,
                         "rest.effect.stamina":-0.4,
-                        "zzz":false
+                        "disable":"zzz"
                 }
          }
 
