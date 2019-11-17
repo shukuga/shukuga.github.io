@@ -83,6 +83,7 @@
          },
         {
                 "id":"medicalbook",
+                "name":"Medical book",
                 "length":2,
                 "repeat":false,
                 "verb":"studying",
