@@ -10,6 +10,9 @@
 	"run":{
 		"stamina":0.2	
 	},
+	"loot":{
+		"medicalbook":1
+	}
 	"encs":[
 		"rubble1"
 	]
