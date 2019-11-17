@@ -1,15 +1,13 @@
 [
 	{
-		"id":"enc_primer1",
-		"name":"magical primer",
-		"desc":"an introduction to magical theory.",
+		"id":"rubble1",
+		"name":"Dig through rubble",
+		"desc":"Find out what's at the bottom of this pile.",
 		"effect":{
-			"bf":"-1~2",
-			"lore.exp":1
+			"stamina":-0.1
 		},
 		"result":{
-			"research":1,
-			"arcana":0.01
+			"datasources":1
 		}
 	},
 	{
