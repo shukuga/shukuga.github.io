@@ -2,6 +2,7 @@
         {
                 "id":"gold",
                 "desc":"Gold Coins",
+                "hidden":true,
                 "locked":false,
                 "max":5
         },
@@ -41,9 +42,9 @@
          {
                 "id":"medicaldata",
                 "name":"medical data",
-                "max":10,
+                "max":20,
                 "mod":{
-                        "biology.max":0.1
+                        "biology.max":0.05
                 }
         },
         {
