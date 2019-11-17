@@ -23,7 +23,7 @@
 },
 {
 	"id":"loc_maintenance",
-	"name":"maintinance closet",
+	"name":"maintenance closet",
 	"length":10,
 	"require":"g.explorewest>0",
 	"desc":"",
