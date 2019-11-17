@@ -32,7 +32,7 @@
          {      "id":"antirad",
                 "name":"Anti-radiation medicine",
                 "desc":"Stop your body from melting in the cosmic radiation",
-                "require":"g.firstaid>0&&g.biology>0",
+                "require":"g.firstaid>0&&g.medicine>0",
                 "mod":{
                         "hp.max":2,
                         "stamina.max":2
@@ -41,7 +41,7 @@
          {      "id":"zzz",
                 "name":"Sleep aids",
                 "desc":"Early to bed",
-                "require":"g.firstaid>0&&g.biology>1",
+                "require":"g.firstaid>0&&g.medicine>1",
                 "mod":{
                         "stamina.rate":-0.2,
                         "rest.effect.stamina":0.4
@@ -50,7 +50,7 @@
          {      "id":"amps",
                 "name":"Stimulants",
                 "desc":"You can sleep when you're dead",
-                "require":"g.firstaid>0&&g.biology>1",
+                "require":"g.firstaid>0&&g.medicine>1",
                 "mod":{
                         "stamina.rate":0.2,
                         "rest.effect.stamina":-0.4
@@ -59,7 +59,7 @@
          {      "id":"kidney",
                 "name":"auxillary dialysis module",
                 "desc":"Your kidneys could use some help",
-                "require":"g.firstaid>0&&g.biology>4",
+                "require":"g.firstaid>0&&g.medicine>4",
                 "mod":{
                         "stamina.rate":0.5,
                         "max.hp":-0.1
