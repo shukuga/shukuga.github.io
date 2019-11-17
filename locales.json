@@ -10,9 +10,6 @@
 	"run":{
 		"stamina":0.2	
 	},
-	"result":{
-		"medicalbook":true
-	},
 	"encs":[
 		"rubble1"
 	]
