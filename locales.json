@@ -11,7 +11,7 @@
 		"stamina":0.2
 	},
 	"loot":{
-		"g.medicalbook":true
+		"medicalbook":true
 	},
 	"encs":[
 		"rubble1"
