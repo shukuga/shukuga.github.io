@@ -82,25 +82,32 @@
                 }
          },
         {
-                "id":"study",
-                "perpetual":true,
-                "verb":"studying scrolls",
-                "desc":"Study arcane scrolls",
-                "require":"g.datasource>0",
+                "id":"medicalbook",
+                "length":2,
+                "repeat":false,
+                "verb":"studying",
+                "desc":"Learn the basics of medicine",
                 "run":{
                         "stamina":0.2
-                },
-                "every":{
-                        "100":{
-                                "effect.research":0.05
-                        }
-                },
-                "effect":{
-                        "research":0.55,
-                        "arcana":{
-                                "skipLocked":true,
-                                "value":0.002
-                        }
+                }
+        {
+                "id":"engineeringbook",
+                "length":2,
+                "repeat":false,
+                "verb":"studying",
+                "desc":"Learn the basics of engineering",
+                "run":{
+                        "stamina":0.2
+                }
+        },
+                {
+                "id":"computerbook",
+                "length":2,
+                "repeat":false,
+                "verb":"studying",
+                "desc":"Learn the basics of computer use",
+                "run":{
+                        "stamina":0.2
                 }
         },
         {
