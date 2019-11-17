@@ -11,7 +11,7 @@
 		"stamina":0.2	
 	},
 	"result":{
-		"medicalbook":true
+		"g.medicalbook":true
 	},
 	"encs":[
 		"rubble1"
