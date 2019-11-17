@@ -3,7 +3,6 @@
                 "id":"gold",
                 "desc":"Gold Coins",
                 "locked":false,
-                "hidden":true,
                 "max":5
         },
         {
@@ -31,11 +30,20 @@
                 "max":10
         },
         {       "id":"datasource",
+                "name":"Data source",
                 "desc":"May contain useful information",
                 "max":10,
                 "mod":{
                         "research.rate":0.005,
                         "research.max":1
+                }
+         },
+         {
+                "id":"medicaldata",
+                "name":"medical data",
+                "max":10,
+                "mod":{
+                        "biology.max":0.1
                 }
         },
         {
