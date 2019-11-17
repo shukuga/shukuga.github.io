@@ -18,17 +18,17 @@
 			"medicaldata":"0~2"
 		}
 	},
-	{
-		"id":"medicalsamples",
-		"name":"destroyed medical samples",
-		"level":1,
-		"desc":"Materials used in diagnostics or research",
-		"effect":{
-			"unease":"0~1",
-			"biology.exp":0.1,
-			"research":"0~1"
-		}
-	},
+//	{
+//		"id":"medicalsamples",
+//		"name":"destroyed medical samples",
+//		"level":1,
+//		"desc":"Materials used in diagnostics or research",
+//		"effect":{
+//			"unease":"0~1",
+//			"biology.exp":0.1,
+//			"research":"0~1"
+//		}
+//	},
 	{
 		"id":"toolbox",
 		"name":"mangled toolbox",
