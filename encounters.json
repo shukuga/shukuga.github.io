@@ -3,9 +3,6 @@
 		"id":"rubble1",
 		"name":"Dig through rubble",
 		"desc":"Find out what's at the bottom of this pile.",
-		"effect":{
-			"stamina":-0.1
-		},
 		"result":{
 			"scrap":"0~1"
 		}
@@ -25,8 +22,7 @@
 		"desc":"Materials used in diagnostics or research",
 		"effect":{
 			"unease":"0~1",
-			"biology.exp":0.1,
-			"research":"0~1"
+			"biology.exp":0.1
 		}
 	},
 	{
