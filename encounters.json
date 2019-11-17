@@ -7,17 +7,15 @@
 			"stamina":-0.1
 		},
 		"result":{
-			"datasources":1
+			"scrap":"0~1"
 		}
 	},
 	{
-		"id":"enc_workbook1",
-		"name":"workbook",
+		"id":"loosepapers",
+		"name":"Loose papers",
 		"desc":"a book on the practical applications of magic",
 		"effect":{
-			"bf":"-1~2",
-			"rage":"0~2",
-			"crafting.exp":2
+			"medicaldata":"0~2"
 		}
 	},
 	{
