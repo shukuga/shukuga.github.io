@@ -3,7 +3,7 @@
 	"id":"loc_medical",
 	"name":"Medical bay wreckage",
 	"level":1,
-	"length":1,
+	"length":10,
 	"sym":"📖",
 	"require":"g.explorenorth>0",
 	"desc":"a good apprentice spends all their free time in the library. after doing chores, of course.",
@@ -18,30 +18,26 @@
 	"encs":[
 		"rubble1",
 		"loosepapers"
+		"medicalsamples"
 	]
 },
 {
-	"id":"loc_spring",
-	"name":"lillit's spring",
-	"level":2,
-	"length":15,
-	"require":"apprentice",
+	"id":"loc_maintenance",
+	"name":"maintinance closet",
+	"length":10,
+	"require":"g.explorewest>0",
 	"desc":"tradition tells of a spring with enchanted waters. investigations might prove revealing.",
 	"run":{
 		"stamina":0.2
 	},
-	"result":{
-		"arcana":0.1,
-		"research":10
-	},
+
 	"loot":{
-		"herbs":"2~5"
+		"scrap":"2~5"
+		"engingeeringbook"
 	},
 	"encs":[
-		"manatree",
-		"mysticwater",
-		"manatree",
-		"hiddencache"
+		"rubble1"
+		"toolbox"
 	]
 },
 {
