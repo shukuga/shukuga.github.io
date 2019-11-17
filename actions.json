@@ -100,6 +100,7 @@
         },
         {
                 "id":"engineeringbook",
+                "name":"Engineering book",
                 "length":2,
                 "repeat":false,
                 "verb":"studying",
@@ -110,6 +111,7 @@
         },
         {
                 "id":"computerbook",
+                "name":"computer book",
                 "length":2,
                 "repeat":false,
                 "verb":"studying",
