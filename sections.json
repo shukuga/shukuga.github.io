@@ -21,7 +21,7 @@
 	{
 		"id":"sect_raid",
 		"name":"adventure",
-		"require":"evt_helper"
+		"require":"repairedsuit"
 
 	},
 	{
