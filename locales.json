@@ -17,7 +17,7 @@
 	},
 	"encs":[
 		"rubble1",
-		"loosepapers"
+		"loosepapers",
 		"medicalsamples"
 	]
 },
@@ -32,7 +32,7 @@
 	},
 
 	"loot":{
-		"scrap":"2~5"
+		"scrap":"2~5",
 		"engingeeringbook"
 	},
 	"encs":[
