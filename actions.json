@@ -85,6 +85,7 @@
                 "id":"medicalbook",
                 "name":"Medical book",
                 "length":2,
+                "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of medicine",
                 "cost":{
