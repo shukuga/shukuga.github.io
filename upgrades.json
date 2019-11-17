@@ -20,7 +20,7 @@
                 "id":"firstaid",
                 "name":"First Aid Kit",
                 "desc":"Supplies to help you return to a healthier state",
-                "require":"explorenorth>0"
+                "require":"explorenorth>0",
                 "mod":{
                         "hp.max":2
                 }
