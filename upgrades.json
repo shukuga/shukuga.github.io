@@ -22,7 +22,8 @@
                 "desc":"Supplies to help you return to a healthier state",
                 "require":"g.explorenorth>0",
                 "mod":{
-                        "hp.max":2
+                        "hp.max":2,
+                        "rest.hp.rate":0.1
                 }
          },
          {      "id":"antirad",
@@ -34,6 +35,15 @@
                         "stamina.max":2
                 }
          },
+         {      "id":"zzz",
+                "name":"Sleep aids",
+                "desc":"Early to bed",
+                "require":"g.firstaid>0&&g.biology>1",
+                "mod":{
+                        "stamina.rate":-0.1,
+                        "rest.effect.stamina":0.4
+                }
+         }
          {      "id":"amps",
                 "name":"Stimulants",
                 "desc":"You can sleep when you're dead",
