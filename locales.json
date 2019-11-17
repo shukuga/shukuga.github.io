@@ -11,10 +11,13 @@
 		"stamina":0.2	
 	},
 	"loot":{
-		"medicalbook":1
+		"medicalbook":1,
+		"medicalsupplies":"0~1",
+		"medicaldata":"0~1"
 	},
 	"encs":[
-		"rubble1"
+		"rubble1",
+		"loosepapers"
 	]
 },
 {
