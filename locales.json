@@ -6,7 +6,7 @@
 	"length":10,
 	"sym":"📖",
 	"require":"g.explorenorth>0",
-	"desc":"a good apprentice spends all their free time in the library. after doing chores, of course.",
+	"desc":"",
 	"run":{
 		"stamina":0.2	
 	},
@@ -26,17 +26,15 @@
 	"name":"maintinance closet",
 	"length":10,
 	"require":"g.explorewest>0",
-	"desc":"tradition tells of a spring with enchanted waters. investigations might prove revealing.",
+	"desc":"",
 	"run":{
 		"stamina":0.2
 	},
-
 	"loot":{
 		"scrap":"2~5",
 		"engingeeringbook"
 	},
 	"encs":[
-		"rubble1",
 		"toolbox"
 	]
 },
