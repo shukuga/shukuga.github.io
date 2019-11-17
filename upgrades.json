@@ -2,9 +2,12 @@
         {
                 "id":"finishsuit",
                 "name":"Finalize suit repairs",
-                "desc":"Purchase freedom from your apprenticeship. You will become an independent practitioner of magic.",
+                "desc":"With a last readjustment your life-saving equipment is ready to use",
                 "require":"g.suit>=5",
                 "repeat":false,
+                "mod":{
+                        "hp.max":1
+                },
                 "effect":"repairedsuit"
         },
         {
@@ -40,8 +43,8 @@
                 "desc":"Early to bed",
                 "require":"g.firstaid>0&&g.biology>1",
                 "mod":{
-                        "stamina.rate":-0.1,
-                        "rest.effect.stamina":0.2
+                        "stamina.rate":-0.2,
+                        "rest.effect.stamina":0.4
                 }
          },
          {      "id":"amps",
@@ -51,6 +54,15 @@
                 "mod":{
                         "stamina.rate":0.2,
                         "rest.effect.stamina":-0.4
+                }
+         },
+         {      "id":"kidney",
+                "name":"auxillary dialysis module",
+                "desc":"Your kidneys could use some help",
+                "require":"g.firstaid>0&&g.biology>4",
+                "mod":{
+                        "stamina.rate":0.5,
+                        "max.hp":-0.1
                 }
          }
 
