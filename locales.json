@@ -8,9 +8,7 @@
 	"require":"g.explorenorth>0",
 	"desc":"a good apprentice spends all their free time in the library. after doing chores, of course.",
 	"run":{
-		"stamina":0.2
-	},
-	"loot":{
+		"stamina":0.2,
 		"medicalbook":true
 	},
 	"encs":[
