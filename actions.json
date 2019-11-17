@@ -84,7 +84,6 @@
         {
                 "id":"medicalbook",
                 "name":"Medical book",
-                "require":"loc_medical>0",
                 "length":2,
                 "verb":"studying",
                 "desc":"Learn the basics of medicine",
