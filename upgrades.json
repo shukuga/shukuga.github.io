@@ -20,7 +20,6 @@
                 "id":"firstaid",
                 "name":"First Aid Kit",
                 "desc":"Supplies to help you return to a healthier state",
-                "require":"g.findmedicalbay>0",
                 "mod":{
                         "hp.max":2
                 }
