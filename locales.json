@@ -23,7 +23,7 @@
 },
 {
 	"id":"loc_maintenance",
-	"name":"maintenance closet",
+	"name":"Maintenance closet",
 	"length":10,
 	"require":"g.explorewest>0",
 	"desc":"",
@@ -32,13 +32,27 @@
 	},
 	"loot":{
 		"scrap":"2~5",
-		"engingeeringbook":1
+		"engineeringbook":1
 	},
 	"encs":[
 		"toolbox"
 	]
 },
 {
+	"id":"loc_escapepod",
+	"name":"Area surrounding the escape pod",
+	"length":5,
+	"desc":"",
+	"run":{
+		"stamina":0.2
+	},
+	"loot":{
+		"scrap":"0~1"
+	},
+	"encs":[
+		"rubble1"
+	]
+},{
 	"id":"eryleyot",
 	"name":"eryl eyot",
 	"level":5,
