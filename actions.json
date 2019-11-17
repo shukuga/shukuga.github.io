@@ -90,6 +90,7 @@
                 "run":{
                         "stamina":0.2
                 }
+        },
         {
                 "id":"engineeringbook",
                 "length":2,
@@ -100,7 +101,7 @@
                         "stamina":0.2
                 }
         },
-                {
+        {
                 "id":"computerbook",
                 "length":2,
                 "repeat":false,
