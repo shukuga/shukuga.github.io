@@ -1,5 +1,19 @@
 [
 	{
+		"id":"f_smcomputer",
+		"name":"small computer",
+		"desc":"A small device for processing data",
+		"require":"g.research>0",
+		"repeat":true,
+		"cost":{
+			"electronics":5,
+			"space":1
+		},
+		"mod":{
+			"processing":5
+		}
+	},
+	{
 		"id":"smchest",
 		"name":"small chest",
 		"desc":"A small wooden chest.",
@@ -48,6 +62,7 @@
 	{
 		"id":"cot",
 		"desc":"Slightly better than sleeping on the floor",
+		"require":"voidlore",
 		"locked":false,
 		"tags":"bed",
 		"slot":"bed",
@@ -252,16 +267,16 @@
 	{
 
 		"id":"workbench",
-		"desc":"A small bench for arts and crafts. Necessary for many wizard studies.",
+		"desc":"A small bench for crafts.",
 		"tags":"workspace",
 		"locked":false,
 		"repeat":true,
 		"cost":{
-			"gold":15,
+			"scrap":5,
 			"space":1
 		},
 		"mod":{
-			"research.max":5
+			"scrap.max":5
 		}
 
 	},
@@ -319,6 +334,7 @@
 	{
 		"id":"plant",
 		"name":"potted milkweed",
+		"require":"voidsource",
 		"locked":false,
 		"desc":"Really brightens up the place.",
 		"tags":"t_garden",
@@ -352,6 +368,7 @@
 	{
 		"id":"birdcage",
 		"desc":"Perfect for robins.",
+		"require":"voidsource"
 		"tags":"t_pets",
 		"locked":false,
 		"repeat":true,
