@@ -39,6 +39,7 @@
 		"need":"g.engineeringbook>0",
 		"desc":"Keeping objects in working order",
 		"buy":{},
+		"max":1,
 		"run":{
 			"stamina":0.5
 		},
@@ -54,6 +55,7 @@
 		"need":"maintenance>1",
 		"desc":"an absolutely vital skill for an engineer to craft complicated objects.",
 		"buy":{},
+		"max":1,
 		"run":{
 			"stamina":0.5
 		},
@@ -69,6 +71,7 @@
 		"need":"g.computerbook>0",
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
+		"max":1,
 		"run":{
 			"stamina":0.5
 		},
@@ -82,7 +85,7 @@
 	{
 		"id":"crafting",
 		"need":"voidsource",
-		"desc":"Medicine and biotechnology",
+		"desc":"",
 		"buy":{
 			"research":10
 		},
