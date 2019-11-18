@@ -4,7 +4,6 @@
                 "name":"Finalize suit repairs",
                 "desc":"With a last readjustment your life-saving equipment is ready to use",
                 "require":"g.suit>=5",
-                "repeat":false,
                 "mod":{
                         "hp.max":1
                 },
