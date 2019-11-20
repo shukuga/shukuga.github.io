@@ -52,7 +52,7 @@
                 }    
         },
         {
-                "id":"scavenge",
+                "id":"salvage",
                 "perpetual":true,
                 "verb":"salvaging",
                 "locked":false,
@@ -62,7 +62,7 @@
                         "hp":0.5
                 },
                 "every":{
-                        "5":{
+                        "100":{
                                 "effect.scrap":0.05
                         }
                 },
