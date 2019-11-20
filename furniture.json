@@ -1,5 +1,19 @@
 [
 	{
+		"id":"smcomputer",
+		"name":"small computer",
+		"desc":"A small device for processing data",
+		"require":"g.research>0",
+		"repeat":true,
+		"cost":{
+			"electronics":5,
+			"space":1
+		},
+		"mod":{
+			"processing.max":5
+		}
+	},
+	{
 		"id":"smchest",
 		"name":"small chest",
 		"desc":"A small wooden chest.",
