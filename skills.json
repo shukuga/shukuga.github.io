@@ -4,7 +4,6 @@
 		"need":"g.medicalbook>0",
 		"desc":"How to take care of your squishy body",
 		"buy":{},
-		"max":1,
 		"run":{
 			"stamina":0.5
 		},
@@ -22,7 +21,6 @@
 		"buy":{
 			"sp":1
 		      },
-		"max":1,
 		"run":{
 			"medicalsupplies":1
 		},
@@ -39,7 +37,6 @@
 		"need":"g.engineeringbook>0",
 		"desc":"Keeping objects in working order",
 		"buy":{},
-		"max":1,
 		"run":{
 			"stamina":0.5
 		},
@@ -55,7 +52,6 @@
 		"need":"maintenance>1",
 		"desc":"an absolutely vital skill for an engineer to craft complicated objects.",
 		"buy":{},
-		"max":1,
 		"run":{
 			"stamina":0.5
 		},
@@ -71,7 +67,6 @@
 		"need":"g.computerbook>0",
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
-		"max":1,
 		"run":{
 			"stamina":0.5
 		},
