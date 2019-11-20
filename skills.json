@@ -13,7 +13,7 @@
 	},
 	{
 		"id":"biology",
-		"need":"medicine>1",
+		"need":"g.medicine>1",
 		"desc":"Biotechnology",
 		"buy":{},
 		"run":{
