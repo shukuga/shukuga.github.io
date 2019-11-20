@@ -41,7 +41,7 @@
 {
 	"id":"loc_escapepod",
 	"name":"Area surrounding the escape pod",
-	"require":"g.exploreescape>0",
+	"require":"exploreescape>0",
 	"length":5,
 	"desc":"",
 	"run":{
