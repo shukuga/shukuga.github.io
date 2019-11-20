@@ -38,7 +38,7 @@
 	},
 	{
 		"id":"engineering",
-		"need":"maintenance>1",
+		"need":"g.maintenance>1",
 		"desc":"an absolutely vital skill for an engineer to craft complicated objects.",
 		"buy":{},
 		"run":{
