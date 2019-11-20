@@ -71,7 +71,7 @@
                         
                 }
         },
-                 {      "id":"escaperepair",
+        {      "id":"escaperepair",
                 "name":"Airproof escape pod",
                 "repeat":false,
                 "desc":"Some place where you can take off your suit",
@@ -84,7 +84,7 @@
         {
                 "id":"medicalbook",
                 "name":"Medical book",
-                "length":2,
+                "length":4,
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of medicine",
@@ -92,7 +92,7 @@
                         "stamina":1
                 },
                 "run":{
-                        "stamina":0.2
+                        "stamina":0.5
                 },
                 "mod":{
                         "biology.rate":0.1
@@ -100,22 +100,24 @@
         },
         {
                 "id":"engineeringbook",
-                "length":2,
+                "name":"engineering book"
+                "length":4,
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of engineering",
                 "run":{
-                        "stamina":0.2
+                        "stamina":0.5
                 }
         },
         {
                 "id":"computerbook",
-                "length":2,
+                "name":"software manuals"
+                "length":4,
                 "repeat":false,
                 "verb":"studying",
-                "desc":"Learn the basics of computer use",
+                "desc":"Learn the basics of computer user",
                 "run":{
-                        "stamina":0.2
+                        "stamina":0.5
                 }
         },
         {
