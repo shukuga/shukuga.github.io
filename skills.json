@@ -7,9 +7,6 @@
 		"run":{
 			"stamina":0.5
 		},
-		"result":{
-			"sp":0.1
-		},
 		"mod":{
 			"research.max":1
 		}
@@ -18,14 +15,9 @@
 		"id":"biology",
 		"need":"medicine>1",
 		"desc":"Biotechnology",
-		"buy":{
-			"sp":1
-		      },
+		"buy":{},
 		"run":{
 			"medicalsupplies":1
-		},
-		"result":{
-			"sp":0.1
 		},
 		"mod":{
 			"research.max":1,
@@ -40,9 +32,6 @@
 		"run":{
 			"stamina":0.5
 		},
-		"result":{
-			"sp":0.1
-		},
 		"mod":{
 			"research.max":1
 		}
@@ -55,9 +44,6 @@
 		"run":{
 			"stamina":0.5
 		},
-		"result":{
-			"sp":0.1
-		},
 		"mod":{
 			"research.max":1
 		}
@@ -69,9 +55,6 @@
 		"buy":{},
 		"run":{
 			"stamina":0.5
-		},
-		"result":{
-			"sp":0.1
 		},
 		"mod":{
 			"research.max":1
