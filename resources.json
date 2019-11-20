@@ -51,6 +51,16 @@
                 "name":"medical supplies",
                 "max":20
         },
+                 {
+                "id":"electronics",
+                "desc":"robot bones.",
+                "max":10
+        },
+        {
+                "id":"processing",
+                "desc":"Processing power",
+                "max":10
+        },
         {
                 "id":"bones",
                 "desc":"human bones.",
