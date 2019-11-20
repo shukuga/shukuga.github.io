@@ -93,14 +93,11 @@
                 },
                 "run":{
                         "stamina":0.5
-                },
-                "mod":{
-                        "biology.rate":0.1
                 }
         },
         {
                 "id":"engineeringbook",
-                "name":"engineering book"
+                "name":"engineering book",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
@@ -111,7 +108,7 @@
         },
         {
                 "id":"computerbook",
-                "name":"software manuals"
+                "name":"software manuals",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
