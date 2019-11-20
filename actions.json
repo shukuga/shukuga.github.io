@@ -1,5 +1,20 @@
 [
-        
+        {
+                "id":"rest",
+                "tags":"t_rest",
+                "name":"rest",
+                "slot":"rest",
+                "verb":"resting",
+                "locked":false,
+                "owned":true,
+                "perpetual":true,
+                "fill":[ "stamina", "hp", "stress"],
+                "effect":{
+                        "stamina":1,
+                        "hp":1,
+                        "stress":-1
+                }
+        },
         {
                 "id":"stabilize",
                 "name":"Stabilize suit",
