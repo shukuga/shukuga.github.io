@@ -1,6 +1,6 @@
 [
 	{
-		"id":"f_smcomputer",
+		"id":"smcomputer",
 		"name":"small computer",
 		"desc":"A small device for processing data",
 		"require":"g.research>0",
@@ -10,7 +10,7 @@
 			"space":1
 		},
 		"mod":{
-			"processing":5
+			"processing.max":5
 		}
 	},
 	{
