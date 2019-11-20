@@ -1,4 +1,18 @@
 [
+		{
+		"id":"smcomputer",
+		"name":"small computer",
+		"desc":"A small device for processing data",
+		"require":"g.research>0",
+		"repeat":true,
+		"cost":{
+			"electronics":5,
+			"space":1
+		},
+		"mod":{
+			"processing.max":5
+		}
+	},
 	{
 		"id":"smchest",
 		"name":"small chest",
@@ -354,7 +368,7 @@
 	{
 		"id":"birdcage",
 		"desc":"Perfect for robins.",
-		"require":"voidsource"
+		"require":"voidsource",
 		"tags":"t_pets",
 		"locked":false,
 		"repeat":true,
