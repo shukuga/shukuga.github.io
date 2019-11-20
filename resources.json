@@ -59,7 +59,7 @@
         {
                 "id":"processing",
                 "desc":"Processing power",
-                "max":0
+                "max":10
         },
         {
                 "id":"bones",
