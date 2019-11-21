@@ -20,6 +20,7 @@
 		"repeat":false,
 		"cost":{
 			"space":1
+		}
 	},
 	{
 		"id":"stimulants",
@@ -49,7 +50,8 @@
 			"rest.stamina.rate":0.4
 		}
 	},
-         {      "id":"kidney",
+        {
+		"id":"kidney",
                 "name":"auxillary dialysis module",
                 "desc":"Your kidneys could use some help",
                 "require":"g.firstaid>0&&g.medicine>4",
@@ -57,7 +59,7 @@
 			"space":2,
 			"medicalsupplies":2,
 			"electronics":2
-		}
+		},
                 "mod":{
                         "stamina.rate":0.5,
                         "max.hp":-0.1
