@@ -21,9 +21,11 @@
          },
          {
                 "id":"flashlight",
+                "name":"repair flashlight",
                 "desc":"You don't know what a flashlight is?",
+                "require":{"g.explorewest&&g.maintenance>0",
                 "cost":{
-                        "smallbatteries":2
+                        "electronics":1
                 }
          },
          
