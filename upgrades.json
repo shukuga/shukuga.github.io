@@ -20,6 +20,14 @@
                 }
          },
          {
+                "id":"flashlight",
+                "desc":"You don't know what a flashlight is?",
+                "cost":{
+                        "smallbatteries":2
+                }
+         },
+         
+         {
                 "id":"firstaid",
                 "name":"First Aid Kit",
                 "desc":"Supplies to help you return to a healthier state",
