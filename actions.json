@@ -59,6 +59,9 @@
                 "verb":"Exploring",
                 "require":"flashlight",
                 "length":5,
+                "cost":{
+                        "smallbattery":1
+                },
                 "run":{
                         "stamina":0.1
                 }    
