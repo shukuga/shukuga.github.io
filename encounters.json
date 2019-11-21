@@ -34,7 +34,7 @@
 			"biology.exp":0.1
 		},
 		"result":{
-			"medicaldata"::"0~1",
+			"medicaldata":"0~1",
 			"medicalsupplies":"0~2"
 		}
 	},
