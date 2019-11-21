@@ -51,10 +51,22 @@
                         "stamina":0.1
                 }    
         },
+                        {
+                "id":"exploretunnel",
+                "name":"Descend into a buried hallway",
+                "desc":"",
+                "repeat":false,
+                "verb":"Exploring",
+                "require":"flashlight"
+                "length":5,
+                "run":{
+                        "stamina":0.1
+                }    
+        },
         {
-                "id":"salvage",
+                "id":"scavenge",
                 "perpetual":true,
-                "verb":"salvaging",
+                "verb":"scavenge",
                 "locked":false,
                 "desc":"Collect useful objects",
                 "run":{
