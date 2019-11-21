@@ -14,7 +14,7 @@
                 "id":"scrubbers",
                 "name":"Portable CO2 scrubber",
                 "desc":"With a little work, this device will allow you to breath in small areas",
-                "require":"g.findmaintenancescrap>0",
+                "require":"g.explorewest>0",
                 "cost":{
                         "scrap":2
                 }
