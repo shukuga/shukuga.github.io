@@ -61,8 +61,8 @@
 		}
 	},
 	{
-		"id":"crafting",
-		"need":"voidsource",
+		"id":"computeruse",
+		"need":"g.computerbook>0",
 		"desc":"",
 		"buy":{
 			"research":10
