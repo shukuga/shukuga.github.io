@@ -57,7 +57,7 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "require":"flashlight"
+                "require":"flashlight",
                 "length":5,
                 "run":{
                         "stamina":0.1
