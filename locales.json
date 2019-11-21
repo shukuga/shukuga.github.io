@@ -3,7 +3,7 @@
 	"id":"loc_medical",
 	"name":"Medical bay wreckage",
 	"level":1,
-	"length":10,
+	"length":5,
 	"sym":"📖",
 	"require":"g.explorenorth>0",
 	"desc":"",
@@ -24,7 +24,7 @@
 {
 	"id":"loc_maintenance",
 	"name":"Maintenance closet",
-	"length":10,
+	"length":5,
 	"require":"g.explorewest>0",
 	"desc":"",
 	"run":{
@@ -58,17 +58,19 @@
 {
 	"id":"loc_mainframe",
 	"name":"Mainframe",
-	"require":"g.exploretunnel>0&&flashlight>0",
+	"require":"g.exploretunnel>0&&g.flashlight>0",
 	"length":5,
 	"desc":"",
 	"run":{
-		"stamina":0.2
+		"stamina":0.2,
+		"smallbattery":0.2
 	},
 	"loot":{
-		"scrap":"0~1"
+		"g.computerbook":1
 	},
 	"encs":[
-		"rubble1"
+		"rubble1",
+		"toolbox"
 	]
 }
 ]
