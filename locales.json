@@ -81,6 +81,21 @@
 		"mysticwater"
 	]
 },
+	{
+	"id":"loc_mainframe",
+	"name":"Mainframe",
+	"require":"g.exploretunnel>0&&flashlight>0",
+	"length":5,
+	"desc":"",
+	"run":{
+		"stamina":0.2
+	},
+	"loot":{
+		"scrap":"0~1"
+	},
+	"encs":[
+		"rubble1"
+	]
 {
 	"id":"loc_treffil",
 	"name":"explore treffil wood",
