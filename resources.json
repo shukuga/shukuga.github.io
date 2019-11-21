@@ -63,7 +63,7 @@
         },
         {
                 "id":"smallbatteries",
-                "name":"Small batteries"
+                "name":"Small batteries",
                 "desc":"Powers your small devices",
                 "max":1
         },
