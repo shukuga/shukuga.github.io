@@ -31,8 +31,11 @@
 		"desc":"Materials used in diagnostics or research",
 		"effect":{
 			"unease":"0~1",
-			"medicalsupplies":"0~2",
 			"biology.exp":0.1
+		},
+		"result":{
+			"medicaldata"::"0~1",
+			"medicalsupplies":"0~2"
 		}
 	},
 	{
@@ -41,8 +44,11 @@
 		"desc":"Some simple tools, mostly destroyed",
 		"effect":{
 			"scrap":"0~2",
-			"smallbatteries":"0~1",
 			"engineering.exp":0.1
+		},
+		"result":{
+			"smallbatteries":"0~1",
+			"electronics":"0~1",
 		}
 	}
 ]
