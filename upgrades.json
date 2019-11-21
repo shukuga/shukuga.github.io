@@ -23,12 +23,11 @@
                 "id":"flashlight",
                 "name":"repair flashlight",
                 "desc":"You don't know what a flashlight is?",
-                "require":{"g.explorewest&&g.maintenance>0",
+                "require":{"g.explorewest&&g.maintenance>0"},
                 "cost":{
                         "electronics":1
                 }
          },
-         
          {
                 "id":"firstaid",
                 "name":"First Aid Kit",
