@@ -62,9 +62,10 @@
                 "max":10
         },
         {
-                "id":"bones",
-                "desc":"human bones.",
-                "max":10
+                "id":"smallbatteries",
+                "name":"Small batteries
+                "desc":"Powers your small devices",
+                "max":1
         },
         {
 
