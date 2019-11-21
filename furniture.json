@@ -26,7 +26,7 @@
 		"id":"stimulants",
 		"name":"stims",
 		"desc":"You can sleep when you're dead",
-		"require":"g.medicine>0&&firstaid>0&&sleepaid<1",
+		"require":"g.medicine>0&&g.firstaid>0&&sleepaid<1",
 		"repeat":false,
 		"cost":{
 			"medicalsupplies":2
@@ -40,7 +40,7 @@
 		"id":"sleepaid",
 		"name":"sleeping medicine",
 		"desc":"Early to bed...",
-		"require":"g.medicine>0&&firstaid>0&&stimulants<1",
+		"require":"g.medicine>0&&g.firstaid>0&&stimulants<1",
 		"repeat":false,
 		"cost":{
 			"medicalsupplies":2
