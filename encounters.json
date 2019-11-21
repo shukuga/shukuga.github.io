@@ -4,15 +4,24 @@
 		"name":"Dig through rubble",
 		"desc":"Find out what's at the bottom of this pile.",
 		"result":{
-			"scrap":"0~1"
+			"scrap":"0~1",
+			"smallbatteries":"0~1"
 		}
 	},
 	{
-		"id":"loosepapers",
+		"id":"loosepapers1",
 		"name":"Loose papers",
 		"desc":"Information that's nearly useless without organization",
 		"effect":{
 			"medicaldata":"0~2"
+		}
+	},
+	{
+		"id":"loosepapers2",
+		"name":"Loose papers",
+		"desc":"Information that's nearly useless without organization",
+		"effect":{
+			"research":"0~2"
 		}
 	},
 	{
@@ -22,6 +31,7 @@
 		"desc":"Materials used in diagnostics or research",
 		"effect":{
 			"unease":"0~1",
+			"medicalsupplies":"0~2",
 			"biology.exp":0.1
 		}
 	},
@@ -31,6 +41,7 @@
 		"desc":"Some simple tools, mostly destroyed",
 		"effect":{
 			"scrap":"0~2",
+			"smallbatteries":"0~1",
 			"engineering.exp":0.1
 		}
 	}
