@@ -1,9 +1,9 @@
 [
-		{
+	{
 		"id":"smcomputer",
 		"name":"onboard computer",
 		"desc":"A small device for processing data",
-		"require":"g.",
+		"require":"g.computeruse>0",
 		"repeat":true,
 		"cost":{
 			"electronics":5,
@@ -24,7 +24,7 @@
 	},
 	{
 		"id":"stimulants",
-		"name":"iron chest",
+		"name":"stims",
 		"desc":"You can sleep when you're dead",
 		"require":"g.medicine>0&&firstaidkit>0&&sleepaid<1",
 		"repeat":false,
