@@ -22,76 +22,7 @@
 		}
 
 	},
-
 	{
-		"id":"falconer",
-		"tags":"t_job",
-		"actdesc":"Tend your master's owls and falcons.",
-		"require":"animals",
-		"cost":{
-			"gold":100,
-			"research":100,
-			"arcana":1
-		},
-		"effect":{
-			"sp":1.25,
-			"player.exp":10
-		},
-		"mod":{
-			"evt_helper":true,
-			"lore.max":1,
-			"gold.rate":0.07,
-			"animals.rate":0.2,
-			"nature.max":1,
-			"nature.rate":0.1
-		}
-	},
-	{
-		"id":"herbalist",
-		"tags":"t_job",
-		"actdesc":"Gather herbs for your master's potions and alchemy.",
-		"require":"herbalism",
-		"cost":{
-			"gold":100,
-			"research":100,
-			"arcana":1
-		},
-		"effect":{
-			"evt_helper":true,
-			"sp":1.5,
-			"player.exp":10
-		},
-		"mod":{
-			"lore.max":1,
-			"gold.rate":0.08,
-			"herbalism.rate":0.2,
-			"alchemy.rate":0.1
-		}
-	},
-	{
-		"id":"scribe",
-		"tags":"t_job",
-		"actdesc":"Become your master's personal scribe.",
-		"require":"scribescroll",
-		"cost":{
-			"gold":100,
-			"research":100,
-			"arcana":1
-		},
-		"effect":{
-			"evt_helper":true,
-			"sp":1
-		},
-		"mod":{
-			"lore.max":1.5,
-			"arcana.rate":0.0001,
-			"research.max":10,
-			"history.max":1,
-			"gold.rate":0.1,
-			"lore.rate":0.2
-		},"flavor":"When I get a little money I buy books, and if any is left I buy food and clothes."
-	},
-{
 	"id":"neophyte",
 	"actdesc":"The final step on the twisting stairwell of apprenticeship.",
 	"require":"(g.evt_helper>0)&&g.research.max>=125&&g.spellbook.value>0",
@@ -123,51 +54,7 @@
 	"desc":"Your master behind you, you set off into the world alone. You had better find a new place to stay.",
 	"mod":"tier0"
 },
-{
 
-	"id":"blueadept",
-	"name":"blue adept",
-	"desc":"Dedicate yourself to putting the world in order.",
-	"require":"g.neophyte>0&&g.virtue>=200",
-	"tags":"t_tier0",
-	"cost":{
-		"arcana":7
-	},
-	"mod":{
-		"tier0":true,
-		"history.max":1,
-		"waterlore.max":1,
-		"airlore.max":1,
-		"dissection.max":-1,
-		"naturelore.max":-1
-	}
-},
-{
-	"id":"savant",
-	"name":"mystic savant",
-	"desc":"You have no need of these dry tomes and musty old books.",
-	"buyname":"Forgo Studies",
-	"tags":"t_tier0",
-	"require":"g.study<=0&&g.neophyte>0&&g.arcana>=5",
-	"cost":{
-		"arcana":7
-	},
-	"effect":{
-		"sp":1
-	},
-	"mod":{
-		"tier0":true,
-		"lore.max":-1,
-		"history.max":-1,
-		"lore.rate":"-2%",
-		"research.rate":0.2,
-		"conjuration.max":1,
-		"mana.max":1,
-		"spiritlore.max":1,
-		"mysticism.max":2,
-		"mysticism.rate":0.1
-	}
-},
 {
 	"id":"magician",
 	"tags":"t_tier1",
