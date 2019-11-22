@@ -62,8 +62,7 @@
 	"length":5,
 	"desc":"",
 	"run":{
-		"stamina":0.2,
-		"smallbatteries":0.2
+		"stamina":0.2
 	},
 	"loot":{
 		"computerbook":1
