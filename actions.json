@@ -57,7 +57,7 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "require":"flashlight",
+                "require":"g.flashlight>0",
                 "length":5,
                 "cost":{
                         "smallbattery":1
@@ -67,9 +67,9 @@
                 }    
         },
         {
-                "id":"scavenge",
+                "id":"salvage",
                 "perpetual":true,
-                "verb":"scavenge",
+                "verb":"salvaging",
                 "locked":false,
                 "desc":"Collect useful objects",
                 "run":{
