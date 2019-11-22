@@ -60,7 +60,7 @@
                 "require":"g.flashlight>0",
                 "length":5,
                 "cost":{
-                        "g.smallbatteries":1
+                        "smallbatteries":1
                 },
                 "run":{
                         "stamina":0.1
