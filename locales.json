@@ -58,7 +58,7 @@
 {
 	"id":"loc_mainframe",
 	"name":"Mainframe",
-	"require":"g.exploretunnel>0&&flashlight>0",
+	"require":"g.exploretunnel>0&&g.flashlight>0",
 	"length":5,
 	"desc":"",
 	"run":{
