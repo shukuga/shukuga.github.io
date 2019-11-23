@@ -80,13 +80,11 @@
                 "tags":"manas",
                 "desc":"raw magical energy",
                 "unit":false,
-                "require":"lore",
                 "name":"mana",
                 "max":5
         },
         {
                 "id":"fire",
-                "require":"firelore",
                 "unit":false,
                 "tags":"manas,element",
                 "desc":"Fire Mana",
@@ -94,7 +92,6 @@
         },
         {
                 "id":"air",
-                "require":"airlore",
                 "unit":false,
                 "tags":"manas,element",
                 "desc":"Air Mana",
@@ -104,7 +101,6 @@
                 "id":"earth",
                 "unit":false,
                 "tags":"manas,element",
-                "require":"earthlore",
                 "desc":"Earth Mana",
                 "max":0
         },
@@ -113,14 +109,12 @@
                 "unit":false,
                 "tags":"manas,element",
                 "desc":"Water Mana",
-                "require":"waterlore",
                 "max":0
         },
         {
                 "id":"nature",
                 "tags":"manas",
                 "unit":false,
-                "require":"naturelore",
                 "desc":"Nature Mana",
                 "max":0
         },
@@ -129,7 +123,6 @@
                 "name":"shadow",
                 "tags":"manas",
                 "unit":false,
-                "require":"shadowlore",
                 "desc":"Shadow mana",
                 "max":0
         },
@@ -137,7 +130,6 @@
                 "id":"light",
                 "tags":"manas",
                 "unit":false,
-                "require":"lightlore",
                 "desc":"Light mana",
                 "max":0
         },
@@ -148,12 +140,10 @@
                 "tags":"manas",
                 "unit":false,
                 "desc":"Spirit mana",
-                "require":"spiritlore",
                 "max":0
         },
         {
                 "id":"tempus",
-                "require":"chronomancy",
                 "tags":"manas",
                 "unit":false,
                 "desc":"Time incarnate. If only...",
