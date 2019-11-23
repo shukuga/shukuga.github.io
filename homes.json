@@ -6,8 +6,7 @@
 		"require":"repairedsuit",
 		"mod":{
 			"space.max":5,
-			"rest.stamina.rate":0.5,
-			"rest.hp.rate":0.1
+			"gold.max":5
 		}
 	}
 ]
