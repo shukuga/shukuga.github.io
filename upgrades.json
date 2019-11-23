@@ -17,7 +17,7 @@
                 "desc":"With a little work, this device will allow you to breath in small areas",
                 "require":"g.explorewest>0",
                 "cost":{
-                        "scrap":2
+                        "gold":2
                 }
          },
          {
