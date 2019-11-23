@@ -7,11 +7,6 @@
 		"desc":"You awake on an unfamiliar world, surrounded by debris. Your space suit is damaged. Nothing else matters until you can stabilize your condition."
 	},
 	{
-		"id":"evt_scroll",
-		"name":"A tattered scroll",
-		"desc":"You buy a strange scroll from a travelling peddlar. If you could only decipher the cryptic symbols."
-	},
-	{
 		"id":"evt_podhome",
 		"name":"Repressurized escape pod",
 		"desc":"A small space where you can take off your helmet and plan your next move.",
@@ -44,24 +39,6 @@
 		"name":"Escape pod",
 		"desc":"",
 		"require":"g.explorescape>0"
-	},
-	{
-		"id":"evt_gobcamp",
-		"name":"Goblins, Goblins!",
-		"require":"g.tier0&&g.player.level>=4&&g.dist>=25",
-		"desc":"Rumors hint at a camp of goblins in the vicinity. As an aspiring wizard, convention dictates you test your mettle on their lives."
-	},
-	{
-		"id":"evt_rangers",
-		"name":"Interlopers",
-		"require":"g.tier7>0&&g.player.level>=7&&g.evilamt>=50",
-		"desc":"Hearing of your wicked deeds, the rangers of the Ettinmarch plots your downfall. An assault on their camps should crush their presumption."
-	},
-	{
-		"id":"evt_cabal",
-		"name":"Plotters",
-		"require":"g.tier7>0&&g.player.level>=7&&g.virtue>=50",
-		"desc":"Learning of your virtuous ways, a cabal of cytherian priests plots your overthrow. deal with them for the good of the land."
 	},
 	{
 		"id":"tier0",
