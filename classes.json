@@ -1141,32 +1141,5 @@
 			"lore.max":2,
 			"lore.rate":"10%"
 		},"flavor":"it waits in time"
-	},
-	{
-		"id":"highkell",
-		"name":"high kell",
-		"desc":"the ranks of the kell range from the lesser fey and forest delki, to ancient spirits, old and indominable.",
-		"tags":"t_tier6",
-		"require":"g.tier5>0&&(g.fey+g.kell)>0",
-		"cost":{
-			"research":15000,
-			"naturegem":50,
-			"herbs":75,
-			"arcana":35,
-			"waterrune":15,
-			"runestones":15
-		},
-		"mod":{
-			"tier6":true,
-			"airlore.max":2,
-			"airlore.rate":"10%",
-			"naturelore.max":3,
-			"naturelore.rate":"15%",
-			"animals.max":2,
-			"animals.rate":"10%",
-			"earthlore.max":1,
-			"earthlore.rate":"15%"
-		},"flavor":"'It's of no consequence to me,' replied Jora. 'I do not die Trill, and there are few things in this world that could do the trick."
 	}
-
 ]
