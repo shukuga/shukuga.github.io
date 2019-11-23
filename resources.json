@@ -69,6 +69,10 @@
                 "max":1
         },
         {
+                "id":"electronics",
+                "max":10
+        },
+        {
                 "id":"space",
                 "name":"floor space",
                 "desc":"Space Available",
@@ -77,92 +81,11 @@
         },
         {
                 "id":"mana",
+                "name":"energy",
                 "tags":"manas",
-                "desc":"raw magical energy",
+                "desc":"rawenergy",
                 "unit":false,
-                "name":"mana",
                 "max":5
-        },
-        {
-                "id":"fire",
-                "unit":false,
-                "tags":"manas,element",
-                "desc":"Fire Mana",
-                "max":0
-        },
-        {
-                "id":"air",
-                "unit":false,
-                "tags":"manas,element",
-                "desc":"Air Mana",
-                "max":0
-        },
-        {
-                "id":"earth",
-                "unit":false,
-                "tags":"manas,element",
-                "desc":"Earth Mana",
-                "max":0
-        },
-        {
-                "id":"water",
-                "unit":false,
-                "tags":"manas,element",
-                "desc":"Water Mana",
-                "max":0
-        },
-        {
-                "id":"nature",
-                "tags":"manas",
-                "unit":false,
-                "desc":"Nature Mana",
-                "max":0
-        },
-        {
-                "id":"shadow",
-                "name":"shadow",
-                "tags":"manas",
-                "unit":false,
-                "desc":"Shadow mana",
-                "max":0
-        },
-        {
-                "id":"light",
-                "tags":"manas",
-                "unit":false,
-                "desc":"Light mana",
-                "max":0
-        },
-        {
-
-
-                "id":"spirit",
-                "tags":"manas",
-                "unit":false,
-                "desc":"Spirit mana",
-                "max":0
-        },
-        {
-                "id":"tempus",
-                "tags":"manas",
-                "unit":false,
-                "desc":"Time incarnate. If only...",
-                "max":0
-        },
-        {
-                "id":"chaos",
-                "tags":"manas",
-                "unit":false,
-                "desc":"Chaos incarnate. No current use.",
-                "max":0
-        },
-        {
-                "id":"void",
-                "tags":"manas",
-                "unit":false,
-                "desc":"nothingness. No current use.",
-                "flavor":"",
-                "max":0
         }
 
 
