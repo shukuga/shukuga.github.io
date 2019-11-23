@@ -2,10 +2,12 @@
 	{
 		"id":"smcomputer",
 		"name":"onboard computer",
+		"require":"computeruse",
 		"desc":"A small device for processing data",
 		"repeat":true,
 		"cost":{
 			"electronics":5,
+			"processing.max":1,
 			"space":1
 		},
 		"mod":{
