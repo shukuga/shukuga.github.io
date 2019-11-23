@@ -5501,7 +5501,7 @@ var wizrobe = function(t) {
             let t = {};
             for (let e in this.slots) this.slots[e] && (t[e] = this.slots[e].id);
             return {
-                version: 994,
+                version: 1,
                 items: this.items,
                 bars: this.bars,
                 slots: t,
@@ -10347,7 +10347,7 @@ var wizrobe = function(t) {
     Y._withStripped = !0;
     var Z = {
             computed: {
-                VERSION: () => 994
+                VERSION: () => 1
             },
             methods: {
                 fileSelect(t) {
