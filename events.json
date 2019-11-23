@@ -10,7 +10,11 @@
 		"id":"evt_podhome",
 		"name":"Repressurized escape pod",
 		"desc":"A small space where you can take off your helmet and plan your next move.",
-		"require":"g.escaperepair>0&&g.scrubbers>0"
+		"require":"g.escaperepair>0&&g.scrubbers>0",
+		"mod":{
+			"gold.max":5,
+			"rest.stamina.rate":0.2,
+			"rest.hp.rate":0.1
 
 	},
 	{
@@ -19,6 +23,7 @@
 		"desc":"With your suit intact you have a chance to breathe. You can remember the evacuation alarms. Were you the only one who didn't escape in time?",
 		"disable":["stabilize"],
 		"mod":{
+			"hp.max":"1",
 			"stamina.max":4
 		}
 	},
