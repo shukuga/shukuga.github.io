@@ -1,4 +1,23 @@
 [
+
+	{
+		"id":"evt_intro",
+		"name":"Prologue",
+		"require":"hp",
+		"desc":"You awake on an unfamiliar world, surrounded by debris. Your space suit is damaged. Nothing else matters until you can stabilize your condition."
+	},
+	{
+		"id":"evt_scroll",
+		"name":"A tattered scroll",
+		"desc":"You buy a strange scroll from a travelling peddlar. If you could only decipher the cryptic symbols."
+	},
+	{
+		"id":"evt_podhome",
+		"name":"Repressurized escape pod",
+		"desc":"A small space where you can take off your helmet and plan your next move.",
+		"require":"g.escaperepair>0&&g.scrubbers>0"
+
+	},
 	{
 		"id":"repairedsuit",
 		"name":"Intact Suit",
@@ -7,5 +26,274 @@
 		"mod":{
 			"stamina.max":4
 		}
+	},
+	{
+		"id":"findmedicalbay",
+		"name":"Destroyed Medical Bay",
+		"desc":"",
+		"require":"g.explorenorth>0"
+	},
+	{
+		"id":"findmaintenancescrap",
+		"name":"Maintenance Room Scrap",
+		"desc":"",
+		"require":"g.explorewest>0"
+	},
+	{
+		"id":"findescapepod",
+		"name":"Escape pod",
+		"desc":"",
+		"require":"g.explorescape>0"
+	},
+	{
+		"id":"evt_gobcamp",
+		"name":"Goblins, Goblins!",
+		"require":"g.tier0&&g.player.level>=4&&g.dist>=25",
+		"desc":"Rumors hint at a camp of goblins in the vicinity. As an aspiring wizard, convention dictates you test your mettle on their lives."
+	},
+	{
+		"id":"evt_rangers",
+		"name":"Interlopers",
+		"require":"g.tier7>0&&g.player.level>=7&&g.evilamt>=50",
+		"desc":"Hearing of your wicked deeds, the rangers of the Ettinmarch plots your downfall. An assault on their camps should crush their presumption."
+	},
+	{
+		"id":"evt_cabal",
+		"name":"Plotters",
+		"require":"g.tier7>0&&g.player.level>=7&&g.virtue>=50",
+		"desc":"Learning of your virtuous ways, a cabal of cytherian priests plots your overthrow. deal with them for the good of the land."
+	},
+	{
+		"id":"tier0",
+		"name":"Solitary Magic",
+		"desc":"Some say the study of magic doesn't truly begin until apprenticeship ends. People say a lot of things.",
+		"disable":["study", "chores","errands","leavemaster","slaymaster", "pestcontrol", "alcove", "atticbedroom"],
+		"lock":"t_tier0",
+		"effect":{
+			"innroom":true,
+			"sp":1,
+			"player.exp":15
+		},
+		"mod":{
+			"fame":1,
+			"research.max":15
+		}
+
+	},
+	{
+		"id":"tier1",
+		"name":"Professional Magick",
+		"desc":"Every province has its handful of runaway apprentices and failed Adepts. It's not uncommon for thieves and rangers to know a spell or two. They are nothing compared to the talents of a true professional.",
+		"disable":["treatailments","prestidigitation","buyscroll"],
+		"lock":["t_tier1", "t_tier0"],
+		"effect":{
+			"sp":1,
+			"player.exp":15
+		},
+		"mod":{
+			"fame":2,
+			"crafting.max":1,
+			"arcanebody.max":1,
+			"occultendure.max":1,
+			"crystalmind.max":1
+		}
+
+	},
+	{
+		"id":"tier2",
+		"name":"Arcane Ascendant",
+		"desc":"The masses of arcane dabblers never reach such heights.",
+		"lock":"t_tier2",
+		"effect":{
+			"player.exp":25
+		},
+		"mod":{
+			"fame":3,
+			"lore.max":2,
+			"arcanebody.max":1,
+			"occultendure.max":1,
+			"crystalmind.max":1
+		}
+
+	},
+	{
+		"id":"tier3",
+		"name":"Magical Mastery",
+		"desc":"You are a master of your field of magic.",
+		"lock":"t_tier3",
+		"effect":{
+			"sp":1,
+			"player.exp":50
+		},
+		"mod":{
+			"fame":4,
+			"lore.max":3,
+			"crafting.max":2,
+			"arcanebody.max":1,
+			"occultendure.max":1,
+			"crystalmind.max":1
+		}
+
+	},
+	{
+		"id":"tier4",
+		"name":"Supreme Sorcery",
+		"desc":"Not even the masters could challenge you.",
+		"lock":"t_tier4",
+		"effect":{
+			"sp":1,
+			"player.exp":75
+		},
+		"mod":{
+			"fame":5,
+			"lore.max":4,
+			"crafting.max":2,
+			"arcanebody.max":1,
+			"occultendure.max":1,
+			"crystalmind.max":1
+		}
+
+	},
+	{
+		"id":"tier5",
+		"name":"Dhrunic Magic",
+		"desc":"Magic from a forgotten age.",
+		"lock":"t_tier5",
+		"effect":{
+			"sp":1,
+			"player.exp":100
+		},
+		"mod":{
+			"fame":6,
+			"lore.max":4,
+			"crafting.max":2,
+			"arcanebody.max":1,
+			"arcanebody2.max":2,
+			"occultendure.max":1,
+			"crystalmind.max":2
+		}
+
+	},
+	{
+		"id":"tier6",
+		"name":"Ageless Magic",
+		"desc":"ages of the world come and go; only these endure.",
+		"lock":"t_tier6",
+		"effect":{
+			"sp":1,
+			"player.exp":100
+		},
+		"mod":{
+			"fame":7,
+			"lore.max":3,
+			"crafting.max":4,
+			"arcanebody.max":1,
+			"arcanebody2.max":1,
+			"occultendure.max":1,
+			"crystalmind.max":1
+		}
+
+	},
+	{
+		"id":"tier7",
+		"name":"Dhrunic Pillar",
+		"desc":"a foundation of the world",
+		"lock":"t_tier7",
+		"effect":{
+			"sp":1,
+			"player.exp":100
+		},
+		"mod":{
+			"fame":8,
+			"lore.max":4,
+			"crafting.max":2,
+			"arcanebody.max":1,
+			"arcanebody2.max":2,
+			"occultendure.max":1,
+			"crystalmind.max":1
+		}
+
+	},
+	{
+
+		"id":"decent",
+		"require":"g.virtue>75&&g.evilamt<10",
+		"desc":"You are turning out to be an upstanding spellcaster.",
+		"mod":{
+			"light.rate":0.1
+		}
+
+	},
+	{
+
+		"id":"respectable",
+		"require":"g.virtue>350&&g.evilamt<20",
+		"desc":"You have become a respected personage in the magical world.",
+		"mod":{
+			"fame":1,
+			"light.rate":0.1
+		}
+
+	},
+	{
+
+		"id":"good",
+		"name":"virtuous",
+		"require":"g.virtue>750&&g.evil<=0",
+		"desc":"Your actions have shown you to be a virtuous wizard.",
+		"mod":{
+			"light.max":1,
+			"lightlore.rate":0.1,
+			"lightlore.max":1
+		}
+
+	},
+	{
+		"id":"secretfire",
+		"name":"servant of the secret fire",
+		"desc":"",
+		"mod":{
+			"firelore.rate":0.2,
+			"firelore.max":1,
+			"lightlore.rate":0.2,
+			"lightlore.max":1
+		}
+
+	},
+	{
+		"id":"immoral",
+		"desc":"You have taken your first steps on the path of evil. It's a good thing.",
+		"require":"g.evilamt>=5",
+		"mod":{
+			"shadowlore.rate":0.2
+		}
+
+	},
+	{
+		"id":"wicked",
+		"desc":"Your wicked deeds put you on the sure path of evil. A few more steps, and there will be no turning back.",
+		"require":"g.evilamt>=250",
+		"mod":{
+			"fame":1,
+			"shadowlore.max":1,
+			"shadowlore.rate":0.2
+		}
+
+	},
+	{
+		"id":"evil",
+		"name":"vile",
+		"desc":"Freed of pitiful notions of right, and morality, the dark arts lie open before you.",
+		"require":"g.evilamt>500",
+		"disable":["light","good", "lightlore"],
+		"mod":{
+			"shadow.max":1,
+			"shadowlore":{
+				"max":1,
+				"rate":0.1
+			}
+		}
+
 	}
+
 ]
