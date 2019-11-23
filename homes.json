@@ -1,9 +1,9 @@
 [
 	{
-		"id":"escapepod",
-		"desc":"A small piece of your ship",
-		"flavor":"Better than dirt",
-		"require":"g.escaperepair>0&&g.scrubbers>0",
+		"id":"h_suit1",
+		"name":"escape suit"
+		"desc":"Not intended for long-term or rugged use",
+		"require":"repairedsuit",
 		"mod":{
 			"space.max":5,
 			"rest.stamina.rate":0.5,
