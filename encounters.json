@@ -4,7 +4,7 @@
 		"name":"Dig through rubble",
 		"desc":"Find out what's at the bottom of this pile.",
 		"result":{
-			"scrap":"0~1"
+			"gold":"0~1"
 		}
 	},
 	{
@@ -30,7 +30,7 @@
 		"name":"mangled toolbox",
 		"desc":"a tree by a magic spring exhibits surprising qualities",
 		"effect":{
-			"scrap":"0~2",
+			"gold":"0~2",
 			"engineering.exp":0.1
 		}
 	}
