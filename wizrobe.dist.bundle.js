@@ -443,25 +443,13 @@ var wizrobe = function(t) {
             this.loaded = !1, this.state = null, this._items = null
         },
         load(t = null, e = null) {
-            return this.reset(), this.log.clear(), r.J.init(this), this.runner = null, this.loader = s.a.loadGame(t).then(i => (this.state = new o.b(i, t), this.itemGen = new h.a(this.state), this._items = this.state.items, this.runner = this.state.runner, e && this.addData(e), this.recheckTiers(), this.restoreMods(), d = new u(this._items), r.J.add(r.u, d.unlocked, d), d.forceCheck(), r.J.add(r.p, this.enterLoc, this), r.J.add(r.v, this.enterLoc, this), r.J.add(r.E, this.setSlot, this), r.J.add(r.m, this.onDelete, this), this.loaded = !0, this), t => {
+            return this.reset(), this.log.clear(), r.J.init(this), this.runner = null, this.loader = s.a.loadGame(t).then(i => (this.state = new o.b(i, t), this.itemGen = new h.a(this.state), this._items = this.state.items, this.runner = this.state.runner, e && this.addData(e), this.restoreMods(), d = new u(this._items), r.J.add(r.u, d.unlocked, d), d.forceCheck(), r.J.add(r.p, this.enterLoc, this), r.J.add(r.v, this.enterLoc, this), r.J.add(r.E, this.setSlot, this), r.J.add(r.m, this.onDelete, this), this.loaded = !0, this), t => {
                 console.error(t.message + "\n" + t.stack)
             })
         },
         logStat(t, e) {
             let i = this.getData(t);
             i ? (e && Object(n.h)(i, "LOG STAT"), console.warn(t + " value: " + i.value), console.log(i.constructor.name)) : console.warn("STAT MISSING: " + t)
-        },
-        recheckTiers() {
-            let t = "",
-                e = -1;
-            for (; ++e <= 5;) {
-                for (var i = this.state.getTagList("t_tier" + e), s = this.state.getData("tier" + e), n = !1, r = i.length - 1; r >= 0; r--)
-                    if (i[r].value > 0) {
-                        t = i[r].name, s.locked ? s.locked = !1 : 0 == s.value && s.doUnlock(this), n = !0;
-                        break
-                    } n || (s.value = 0)
-            }
-            t && !this.state.player.gclass && this.state.player.setClass(t)
         },
         restoreMods() {
             let t = this.state.items;
