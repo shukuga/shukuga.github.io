@@ -28,11 +28,11 @@
 	},
 	{
 		"id":"sect_spells",
-		"name":"spells",
+		"name":"spells"
 	},
 	{
 		"id":"sect_scraft",
-		"name":"spellcraft",
+		"name":"spellcraft"
 	},
 	{
 		"id":"sect_equip",
