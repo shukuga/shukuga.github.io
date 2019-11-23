@@ -4,7 +4,8 @@
 		"name":"Dig through rubble",
 		"desc":"Find out what's at the bottom of this pile.",
 		"result":{
-			"gold":"0~1"
+			"gold":"0~1",
+			"electronics":"0~1"
 		}
 	},
 	{
@@ -22,7 +23,9 @@
 		"desc":"Materials used in diagnostics or research",
 		"effect":{
 			"unease":"0~1",
-			"biology.exp":0.1
+			"medicaldata":"0~1",
+			"medicalsupplies":"0~1",
+			"medicine.exp":0.1
 		}
 	},
 	{
@@ -31,6 +34,8 @@
 		"desc":"a tree by a magic spring exhibits surprising qualities",
 		"effect":{
 			"gold":"0~2",
+			"electronics":"0~1",
+			"smallbatteries":"0~1",
 			"engineering.exp":0.1
 		}
 	}
