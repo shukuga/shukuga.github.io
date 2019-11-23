@@ -20,6 +20,7 @@
 		"require":"g.explorewest>0",
 		"repeat":false,
 		"cost":{
+			"gold":1,
 			"space":1
 		}
 	},
@@ -33,8 +34,9 @@
 			"medicalsupplies":2
 		},
 		"mod":{
-			"stamina.rate":0.2,
-			"rest.stamina.rate":-0.4
+			"stamina.rate":0.1,
+			"rest.stamina.rate":-0.2,
+			"rest.hp.rate":-0.1
 		}
 	},
 	{
@@ -47,8 +49,8 @@
 			"medicalsupplies":2
 		},
 		"mod":{
-			"stamina.rate":-0.2,
-			"rest.stamina.rate":0.4
+			"stamina.rate":-0.1,
+			"rest.stamina.rate":0.2
 		}
 	},
         {
