@@ -5,7 +5,6 @@
 		"actname":"Apprenticeship",
 		"actdesc":"Become an apprentice.",
 		"require":"research",
-		"disable":["focus"],
 		"warn":false,
 		"log":{
 			"name":"Apprentice",
