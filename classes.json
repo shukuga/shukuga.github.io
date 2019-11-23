@@ -5,7 +5,7 @@
 		"actname":"Apprenticeship",
 		"actdesc":"Become an apprentice.",
 		"require":"research",
-		"disable":["cleanstables"],
+		"disable":["focus"],
 		"warn":false,
 		"log":{
 			"name":"Apprentice",
@@ -20,38 +20,4 @@
 			"player.exp":5,
 			"sp":1
 		}
-
-	},
-	{
-	"id":"neophyte",
-	"actdesc":"The final step on the twisting stairwell of apprenticeship.",
-	"require":"(g.evt_helper>0)&&g.research.max>=125&&g.spellbook.value>0",
-	"log":{
-		"name":"Neophyte",
-		"desc":"Your master has decided you are ready to take the next step on the path of wizardry."
-	},
-	"flavor":"Why does Master charge so many fees?",
-	"cost":{
-		"gold":150,
-		"research":175,
-		"arcana":3
-	},
-	"effect":{
-		"sp":1,
-		"player.exp":10
-	},
-	"mod":{
-		"research.max":10,
-		"arcana.rate":0.0001,
-		"lore.max":1,
-		"lore.rate":0.2
-	}
-},
-{
-	"id":"adept",
-	"name":"adept",
-	"tags":"t_tier0",
-	"desc":"Your master behind you, you set off into the world alone. You had better find a new place to stay.",
-	"mod":"tier0"
-}
 ]
