@@ -1,7 +1,7 @@
 [
         {
                 "id":"gold",
-                "name":"junk"
+                "name":"junk",
                 "desc":"Gold Coins",
                 "locked":false,
                 "max":5
