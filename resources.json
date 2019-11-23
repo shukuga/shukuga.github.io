@@ -1,7 +1,7 @@
 [
         {
                 "id":"gold",
-                "name":"junk",
+                "name":"scrap",
                 "desc":"Gold Coins",
                 "locked":false,
                 "max":5
@@ -24,11 +24,6 @@
                 "school":"arcane",
                 "desc":"Profound mystical knowledge",
                 "max":0
-        },
-        {
-                "id":"scrap",
-                "desc":"miscellaneous objects of dubious use",
-                "max":10
         },
         {       "id":"datasource",
                 "name":"Data source",
