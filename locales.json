@@ -31,7 +31,7 @@
 		"stamina":0.2
 	},
 	"loot":{
-		"scrap":"2~5",
+		"gold":"2~5",
 		"engineeringbook":1
 	},
 	"encs":[
@@ -49,7 +49,7 @@
 		"stamina":0.2
 	},
 	"loot":{
-		"scrap":"0~1"
+		"gold":"0~1"
 	},
 	"encs":[
 		"rubble1"
