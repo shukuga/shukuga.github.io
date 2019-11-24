@@ -14,7 +14,7 @@
 	{
 		"id":"suitlevel",
 		"name":"suitlevel",
-		"desc":"Wizard life-force",
+		"desc":"",
 		"hidden":false,
 		"val":0,
 		"unit":true,
@@ -53,7 +53,7 @@
 		"id":"dist",
 		"name":"distance",
 		"desc":"Maximum travel distance.",
-		"val":0,
+		"val":5,
 		"stat":true,
 		"locked":false
 	},
