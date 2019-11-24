@@ -4,7 +4,7 @@
 		"id":"evt_intro",
 		"name":"Prologue",
 		"require":"hp",
-		"desc":"You awake on an unfamiliar world, surrounded by debris. Your space suit is damaged. Nothing else matters until you can stabilize your condition."
+		"desc":"You awaken on an unfamiliar world, surrounded by debris. Your space suit is damaged. Nothing else matters until you can stabilize your condition."
 	},
 	{
 		"id":"evt_podhome",
