@@ -60,7 +60,7 @@
                 "repeat":false,
                 "verb":"Exploring",
                 "need":"g.flashlight>0",
-                "require":"g.dist>1",
+                "require":"g.dist>6",
                 "length":5,
                 "cost":{
                         "smallbatteries":1
