@@ -6,7 +6,8 @@
 		"require":"repairedsuit",
 		"mod":{
 			"space.max":5,
-			"gold.max":5
+			"gold.max":5,
+			"dist":1
 		}
 	}
 ]
