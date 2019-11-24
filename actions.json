@@ -148,11 +148,29 @@
                 "effect":{
                         "manas":{
                                 "skipLocked":true,
-                                "value":1
+                                "value":0.5
                         },
                         "stamina":1,
                         "hp":0.1,
-                        "stress":-1
+                        "stress":-.5
+                }
+        },
+        {
+                "id":"a_firstaid",
+                "tags":"t_rest",
+                "name":"Perform first aid",
+                "slot":"rest",
+                "verb":"ministrating",
+                "perpetual":true,
+                "fill":[ "stamina", "hp", "manas", "stress"],
+                "effect":{
+                        "manas":{
+                                "skipLocked":true,
+                                "value":0.1
+                        },
+                        "stamina":0.1,
+                        "hp":1,
+                        "stress":-0.1
                 }
         },
         {
