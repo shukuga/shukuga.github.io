@@ -161,6 +161,7 @@
                 "name":"Perform first aid",
                 "slot":"rest",
                 "verb":"ministrating",
+                "require":"g.firstaid>0&&g.medicine>0",
                 "perpetual":true,
                 "fill":[ "stamina", "hp", "manas", "stress"],
                 "effect":{
