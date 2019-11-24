@@ -16,40 +16,45 @@
 		"need":"g.medicine>1",
 		"desc":"Biotechnology",
 		"buy":{},
+		"level":1,
 		"run":{
 			"medicalsupplies":1
 		},
 		"mod":{
 			"research.max":1,
+			"g.medical.max":0.2,
 			"medicalsupplies.max":10
 		}
 	},
 	{
 		"id":"maintenance",
-		"need":"g.engineeringbook>0",
+		"need":"g.maintenancebook>0",
 		"desc":"Keeping objects in working order",
 		"buy":{},
 		"run":{
 			"stamina":0.5
 		},
 		"mod":{
-			"research.max":1
+			"research.max":1,
+			"g.biology.rate":0.1
 		}
 	},
 	{
 		"id":"engineering",
 		"need":"g.maintenance>1",
 		"desc":"an absolutely vital skill for an engineer to craft complicated objects.",
+		"level":1,
 		"buy":{},
 		"run":{
 			"stamina":0.5
 		},
 		"mod":{
-			"research.max":1
+			"research.max":1,
+			"g.maintenance.max":0.2
 		}
 	},
 		{
-		"id":"datanalysis",
+		"id":"computeruser",
 		"need":"g.computerbook>0",
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
@@ -57,7 +62,8 @@
 			"stamina":0.5
 		},
 		"mod":{
-			"research.max":1
+			"research.max":1,
+			"processing.max":1
 		}
 	}
 ]
