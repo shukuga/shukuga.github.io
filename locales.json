@@ -32,7 +32,7 @@
 	},
 	"loot":{
 		"gold":"2~5",
-		"engineeringbook":1
+		"maintenancebook":1
 	},
 	"encs":[
 		"toolbox",
