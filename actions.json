@@ -21,7 +21,7 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "need":"dist>0"
+                "need":"dist>0",
                 "require":"repairedsuit",
                 "length":5,
                 "run":{
@@ -34,7 +34,7 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "need":"dist>0"
+                "need":"dist>0",
                 "require":"repairedsuit",
                 "length":5,
                 "run":{
@@ -60,7 +60,7 @@
                 "repeat":false,
                 "verb":"Exploring",
                 "need":"g.flashlight>0",
-                "require":"dist>1"
+                "require":"dist>1",
                 "length":5,
                 "cost":{
                         "smallbatteries":1
@@ -70,9 +70,9 @@
                 }    
         },
         {
-                "id":"salvage",
+                "id":"scavenge",
                 "perpetual":true,
-                "verb":"salvaging",
+                "verb":"Scavenging",
                 "locked":false,
                 "desc":"Collect useful objects",
                 "run":{
