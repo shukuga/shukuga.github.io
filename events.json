@@ -9,7 +9,7 @@
 	{
 		"id":"evt_podhome",
 		"name":"Repressurized escape pod",
-		"desc":"A small space where you can take off your helmet and plan your next move.",
+		"desc":"You have turned your escape pod into a makeshift shelter from the alien element. It is only a small space where you can take off your helmet and plan your next move.",
 		"require":"g.escaperepair>0&&g.scrubbers>0",
 		"mod":{
 			"gold.max":5,
@@ -30,19 +30,20 @@
 	{
 		"id":"findmedicalbay",
 		"name":"Destroyed Medical Bay",
-		"desc":"",
+		"desc":"This is a small section of your ship that was dedicated to handling injuries. While most of the machinery is useless without the ship's system, some of the equipment can be repurposed.",
 		"require":"g.explorenorth>0"
 	},
 	{
 		"id":"findmaintenancescrap",
-		"name":"Maintenance Room Scrap",
-		"desc":"",
+		"name":"Maintenance Closet",
+		"desc":"Tools and materials used in basic ship repairs and maintinance. There may even be some literature on how to perform such repairs.",
 		"require":"g.explorewest>0"
 	},
 	{
-		"id":"findescapepod",
-		"name":"Escape pod",
+		"id":"findtunnel",
+		"name":"Dark tunnel",
 		"desc":"",
+		"need":"g.flashlight>0",
 		"require":"g.explorescape>0"
 	}
 ]
