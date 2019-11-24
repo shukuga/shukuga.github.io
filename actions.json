@@ -21,7 +21,7 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "need":"g.dist>0",
+                "need":"g.dist>5",
                 "require":"repairedsuit",
                 "length":5,
                 "run":{
@@ -34,7 +34,7 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "need":"g.dist>0",
+                "need":"g.dist>5",
                 "require":"repairedsuit",
                 "length":5,
                 "run":{
@@ -112,10 +112,21 @@
                 "run":{
                         "stamina":1
                 }
+        },       
+        {
+                "id":"maintenancebook",
+                "name":"Maintenance procedures",
+                "length":4,
+                "repeat":false,
+                "verb":"studying",
+                "desc":"Learn the basics of maintaining ship equipment",
+                "run":{
+                        "stamina":1
+                }
         },
         {
                 "id":"engineeringbook",
-                "name":"engineering book",
+                "name":"engineering references",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
