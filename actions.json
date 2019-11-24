@@ -81,7 +81,10 @@
                 },
                 "every":{
                         "100":{
-                                "effect.gold":0.05
+                                "effect.electronics":0.1
+                        },
+                        "200":{
+                                "effect.smallbatteries":0.05
                         }
                 },
                 "effect":{
@@ -101,7 +104,7 @@
          },
         {
                 "id":"medicalbook",
-                "name":"Medical book",
+                "name":"Study Medical textbooks",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
@@ -111,39 +114,51 @@
                 },
                 "run":{
                         "stamina":1
+                },
+                "effect":{
+                        "research":1
                 }
         },       
         {
                 "id":"maintenancebook",
-                "name":"Maintenance procedures",
+                "name":"Study Maintenance procedures",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of maintaining ship equipment",
                 "run":{
                         "stamina":1
+                },
+                "effect":{
+                        "research":1
                 }
         },
         {
                 "id":"engineeringbook",
-                "name":"engineering references",
+                "name":"Study engineering references",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of engineering",
                 "run":{
                         "stamina":1
+                },
+                "effect":{
+                        "research":1
                 }
         },
         {
                 "id":"computerbook",
-                "name":"software manuals",
+                "name":"Study software manuals",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of computer user",
                 "run":{
                         "stamina":1
+                },
+                "effect":{
+                        "research":1
                 }
         },
         {
