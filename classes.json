@@ -4,7 +4,7 @@
 		"desc":"apprentice to a notable wizard",
 		"actname":"Apprenticeship",
 		"actdesc":"Become an apprentice.",
-		"require":"research",
+		"require":"g.medicine>99",
 		"warn":false,
 		"log":{
 			"name":"Apprentice",
