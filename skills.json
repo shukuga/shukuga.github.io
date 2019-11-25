@@ -4,12 +4,13 @@
 		"need":"g.medicalbook>0",
 		"desc":"How to take care of your squishy body",
 		"buy":{},
-		"max":-3,
+		"max":2,
 		"run":{
 			"stamina":0.5
 		},
 		"mod":{
-			"research.max":1
+			"research.max":1,
+			"g.biology.rate":0.1
 		}
 	},
 	{
@@ -37,7 +38,7 @@
 		},
 		"mod":{
 			"research.max":1,
-			"g.biology.rate":0.1
+			"g.engineering.rate":0.1
 		}
 	},
 	{
