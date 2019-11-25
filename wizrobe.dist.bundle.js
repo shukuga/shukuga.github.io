@@ -4219,7 +4219,7 @@ var wizrobe = function(t) {
             }
             this.buy || (this.buy = {
                 sp: 1
-            }), this.rate ? this.rate.base || (this.rate.base = 1) : this.rate = new n.a(1, "rate"), this.max || (this.max = new n.a(5, "max", !0))
+            }), this.rate ? this.rate.base || (this.rate.base = 1) : this.rate = new n.a(1, "rate"), this.max || (this.max = new n.a(2, "max", !0))
         }
         canBuy(t) {
             return !(this.disabled || this.locked || this.locks > 0) && !(this.buy && !t.canPay(this.buy))
