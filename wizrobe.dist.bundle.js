@@ -3536,7 +3536,7 @@ var wizrobe = function(t) {
             t instanceof s.a ? this._sp = t : this._sp.value = t
         }
         constructor(t = null) {
-            super(t), this.id = this.type = "player", t && t.name || (this.name = "wizrobe"), this.hid || (this.hid = f()), this.level || (this.level = 0), this._title = this._title || "waif", this.titles = this._titles || [], this._next = this._next || 50, this.retreat = this.retreat || 0, this.initStates(), this.tohit || (this.tohit = 1), this.defense || (this.defense = 0), this.alignment = this.alignment || "neutral", null !== this.damage && void 0 !== this.damage || (this.damage = 1), this.weapon || (this.weapon = p)
+            super(t), this.id = this.type = "player", t && t.name || (this.name = "Unnamed Survivor"), this.hid || (this.hid = f()), this.level || (this.level = 0), this._title = this._title || "waif", this.titles = this._titles || [], this._next = this._next || 50, this.retreat = this.retreat || 0, this.initStates(), this.tohit || (this.tohit = 1), this.defense || (this.defense = 0), this.alignment = this.alignment || "neutral", null !== this.damage && void 0 !== this.damage || (this.damage = 1), this.weapon || (this.weapon = p)
         }
         setClass(t) {
             this.gclass = t, this.setTitle(t), h.J.emit(h.f, this)
