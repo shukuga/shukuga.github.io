@@ -13,20 +13,23 @@
         },
         {
                 "id":"scrubbers",
-                "name":"Portable CO2 scrubber",
+                "name":"Repair Portable CO2 scrubber",
                 "desc":"With a little work, this device will allow you to breath in small areas",
-                "require":"g.explorewest>0",
+                "require":"g.explorewest>0&&g.maintenance>0",
                 "cost":{
-                        "gold":2
+                        "gold":5,
+                        "electronics":1
                 }
          },
          {
                 "id":"firstaid",
-                "name":"First Aid Kit",
-                "desc":"Supplies to help you return to a healthier state",
-                "require":"g.explorenorth>0",
+                "name":"Assemble First Aid Kit",
+                "desc":"A complete set of supplies to help you return to a healthier state",
+                "require":"g.explorenorth>0&&g.medicine>0",
+                "cost":{
+                        "medicalsupplies":10
+                }
                 "mod":{
-                        "hp.max":1,
                         "rest.hp.rate":0.1
                 }
          }
