@@ -38,7 +38,7 @@
 		},
 		"mod":{
 			"research.max":1,
-			"g.engineering.rate":0.1
+			"engineering.rate":0.1
 		}
 	},
 	{
