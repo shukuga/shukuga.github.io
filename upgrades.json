@@ -28,7 +28,7 @@
                 "require":"g.explorenorth>0&&g.medicine>0",
                 "cost":{
                         "medicalsupplies":10
-                }
+                },
                 "mod":{
                         "rest.hp.rate":0.1
                 }
