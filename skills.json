@@ -10,7 +10,7 @@
 		},
 		"mod":{
 			"research.max":1,
-			"g.biology.rate":0.1
+			"biology.rate":0.1
 		}
 	},
 	{
@@ -52,7 +52,7 @@
 		},
 		"mod":{
 			"research.max":1,
-			"g.maintenance.max":0.2
+			"maintenance.max":0.2
 		}
 	},
 		{
