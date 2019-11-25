@@ -52,7 +52,7 @@
 		},
 		"mod":{
 			"research.max":1,
-			"maintenance.max":0.2
+			"maintenance.max":-0.4
 		}
 	},
 		{
