@@ -12,6 +12,7 @@
                 "effect":{
                         "repairedsuit",
                         "home":"h_suit1"
+                }
         },
         {
                 "id":"scrubbers",
