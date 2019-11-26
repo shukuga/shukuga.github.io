@@ -9,7 +9,9 @@
                 "mod":{
                         "hp.max":1
                 },
-                "effect":"repairedsuit"
+                "effect":{
+                        "repairedsuit",
+                        "home":"h_suit1"
         },
         {
                 "id":"scrubbers",
