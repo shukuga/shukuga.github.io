@@ -10315,25 +10315,25 @@ var wizrobe = function(t) {
                 staticClass: "link-bar"
             }, [i("a", {
                 attrs: {
-                    href: "https://discord.gg/bCABC96",
+                    href: "",
                     target: "_blank"
                 }
-            }, [t._v("discord/guide")]), t._v(" "), i("a", {
+            }, [t._v("")]), t._v(" "), i("a", {
                 attrs: {
                     href: "http://wiki.lerpinglemur.com/dhrune",
                     target: "_blank"
                 }
-            }, [t._v("wiki")]), t._v(" "), i("a", {
+            }, [t._v("")]), t._v(" "), i("a", {
                 attrs: {
                     href: "https://www.patreon.com/theoryofmagic",
                     target: "_blank"
                 }
-            }, [t._v("patreon")]), t._v(" "), i("a", {
+            }, [t._v("")]), t._v(" "), i("a", {
                 attrs: {
                     href: "https://www.reddit.com/r/wizrobe/",
                     target: "_blank"
                 }
-            }, [t._v("reddit")]), t._v(" "), i("span", {
+            }, [t._v("")]), t._v(" "), i("span", {
                 staticClass: "vers"
             }, [t._v("build# " + t._s(t.VERSION))]), t._v(" "), i("button", {
                 staticClass: "text-button",
