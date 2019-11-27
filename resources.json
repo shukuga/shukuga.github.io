@@ -8,7 +8,7 @@
         },
         {
                 "id":"r_suit",
-                "name":"Suit integrity"
+                "name":"Suit integrity",
                 "desc":"Integrity of your space suit",
                 "locked":false,
                 "hidden":true,
