@@ -173,7 +173,7 @@
                 "fill":[ "stamina", "hp", "manas", "stress"],
                 "cost":{
                         "hp.mod.stamina.rate:0.4
-                }
+                },
                 "effect":{
                         "hp.mod.stamina.rate":0.4,
                         "manas":{
