@@ -172,12 +172,11 @@
                 "perpetual":true,
                 "effect":{
                         "manas":{
-                                "value":0.5
+                                "value":0.1
                         },
                         "stamina":1,
                         "hp":0.1,
                         "stress":-0.5,
-                        "empty":0.0001
                 }
         },
         {
