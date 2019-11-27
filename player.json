@@ -12,6 +12,12 @@
 		"locked":false
 	},
 	{
+		"id":"empty",
+		"name":"",
+		"val":1,
+		"hidden":true
+	},
+	{
 		"id":"suitlevel",
 		"name":"suitlevel",
 		"desc":"",
