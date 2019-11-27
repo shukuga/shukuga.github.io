@@ -170,7 +170,6 @@
                 "locked":false,
                 "owned":true,
                 "perpetual":true,
-                "fill":[ "stamina", "hp", "manas", "stress"],
                 "effect":{
                         "manas":{
                                 "value":0.5
