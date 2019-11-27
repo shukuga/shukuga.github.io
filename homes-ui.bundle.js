@@ -257,7 +257,7 @@
                     staticStyle: {
                         "text-align": "center"
                     }
-                }, [e._v("No space remaining. Sell items or find a new Home.\n\t\t\t"), e.homesAvail.length > 0 ? i("span", [e._v("If your max gold is not enough to buy a new home, free space for more chests.")]) : e._e()]) : e._e(), e._v(" "), i("table", {
+                }, [e._v("No space remaining. Sell items or find a new suit.\n\t\t\t"), e.suitsAvail.length > 0 ? i("span", [e._v("If your max gold is not enough to buy a new suit, free space for more chests.")]) : e._e()]) : e._e(), e._v(" "), i("table", {
                     staticClass: "furniture item-table"
                 }, [e._m(0), e._v(" "), e._l(e.filtered, (function(t) {
                     return i("tr", {
@@ -391,8 +391,8 @@
                         space() {
                             return this.state.getData("space")
                         },
-                        homesAvail() {
-                            return this.state.homes.filter(e => !this.locked(e))
+                        suitsAvail() {
+                            return this.state.suits.filter(e => !this.locked(e))
                         },
                         furniture() {
                             let e = this.state;
@@ -415,7 +415,7 @@
                         staticClass: "name"
                     }, [this._v("Furnishing")]), t("th", [this._v("Owned")]), t("th"), t("th")])
                 }], !1, null, "4f9f9edc", null);
-            f.options.__file = "src/ui/homes.vue";
+            f.options.__file = "src/ui/suits.vue";
             t.default = f.exports
         },
         94: function(e, t, i) {
