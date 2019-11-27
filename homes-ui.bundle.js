@@ -242,7 +242,7 @@
                 }, [e._v(e._s(e.hallName))])]) : e._e(), e._v(" "), i("slotpick", {
                     attrs: {
                         title: "suit",
-                        pick: "home"
+                        pick: "suit"
                     }
                 }), e._v(" "), i("slotpick", {
                     attrs: {
