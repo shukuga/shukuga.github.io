@@ -170,11 +170,8 @@
                 "locked":false,
                 "owned":true,
                 "perpetual":true,
-                "mod":{
-                        
-                },
                 "effect":{
-                        "stamina":{0.4*"hp"},
+                        "hp.mod.stamina":0.4,
                         "manas":{
                                 "value":0.1
                         },
