@@ -5,7 +5,7 @@
                 "name":"Stabilize suit",
                 "desc":"The atmostphere is too harsh to continue without a functional suit",
                 "verb":"Repairing",
-                "require":"suit<5",
+                "require":"g.suit<5",
                 "locked":false,
                 "cost":{
                         "stamina":1
@@ -173,12 +173,12 @@
                 "fill":[ "stamina", "hp", "manas", "stress"],
                 "effect":{
                         "manas":{
-                                "skipLocked":true,
                                 "value":0.5
                         },
                         "stamina":1,
                         "hp":0.1,
-                        "stress":-0.5
+                        "stress":-0.5,
+                        "empty":"0"
                 }
         },
         {
