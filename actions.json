@@ -11,7 +11,7 @@
                         "stamina":1
                 },
                 "effect":{
-                        "suit":1
+                        "r_suit":1
                 }, 
                 "flavor":"it's stable employment"
         },
@@ -171,9 +171,10 @@
                 "owned":true,
                 "perpetual":true,
                 "mod":{
-                        "hp.mod.stamina.rate":0.4
+                        
                 },
                 "effect":{
+                        "hp.mod.stamina.rate":0.4,
                         "manas":{
                                 "value":0.1
                         },
