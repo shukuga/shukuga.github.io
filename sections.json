@@ -13,8 +13,7 @@
 	},
 	{
 		"id":"sect_house",
-		"name":"home",
-		"locked":false
+		"name":"equipment",
 	},
 	{
 		"id":"sect_raid",
@@ -36,7 +35,7 @@
 	},
 	{
 		"id":"sect_equip",
-		"name":"equip"
+		"name":"whats"
 	},
 	{
 		"id":"sect_bestiary",
