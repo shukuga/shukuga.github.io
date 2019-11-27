@@ -6,7 +6,7 @@
                 "require":"g.suit>0",
                 "cost":{
                         "suit":5,
-                }
+                },
                 "repeat":false,
                 "effect":"repairedsuit"
         },
