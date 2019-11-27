@@ -5,7 +5,7 @@
                 "desc":"With a last readjustment your life-saving equipment is ready to use",
                 "require":"g.suit>0",
                 "cost":{
-                        "suit":5,
+                        "suit":5
                 },
                 "repeat":false,
                 "effect":"repairedsuit"
