@@ -26,7 +26,10 @@
 	{
 		"id":"evt_home1",
 		"name":"First home",
-		"require":"repairedsuit"
+		"require":"repairedsuit",
+		"effect":{
+			"slots.home":"h_suit1"
+		}
 	},
 	{
 		"id":"findmedicalbay",
