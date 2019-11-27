@@ -171,11 +171,8 @@
                 "owned":true,
                 "perpetual":true,
                 "fill":[ "stamina", "hp", "manas", "stress"],
-                "run":{
-                        "hp.mod.stamina.rate":-0.4
-                },
                 "effect":{
-                        "hp.mod.stamina.rate":0.4,
+                        "stamina":0.4,
                         "manas":{
                                 "value":0.1
                         },
