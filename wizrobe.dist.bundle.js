@@ -36,7 +36,7 @@ var wizrobe = function(t) {
                         2: "enchant-ui",
                         3: "equip-ui",
                         4: "hall-ui",
-                        5: "homes-ui",
+                        5: "suits-ui",
                         6: "inv-ui",
                         7: "minions-ui",
                         8: "player-ui",
@@ -829,7 +829,7 @@ var wizrobe = function(t) {
         h = "enc",
         c = "wearable",
         u = "monster",
-        d = "home",
+        d = "suit",
         p = "armor",
         f = "weapon",
         m = "dungeon",
@@ -3945,7 +3945,7 @@ var wizrobe = function(t) {
     })), i.d(e, "b", (function() {
         return tt
     }));
-    const Q = ["resources", "upgrades", "actions", "homes", "furniture", "items", "skills", "player", "spells", "monsters", "dungeons", "events", "classes", "armors", "weapons", "materials", "enchants", "sections", "potions", "encounters", "locales", "stressors", "seasonal"],
+    const Q = ["resources", "upgrades", "actions", "suits", "furniture", "items", "skills", "player", "spells", "monsters", "dungeons", "events", "classes", "armors", "weapons", "materials", "enchants", "sections", "potions", "encounters", "locales", "stressors", "seasonal"],
         Y = /^[A-Za-z_]+\w*$/,
         Z = (t, e = "") => {
             return new W(e, t).load()
@@ -3993,7 +3993,7 @@ var wizrobe = function(t) {
         },
         initInstance(t, e) {
             var i = t.items;
-            return e.resources && (t.resources = this.initItems(i, e.resources, r.a)), e.stressors && (t.stressors = this.initItems(i, e.stressors, r.a, "stress", "stress"), t.stressors.forEach(t => t.hidden = !0)), e.upgrades && (t.upgrades = this.initItems(i, e.upgrades, s.a, null, "upgrade")), e.homes && (t.homes = this.initItems(i, e.homes, s.a, O.e, O.e), t.homes.forEach(t => t.slot = O.e)), e.furniture && this.initItems(i, e.furniture, s.a, "furniture", "furniture"), e.skills && (t.skills = this.initItems(i, e.skills, w.a, O.m)), e.encounters && (t.encounters = this.initItems(i, e.encounters, z.a, O.c, O.c)), e.monsters && (t.monsters = this.initItems(i, e.monsters, S, O.h, O.h)), e.locales && this.initItems(i, e.locales, N), e.dungeons && this.initItems(i, e.dungeons, L), e.spells && this.initItems(i, e.spells, P), e.stats && this.initItems(i, e.stats, x.a, "stat", "stat"), this.initItems(i, e.items, H.a, O.f, O.f), e.armors && (t.armors = this.initItems(i, e.armors, R, O.a, O.a), t.armors.forEach(t => t.kind = t.kind || O.a)), e.weapons && (t.weapons = this.initItems(i, e.weapons, R, O.n, O.n), t.weapons.forEach(t => t.kind = t.kind || O.n)), e.potions && (t.potions = this.initItems(i, e.potions, V, O.j, O.j)), e.materials && (t.materials = this.initItems(i, e.materials, q, "material", "material ")), e.events && (t.events = this.initItems(i, e.events, G, "event", "event")), e.classes && (t.classes = this.initItems(i, e.classes, K, "class", "class")), e.actions && (t.actions = this.initItems(i, e.actions, C.a, null, "action")), e.enchants && (t.enchants = this.initItems(i, e.enchants, F, null, "enchant")), e.sections && (t.sections = this.initItems(i, e.sections)), e.player && (t.player = this.initPlayer(i, e.player, t.items.player)), t
+            return e.resources && (t.resources = this.initItems(i, e.resources, r.a)), e.stressors && (t.stressors = this.initItems(i, e.stressors, r.a, "stress", "stress"), t.stressors.forEach(t => t.hidden = !0)), e.upgrades && (t.upgrades = this.initItems(i, e.upgrades, s.a, null, "upgrade")), e.suits && (t.suits = this.initItems(i, e.suits, s.a, O.e, O.e), t.suits.forEach(t => t.slot = O.e)), e.furniture && this.initItems(i, e.furniture, s.a, "furniture", "furniture"), e.skills && (t.skills = this.initItems(i, e.skills, w.a, O.m)), e.encounters && (t.encounters = this.initItems(i, e.encounters, z.a, O.c, O.c)), e.monsters && (t.monsters = this.initItems(i, e.monsters, S, O.h, O.h)), e.locales && this.initItems(i, e.locales, N), e.dungeons && this.initItems(i, e.dungeons, L), e.spells && this.initItems(i, e.spells, P), e.stats && this.initItems(i, e.stats, x.a, "stat", "stat"), this.initItems(i, e.items, H.a, O.f, O.f), e.armors && (t.armors = this.initItems(i, e.armors, R, O.a, O.a), t.armors.forEach(t => t.kind = t.kind || O.a)), e.weapons && (t.weapons = this.initItems(i, e.weapons, R, O.n, O.n), t.weapons.forEach(t => t.kind = t.kind || O.n)), e.potions && (t.potions = this.initItems(i, e.potions, V, O.j, O.j)), e.materials && (t.materials = this.initItems(i, e.materials, q, "material", "material ")), e.events && (t.events = this.initItems(i, e.events, G, "event", "event")), e.classes && (t.classes = this.initItems(i, e.classes, K, "class", "class")), e.actions && (t.actions = this.initItems(i, e.actions, C.a, null, "action")), e.enchants && (t.enchants = this.initItems(i, e.enchants, F, null, "enchant")), e.sections && (t.sections = this.initItems(i, e.sections)), e.player && (t.player = this.initPlayer(i, e.player, t.items.player)), t
         },
         initItems(t, e, i = s.a, n = null, r = null) {
             if (null != e) {
@@ -5543,15 +5543,15 @@ var wizrobe = function(t) {
             let t = 0;
             for (let i in this.items) {
                 var e = this.items[i];
-                e.revive && "function" == typeof e.revive && e.revive(this), e.hasTag ? (e.hasTag(u.e) && (e.need = this.homeTest), t++) : (console.warn(i + " -> " + this.items[i].id + " missing hasTag(). Removing."), delete this.items[i])
+                e.revive && "function" == typeof e.revive && e.revive(this), e.hasTag ? (e.hasTag(u.e) && (e.need = this.suitTest), t++) : (console.warn(i + " -> " + this.items[i].id + " missing hasTag(). Removing."), delete this.items[i])
             }
             console.log("Items Total: " + t)
         }
         initSlots() {
             this.slots = this.slots || {}, Object(x.f)(this.slots, [u.e, "mount", "bed", D]), this.slots[D] || (this.slots[D] = this.getData("rest"))
         }
-        homeTest(t, e, i) {
-            var s = i.slots.home;
+        suitTest(t, e, i) {
+            var s = i.slots.suit;
             return t.space.valueOf() <= t.space.max.delValue(e.mod.space.max.bonus - (s ? s.mod.space.max.bonus : 0))
         }
         initMaterials(t) {
@@ -9557,7 +9557,7 @@ var wizrobe = function(t) {
                 slot: "sect_player"
             }, [i("player")], 1), t._v(" "), i("template", {
                 slot: "sect_house"
-            }, [i("homes", {
+            }, [i("suits", {
                 attrs: {
                     state: t.state
                 }
@@ -10685,7 +10685,7 @@ var wizrobe = function(t) {
                 equip: () => i.e(3).then(i.bind(null, 169)),
                 inventory: () => i.e(6).then(i.bind(null, 170)),
                 potions: () => i.e(9).then(i.bind(null, 171)),
-                homes: () => i.e(5).then(i.bind(null, 172)),
+                suits: () => i.e(5).then(i.bind(null, 172)),
                 player: () => i.e(8).then(i.bind(null, 166)),
                 bestiary: () => i.e(0).then(i.bind(null, 173)),
                 spells: () => i.e(13).then(i.bind(null, 164)),
