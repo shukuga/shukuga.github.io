@@ -170,8 +170,12 @@
                 "locked":false,
                 "owned":true,
                 "perpetual":true,
+                "fill":[ "stamina", "hp", "manas", "stress"],
+                "cost":(
+                        "hp.mod.stamina.rate:0.4
+                }
                 "effect":{
-                        "hp.mod.stamina":0.4,
+                        "hp.mod.stamina.rate":0.4,
                         "manas":{
                                 "value":0.1
                         },
