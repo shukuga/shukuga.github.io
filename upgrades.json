@@ -3,7 +3,7 @@
                 "id":"finishsuit",
                 "name":"Finalize suit repairs",
                 "desc":"With a last readjustment your life-saving equipment is ready to use",
-                "require":"r_suit>0",
+                "require":"g.r_suit>0",
                 "cost":{
                         "r_suit":5
                 },
