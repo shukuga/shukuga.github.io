@@ -171,7 +171,7 @@
                 "owned":true,
                 "perpetual":true,
                 "mod":{
-                        "hp.stamina.rate":4
+                        "mod.hp.stamina.rate":0.4
                 },
                 "effect":{
                         "manas":{
