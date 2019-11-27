@@ -23,6 +23,11 @@
 		"desc":"With your suit intact you have a chance to breathe. You can remember the evacuation alarms. Were you the only one who didn't escape in time?",
 		"disable":["stabilize"]
 	},
+	}
+		"id":"evt_home1",
+		"name":"First home",
+		"require":"repairedsuit"
+	},
 	{
 		"id":"findmedicalbay",
 		"name":"Destroyed Medical Bay",
