@@ -27,7 +27,7 @@
 		"id":"evt_home1",
 		"name":"First home",
 		"require":"repairedsuit",
-		"mod":{
+		"pick":{
 			"slots.home":"h_suit1"
 		}
 	},
