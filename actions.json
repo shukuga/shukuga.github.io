@@ -174,7 +174,7 @@
                         
                 },
                 "effect":{
-                        "hp.mod.stamina.rate":0.4,
+                        "stamina":(0.4**"hp"),
                         "manas":{
                                 "value":0.1
                         },
