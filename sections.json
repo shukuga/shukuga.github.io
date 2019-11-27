@@ -14,7 +14,7 @@
 	{
 		"id":"sect_house",
 		"name":"equipment",
-		"locked":true
+		"require":"repairedsuit"
 	},
 	{
 		"id":"sect_raid",
