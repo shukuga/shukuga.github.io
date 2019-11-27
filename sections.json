@@ -13,7 +13,8 @@
 	},
 	{
 		"id":"sect_house",
-		"name":"equipment"
+		"name":"equipment",
+		"locked":true
 	},
 	{
 		"id":"sect_raid",
