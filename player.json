@@ -6,6 +6,7 @@
 		"val":1,
 		"max":1,
 		"mod":{
+			"stamina.rate":0.1,
 			"rest.mod.stamina":0.4
 		},
 		"unit":false,
@@ -101,11 +102,11 @@
 	{
 		"id":"luck",
 		"desc":"affinity for fortune",
-		"val":10000,
+		"val":0,
 		"stat":true,
 		"unit":false,
 		"locked":false,
-		"hidden":true
+		"flavor":"let's keep this party polite"
 	},
 	{
 		"id":"scraft",
