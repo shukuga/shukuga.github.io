@@ -3557,7 +3557,7 @@ var wizrobe = function(t) {
             for (let t = this.dots.length - 1; t >= 0; t--) this.dots[t].mod && a.c.addMod(this.dots[t].mod, 1)
         }
         defeated() {
-            if (this._hp.value <= 0 || this.stamina.value < 0) return !0;
+            if (this._hp.value <= 0 || this.r_stamina.value < 0) return !0;
             for (let e = this.stressors.length - 1; e >= 0; e--) {
                 var t = this.stressors[e];
                 if (t.value >= t.max.value) return !0
@@ -3593,7 +3593,7 @@ var wizrobe = function(t) {
             this._resist[t] ? this._resist[t].base += e : this._resist[t] = new n.a(e)
         }
         levelUp() {
-            this._level.add(1), this.dirty = !0, this._level % 3 == 0 && this.sp.add(1), this._level % 5 == 0 && (a.c.getData("minions").maxAllies.base += 1), this._level % 4 == 0 && a.c.getData("speed").add(1), a.c.getData("spelllist").max.base += 1, this.tohit.base += 1, this.hp.max.base += 2, this.stamina.max.base += 1, this._exp.value -= this._next, this._next = Math.floor(this._next * (1 + m)), h.J.emit(h.A, this, this._level.valueOf())
+            this._level.add(1), this.dirty = !0, this._level % 3 == 0 && this.sp.add(1), this._level % 5 == 0 && (a.c.getData("minions").maxAllies.base += 1), this._level % 4 == 0 && a.c.getData("speed").add(1), a.c.getData("spelllist").max.base += 1, this.tohit.base += 1, this.hp.max.base += 2, this.r_stamina.max.base += 1, this._exp.value -= this._next, this._next = Math.floor(this._next * (1 + m)), h.J.emit(h.A, this, this._level.valueOf())
         }
         initStates() {
             this._resist = this._resist || {};
@@ -9738,7 +9738,7 @@ var wizrobe = function(t) {
             },
             computed: {
                 all() {
-                    return this.items.filter(t => !t.hasTag("manas") && "space" !== t.id && !this.reslocked(t))
+                    return this.items.filter(t => !t.hasTag("t_manas") && "space" !== t.id && !this.reslocked(t))
                 },
                 shown() {
                     return this.all.filter(t => this.show(t))
@@ -10056,8 +10056,8 @@ var wizrobe = function(t) {
                 directives: [{
                     name: "show",
                     rawName: "v-show",
-                    value: t.show(t.stamina),
-                    expression: "show(stamina)"
+                    value: t.show(t.r_stamina),
+                    expression: "show(r_stamina)"
                 }],
                 staticClass: "hidable",
                 attrs: {
@@ -10070,12 +10070,12 @@ var wizrobe = function(t) {
             }, [i("progbar", {
                 staticClass: "stamina",
                 attrs: {
-                    value: t.stamina.valueOf(),
-                    max: t.stamina.max.value
+                    value: t.r_stamina.valueOf(),
+                    max: t.r_stamina.max.value
                 },
                 nativeOn: {
                     "!mouseenter": function(e) {
-                        return e.stopPropagation(), t.emit("itemover", e, t.stamina)
+                        return e.stopPropagation(), t.emit("itemover", e, t.r_stamina)
                     }
                 }
             })], 1)]), t._v(" "), i("tr", {
@@ -10188,7 +10188,7 @@ var wizrobe = function(t) {
                     return this.state.getData("focus")
                 },
                 manaList() {
-                    return this.state.filterItems(t => t.hasTag("manas") && !t.locked)
+                    return this.state.filterItems(t => t.hasTag("t_manas") && !t.locked)
                 },
                 visMana() {
                     return this.manaList.filter(t => this.show(t))
