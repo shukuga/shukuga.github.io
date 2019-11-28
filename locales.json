@@ -8,7 +8,7 @@
 	"require":"g.a_explorenorth>0",
 	"desc":"",
 	"run":{
-		"r_stamina":0.2	
+		"stamina":0.2	
 	},
 	"loot":{
 		"a_medicalbook":1,
@@ -28,7 +28,7 @@
 	"require":"g.a_explorewest>0",
 	"desc":"",
 	"run":{
-		"r_stamina":0.2
+		"stamina":0.2
 	},
 	"loot":{
 		"gold":"2~5",
@@ -46,7 +46,7 @@
 	"length":5,
 	"desc":"",
 	"run":{
-		"r_stamina":0.2
+		"stamina":0.2
 	},
 	"loot":{
 		"gold":"0~1"
@@ -62,7 +62,7 @@
 	"length":5,
 	"desc":"",
 	"run":{
-		"r_stamina":0.2
+		"stamina":0.2
 	},
 	"loot":{
 		"a_computerbook":1
