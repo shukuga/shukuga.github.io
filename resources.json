@@ -16,60 +16,60 @@
                 "max":5
         },
         {
-                "id":"r_research",
+                "id":"research",
                 "desc":"Research into the technical",
                 "max":10
         },
         {
-                "id":"r_arcana",
+                "id":"arcana",
                 "school":"arcane",
                 "desc":"Profound mystical knowledge",
                 "max":0
         },
-        {       "id":"r_datasource",
+        {       "id":"datasource",
                 "name":"Data source",
                 "desc":"May contain useful information",
                 "max":10,
                 "mod":{
-                        "r_research.rate":0.005,
-                        "r_research.max":1
+                        "research.rate":0.005,
+                        "research.max":1
                 }
          },
          {
-                "id":"r_medicaldata",
+                "id":"medicaldata",
                 "name":"medical data",
                 "max":20,
                 "mod":{
-                        "s_biology.max":0.05
+                        "biology.max":0.05
                 }
         },
         {
-                "id":"r_medicalsupplies",
+                "id":"medicalsupplies",
                 "name":"medical supplies",
                 "max":20
         },
                  {
-                "id":"r_electronics",
+                "id":"electronics",
                 "desc":"robot bones.",
                 "max":10
         },
         {
-                "id":"r_processing",
+                "id":"processing",
                 "desc":"Processing power",
                 "max":10
         },
         {
-                "id":"r_smallbatteries",
+                "id":"smallbatteries",
                 "name":"Small batteries",
                 "desc":"Powers your small devices",
                 "max":1
         },
         {
-                "id":"r_electronics",
+                "id":"electronics",
                 "max":10
         },
         {
-                "id":"r_space",
+                "id":"space",
                 "name":"floor space",
                 "desc":"Space Available",
                 "reverse":true,
@@ -78,8 +78,8 @@
         {
                 "id":"mana",
                 "name":"energy",
-                "tags":"t_manas",
-                "desc":"raw focus",
+                "tags":"manas",
+                "desc":"rawenergy",
                 "unit":false,
                 "max":0
         }
