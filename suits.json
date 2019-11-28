@@ -1,11 +1,11 @@
 [
 	{
-		"id":"s_suit1",
+		"id":"h_suit1",
 		"name":"escape suit",
 		"desc":"Not intended for long-term or rugged use",
-		"require":"e_repairedsuit",
+		"require":"repairedsuit",
 		"mod":{
-			"r_space.max":5,
+			"space.max":5,
 			"gold.max":5,
 			"dist":1
 		}
