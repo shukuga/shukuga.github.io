@@ -1,6 +1,6 @@
 [
         {
-                "id":"finishsuit",
+                "id":"u_finishsuit",
                 "name":"Finalize suit repairs",
                 "desc":"With a last readjustment your life-saving equipment is ready to use",
                 "require":"g.r_suit>0",
@@ -8,25 +8,25 @@
                         "r_suit":5
                 },
                 "repeat":false,
-                "effect":"repairedsuit"
+                "effect":"e_repairedsuit"
         },
         {
-                "id":"scrubbers",
+                "id":"u_scrubbers",
                 "name":"Repair Portable CO2 scrubber",
                 "desc":"With a little work, this device will allow you to breath in small areas",
-                "require":"g.explorewest>0&&g.maintenance>0",
+                "require":"g.a_explorewest>0&&g.s_maintenance>0",
                 "cost":{
                         "gold":5,
-                        "electronics":1
+                        "r_electronics":1
                 }
          },
          {
-                "id":"firstaid",
+                "id":"u_firstaid",
                 "name":"Assemble First Aid Kit",
                 "desc":"A complete set of supplies to help you return to a healthier state",
-                "require":"g.explorenorth>0&&g.medicine>0",
+                "require":"g.a_explorenorth>0&&g.s_medicine>0",
                 "cost":{
-                        "medicalsupplies":10
+                        "r_medicalsupplies":10
                 },
                 "mod":{
                         "rest.hp.rate":0.1
