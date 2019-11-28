@@ -61,7 +61,7 @@
 		"id":"dist",
 		"name":"distance",
 		"desc":"Maximum travel distance.",
-		"val":1,
+		"val":2,
 		"stat":true,
 		"locked":false
 	},
@@ -102,7 +102,7 @@
 	{
 		"id":"luck",
 		"desc":"affinity for fortune",
-		"val":0,
+		"val":100000,
 		"stat":true,
 		"unit":false,
 		"locked":false,
