@@ -10196,7 +10196,7 @@ var wizrobe = function(t) {
                 resting() {
                     return this.state.restAction.running
                 },
-                stamina() {
+                r_stamina() {
                     return this.state.getData("r_stamina")
                 }
             }
@@ -10621,7 +10621,7 @@ var wizrobe = function(t) {
             g: "gold",
             s: "scrolls",
             e: "exp",
-            t: "stamina",
+            t: "r_stamina",
             h: "hp",
             k: "sp",
             m: "mana",
