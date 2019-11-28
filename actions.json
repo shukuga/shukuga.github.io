@@ -8,7 +8,8 @@
                 "need":"g.r_suit<5",
                 "locked":false,
                 "cost":{
-                        "stamina":1
+                        "stamina":0.5,
+                        "hp":0.1
                 },
                 "effect":{
                         "r_suit":1
@@ -21,7 +22,6 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "need":"g.dist>5",
                 "require":"repairedsuit",
                 "length":5,
                 "run":{
@@ -34,7 +34,6 @@
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "need":"g.dist>5",
                 "require":"repairedsuit",
                 "length":5,
                 "run":{
@@ -60,7 +59,7 @@
                 "repeat":false,
                 "verb":"Exploring",
                 "need":"g.flashlight>0",
-                "require":"g.dist>6",
+                "require":"repairedsuit",
                 "length":5,
                 "cost":{
                         "smallbatteries":1
@@ -77,7 +76,7 @@
                 "desc":"Collect useful objects",
                 "run":{
                         "stamina":0.5,
-                        "hp":0.5
+                        "hp":0.1
                 },
                 "every":{
                         "100":{
@@ -174,7 +173,7 @@
                 "locked":false,
                 "owned":true,
                 "perpetual":true,
-                "fill":[ "stamina", "hp", "manas", "stress"],
+                "fill":[ "stamina", "stress"],
                 "effect":{
                         "stamina":0.4,
                         "manas":{
@@ -192,7 +191,7 @@
                 "verb":"ministrating",
                 "require":"g.firstaid>0&&g.medicine>0",
                 "perpetual":true,
-                "fill":[ "stamina", "hp", "manas", "stress"],
+                "fill":["hp"],
                 "effect":{
                         "manas":{
                                 "skipLocked":true,
