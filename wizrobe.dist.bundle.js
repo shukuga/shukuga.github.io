@@ -3557,7 +3557,7 @@ var wizrobe = function(t) {
             for (let t = this.dots.length - 1; t >= 0; t--) this.dots[t].mod && a.c.addMod(this.dots[t].mod, 1)
         }
         defeated() {
-            if (this._hp.value <= 0 || this.r_stamina.value < 0) return !0;
+            if (this._hp.value <= 0 || this.stamina.value < 0) return !0;
             for (let e = this.stressors.length - 1; e >= 0; e--) {
                 var t = this.stressors[e];
                 if (t.value >= t.max.value) return !0
@@ -3593,7 +3593,7 @@ var wizrobe = function(t) {
             this._resist[t] ? this._resist[t].base += e : this._resist[t] = new n.a(e)
         }
         levelUp() {
-            this._level.add(1), this.dirty = !0, this._level % 3 == 0 && this.sp.add(1), this._level % 5 == 0 && (a.c.getData("minions").maxAllies.base += 1), this._level % 4 == 0 && a.c.getData("speed").add(1), a.c.getData("spelllist").max.base += 1, this.tohit.base += 1, this.hp.max.base += 2, this.r_stamina.max.base += 1, this._exp.value -= this._next, this._next = Math.floor(this._next * (1 + m)), h.J.emit(h.A, this, this._level.valueOf())
+            this._level.add(1), this.dirty = !0, this._level % 3 == 0 && this.sp.add(1), this._level % 5 == 0 && (a.c.getData("minions").maxAllies.base += 1), this._level % 4 == 0 && a.c.getData("speed").add(1), a.c.getData("spelllist").max.base += 1, this.tohit.base += 1, this.hp.max.base += 2, this.stamina.max.base += 1, this._exp.value -= this._next, this._next = Math.floor(this._next * (1 + m)), h.J.emit(h.A, this, this._level.valueOf())
         }
         initStates() {
             this._resist = this._resist || {};
@@ -8882,7 +8882,7 @@ var wizrobe = function(t) {
         }, [i("div", {
             staticClass: "fill",
             style: "width:" + t.width
-        }, [t.hideStats ? i("span", [t._v(" ")]) : i("span", {
+        }, [t.hideStats ? i("span", [t._v(" ")]) : i("span", {
             staticClass: "bar-text"
         }, [t._v(t._s((this.value || 0).toFixed(1) + "/" + t.max.toFixed(1)))])])])])
     };
@@ -8919,7 +8919,7 @@ var wizrobe = function(t) {
                 }
             }, [i("span", [t._v(t._s(Math.ceil(e.duration)))]), t._v(" "), t.mini ? t._e() : i("span", [i("br"), t._v(t._s(t.mini ? t.abbr(e) : e.name))]), t._v(" "), e.kind || e.school ? i("div", {
                 staticClass: "bgfill"
-            }, [t._v(" ")]) : t._e()])
+            }, [t._v(" ")]) : t._e()])
         })), 0)
     };
     s._withStripped = !0;
@@ -9738,7 +9738,7 @@ var wizrobe = function(t) {
             },
             computed: {
                 all() {
-                    return this.items.filter(t => !t.hasTag("t_manas") && "space" !== t.id && !this.reslocked(t))
+                    return this.items.filter(t => !t.hasTag("manas") && "space" !== t.id && !this.reslocked(t))
                 },
                 shown() {
                     return this.all.filter(t => this.show(t))
@@ -9882,7 +9882,7 @@ var wizrobe = function(t) {
                     }
                 }), t._v(" "), e.item.school ? i("div", {
                     staticClass: "bgfill"
-                }, [t._v(" ")]) : t._e()]) : i("div", [t._v(t._s(9 != s ? s + 1 : 0))])])
+                }, [t._v(" ")]) : t._e()]) : i("div", [t._v(t._s(9 != s ? s + 1 : 0))])])
             })), 0) : i("div", {
                 staticClass: "quickbar"
             }, [t._m(0)])
@@ -10056,26 +10056,26 @@ var wizrobe = function(t) {
                 directives: [{
                     name: "show",
                     rawName: "v-show",
-                    value: t.show(t.r_stamina),
-                    expression: "show(r_stamina)"
+                    value: t.show(t.stamina),
+                    expression: "show(stamina)"
                 }],
                 staticClass: "hidable",
                 attrs: {
-                    "data-key": "r_stamina"
+                    "data-key": "stamina"
                 }
-            }, [i("td", [t._v("r_stamina")]), i("td", {
+            }, [i("td", [t._v("stamina")]), i("td", {
                 attrs: {
                     colspan: "2"
                 }
             }, [i("progbar", {
-                staticClass: "r_stamina",
+                staticClass: "stamina",
                 attrs: {
-                    value: t.r_stamina.valueOf(),
-                    max: t.r_stamina.max.value
+                    value: t.stamina.valueOf(),
+                    max: t.stamina.max.value
                 },
                 nativeOn: {
                     "!mouseenter": function(e) {
-                        return e.stopPropagation(), t.emit("itemover", e, t.r_stamina)
+                        return e.stopPropagation(), t.emit("itemover", e, t.stamina)
                     }
                 }
             })], 1)]), t._v(" "), i("tr", {
@@ -10188,7 +10188,7 @@ var wizrobe = function(t) {
                     return this.state.getData("focus")
                 },
                 manaList() {
-                    return this.state.filterItems(t => t.hasTag("t_manas") && !t.locked)
+                    return this.state.filterItems(t => t.hasTag("manas") && !t.locked)
                 },
                 visMana() {
                     return this.manaList.filter(t => this.show(t))
@@ -10196,8 +10196,8 @@ var wizrobe = function(t) {
                 resting() {
                     return this.state.restAction.running
                 },
-                r_stamina() {
-                    return this.state.getData("r_stamina")
+                stamina() {
+                    return this.state.getData("stamina")
                 }
             }
         },
@@ -10621,7 +10621,7 @@ var wizrobe = function(t) {
             g: "gold",
             s: "scrolls",
             e: "exp",
-            t: "r_stamina",
+            t: "stamina",
             h: "hp",
             k: "sp",
             m: "mana",
