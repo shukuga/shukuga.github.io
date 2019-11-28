@@ -1,71 +1,71 @@
 [
 	{
-		"id":"f_smcomputer",
+		"id":"smcomputer",
 		"name":"onboard computer",
-		"require":"a_computeruse",
+		"require":"computeruse",
 		"desc":"A small device for processing data",
 		"repeat":true,
 		"cost":{
-			"r_electronics":5,
-			"r_processing.max":1,
-			"r_space":1
+			"electronics":5,
+			"processing.max":1,
+			"space":1
 		},
 		"mod":{
-			"r_processing.max":5
+			"processing.max":5
 		}
 	},
 	{
-		"id":"f_flashlight",
+		"id":"flashlight",
 		"desc":"wrist-mounted light. Required for exploring dark places.",
-		"require":"g.a_explorewest>0",
+		"require":"g.explorewest>0",
 		"repeat":false,
 		"cost":{
 			"gold":1,
-			"r_space":1
+			"space":1
 		}
 	},
 	{
-		"id":"f_stimulants",
+		"id":"stimulants",
 		"name":"stims",
 		"desc":"You can sleep when you're dead",
-		"require":"g.s_medicine>0&&g.u_firstaid>0",
+		"require":"g.medicine>0&&g.firstaid>0",
 		"repeat":false,
 		"cost":{
-			"r_medicalsupplies":2
+			"medicalsupplies":2
 		},
 		"mod":{
 			"stamina.rate":0.1,
-			"a_rest.stamina.rate":-0.2,
-			"a_rest.hp.rate":-0.1
+			"rest.stamina.rate":-0.2,
+			"rest.hp.rate":-0.1
 		}
 	},
 	{
-		"id":"f_sleepaid",
+		"id":"sleepaid",
 		"name":"sleeping medicine",
 		"desc":"Early to bed...",
-		"require":"g.s_medicine>0&&g.u_firstaid>0",
+		"require":"g.medicine>0&&g.firstaid>0",
 		"repeat":false,
 		"cost":{
-			"r_medicalsupplies":2
+			"medicalsupplies":2
 		},
 		"mod":{
 			"stamina.rate":-0.1,
-			"a_rest.stamina.rate":0.2
+			"rest.stamina.rate":0.2
 		}
 	},
         {
-		"id":"f_kidney",
+		"id":"kidney",
                 "name":"auxillary dialysis module",
                 "desc":"Your kidneys could use some help",
-                "require":"g.u_firstaid>0&&g.s_medicine>4",
+                "require":"g.firstaid>0&&g.medicine>4",
 		"cost":{
-			"r_space":2,
-			"r_medicalsupplies":2,
-			"r_electronics":2
+			"space":2,
+			"medicalsupplies":2,
+			"electronics":2
 		},
                 "mod":{
                         "stamina.rate":0.5,
-                        "hp.max":-0.1
+                        "max.hp":-0.1
                 }
         }
 ]
