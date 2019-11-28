@@ -1,7 +1,7 @@
 [
         
         {
-                "id":"a_stabilize",
+                "id":"stabilize",
                 "name":"Stabilize suit",
                 "desc":"The atmostphere is too harsh to continue without a functional suit",
                 "verb":"Repairing",
@@ -16,33 +16,33 @@
                 "flavor":"it's stable employment"
         },
         {
-                "id":"a_explorenorth",
+                "id":"explorenorth",
                 "name":"Explore the wreckage to the north",
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
                 "need":"g.dist>5",
-                "require":"e_repairedsuit",
+                "require":"repairedsuit",
                 "length":5,
                 "run":{
                         "stamina":0.1
                 }    
         },
         {
-                "id":"a_explorewest",
+                "id":"explorewest",
                 "name":"Explore the wreckage to the west",
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
                 "need":"g.dist>5",
-                "require":"e_repairedsuit",
+                "require":"repairedsuit",
                 "length":5,
                 "run":{
                         "stamina":0.1
                 }    
         },
                 {
-                "id":"a_exploreescape",
+                "id":"exploreescape",
                 "name":"Explore the remains of the escape pod",
                 "desc":"",
                 "locked":false,
@@ -54,12 +54,12 @@
                 }    
         },
                         {
-                "id":"a_exploretunnel",
+                "id":"exploretunnel",
                 "name":"Descend into a buried hallway",
                 "desc":"",
                 "repeat":false,
                 "verb":"Exploring",
-                "need":"g.f_flashlight>0",
+                "need":"g.flashlight>0",
                 "require":"g.dist>6",
                 "length":5,
                 "cost":{
@@ -70,7 +70,7 @@
                 }    
         },
         {
-                "id":"a_scavenge",
+                "id":"scavenge",
                 "perpetual":true,
                 "verb":"Scavenging",
                 "locked":false,
@@ -81,10 +81,10 @@
                 },
                 "every":{
                         "100":{
-                                "effect.r_electronics":0.1
+                                "effect.electronics":0.1
                         },
                         "200":{
-                                "effect.r_smallbatteries":0.05
+                                "effect.smallbatteries":0.05
                         }
                 },
                 "effect":{
@@ -92,32 +92,35 @@
                         
                 }
         },
-        {      "id":"a_escaperepair",
+        {      "id":"escaperepair",
                 "name":"Airproof escape pod",
                 "repeat":false,
                 "desc":"Some place where you can take off your suit",
-                "require":"g.a_exploreescape>0",
+                "require":"g.exploreescape>0",
                 "length":5,
                  "cost":{
                         "gold":5
                 }
          },
         {
-                "id":"a_medicalbook",
+                "id":"medicalbook",
                 "name":"Study Medical textbooks",
                 "length":4,
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of medicine",
+                "cost":{
+                        "stamina":1
+                },
                 "run":{
                         "stamina":1
                 },
                 "effect":{
-                        "r_research":1
+                        "research":1
                 }
         },       
         {
-                "id":"a_maintenancebook",
+                "id":"maintenancebook",
                 "name":"Study Maintenance procedures",
                 "length":4,
                 "repeat":false,
@@ -127,11 +130,11 @@
                         "stamina":1
                 },
                 "effect":{
-                        "r_research":1
+                        "research":1
                 }
         },
         {
-                "id":"a_engineeringbook",
+                "id":"engineeringbook",
                 "name":"Study engineering references",
                 "length":4,
                 "repeat":false,
@@ -141,11 +144,11 @@
                         "stamina":1
                 },
                 "effect":{
-                        "r_research":1
+                        "research":1
                 }
         },
         {
-                "id":"a_computerbook",
+                "id":"computerbook",
                 "name":"Study software manuals",
                 "length":4,
                 "repeat":false,
@@ -155,11 +158,11 @@
                         "stamina":1
                 },
                 "effect":{
-                        "r_research":1
+                        "research":1
                 }
         },
         {
-                "id":"a_rest",
+                "id":"rest",
                 "tags":"t_rest",
                 "name":"rest",
                 "slot":"rest",
@@ -167,14 +170,14 @@
                 "locked":false,
                 "owned":true,
                 "perpetual":true,
-                "fill":[ "stamina", "hp", "t_manas", "t_stress"],
+                "fill":[ "stamina", "hp", "manas", "stress"],
                 "effect":{
                         "stamina":0.4,
-                        "t_manas":{
+                        "manas":{
                                 "value":0.1
                         },
                         "hp":0.1,
-                        "t_stress":-0.5
+                        "stress":-0.5
                 }
         },
         {
@@ -183,21 +186,21 @@
                 "name":"Perform first aid",
                 "slot":"rest",
                 "verb":"ministrating",
-                "require":"g.u_firstaid>0&&g.s_medicine>0",
+                "require":"g.firstaid>0&&g.medicine>0",
                 "perpetual":true,
-                "fill":[ "stamina", "hp", "t_manas", "t_stress"],
+                "fill":[ "stamina", "hp", "manas", "stress"],
                 "effect":{
-                        "t_manas":{
+                        "manas":{
                                 "skipLocked":true,
                                 "value":0.1
                         },
                         "stamina":0.1,
                         "hp":0.9,
-                        "t_stress":-0.1
+                        "stress":-0.1
                 }
         },
         {
-                "id":"a_focus",
+                "id":"focus",
                 "desc":"quicken your skills with magic energy.",
                 "require":"mana",
                 "need":"g.runner.hasType('skill')",
