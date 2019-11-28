@@ -19,7 +19,7 @@
 	{
 		"id":"sect_raid",
 		"name":"adventure",
-		"require":"g.dist>0"
+		"require":"repairedsuit"
 	},
 	{
 		"id":"sect_player",
