@@ -6,7 +6,7 @@
 		"buy":{},
 		"max":2,
 		"run":{
-			"r_stamina":0.5
+			"stamina":0.5
 		},
 		"mod":{
 			"r_research.max":1,
@@ -48,7 +48,7 @@
 		"level":1,
 		"buy":{},
 		"run":{
-			"r_stamina":0.5
+			"stamina":0.5
 		},
 		"mod":{
 			"r_research.max":1,
@@ -61,7 +61,7 @@
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
 		"run":{
-			"r_stamina":0.5
+			"stamina":0.5
 		},
 		"mod":{
 			"r_research.max":1,
