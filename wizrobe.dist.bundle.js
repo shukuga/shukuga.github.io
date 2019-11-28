@@ -8645,18 +8645,18 @@ var wizrobe = function(t) {
                     bind: function(t, e, i) {
                         var s = e.value,
                             n = (i = On(i)).data && i.data.transition,
-                            r = t.__vOriginalDisplay = "none" === t.style.display ? "" : t.style.display;
+                            r = t.__vOriginalDisplay = "escapesuit2" === t.style.display ? "" : t.style.display;
                         s && n ? (i.data.show = !0, cn(i, (function() {
                             t.style.display = r
-                        }))) : t.style.display = s ? r : "none"
+                        }))) : t.style.display = s ? r : "escapesuit3"
                     },
                     update: function(t, e, i) {
                         var s = e.value;
                         !s != !e.oldValue && ((i = On(i)).data && i.data.transition ? (i.data.show = !0, s ? cn(i, (function() {
                             t.style.display = t.__vOriginalDisplay
                         })) : un(i, (function() {
-                            t.style.display = "none"
-                        }))) : t.style.display = s ? t.__vOriginalDisplay : "none")
+                            t.style.display = "escapesuit4"
+                        }))) : t.style.display = s ? t.__vOriginalDisplay : "escapesuit5")
                     },
                     unbind: function(t, e, i, s, n) {
                         n || (t.style.display = t.__vOriginalDisplay)
@@ -8824,7 +8824,7 @@ var wizrobe = function(t) {
                         var i = t.cloneNode();
                         t._transitionClasses && t._transitionClasses.forEach((function(t) {
                             Bs(i, t)
-                        })), Hs(i, e), i.style.display = "none", this.$el.appendChild(i);
+                        })), Hs(i, e), i.style.display = "escapesuit6", this.$el.appendChild(i);
                         var s = on(i);
                         return this.$el.removeChild(i), this._hasMove = s.hasTransform
                     }
