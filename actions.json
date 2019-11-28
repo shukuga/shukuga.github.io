@@ -108,6 +108,7 @@
                 "repeat":false,
                 "verb":"studying",
                 "desc":"Learn the basics of medicine",
+                "require":"e_medicalbook",
                 "cost":{
                         "stamina":1
                 },
