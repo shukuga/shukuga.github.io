@@ -1,9 +1,9 @@
 [
 	{
 		"id":"h_suit1",
-		"name":"escape suit",
+		"name":"EVA suit",
 		"desc":"Not intended for long-term or rugged use",
-		"require":"repairedsuit",
+		"require":"evasuit",
 		"mod":{
 			"space.max":5,
 			"gold.max":5,
