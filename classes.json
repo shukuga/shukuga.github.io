@@ -4,18 +4,18 @@
 		"desc":"apprentice to a notable wizard",
 		"actname":"Apprenticeship",
 		"actdesc":"Become an apprentice.",
-		"require":"g.medicine>99",
+		"require":"g.s_medicine>99",
 		"warn":false,
 		"log":{
 			"name":"Apprentice",
 			"desc":"After paying a small fee, you became apprenticed to a local wizard."
 		},
 		"cost":{
-			"research":10,
+			"r_research":10,
 			"gold":20
 		},
 		"effect":{
-			"research.max":10,
+			"r_research.max":10,
 			"player.exp":5,
 			"sp":1
 		}
