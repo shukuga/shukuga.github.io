@@ -9,7 +9,7 @@
 	{
 		"id":"sect_skills",
 		"name":"skills",
-		"require":"repairedsuit"
+		"require":"firstskill"
 	},
 	{
 		"id":"sect_house",
