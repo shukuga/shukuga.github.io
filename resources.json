@@ -76,7 +76,7 @@
                 "max":0
         },
         {
-                "id":"r_mana",
+                "id":"mana",
                 "name":"energy",
                 "tags":"t_manas",
                 "desc":"raw focus",
