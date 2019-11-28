@@ -29,7 +29,7 @@
                         "r_medicalsupplies":10
                 },
                 "mod":{
-                        "rest.hp.rate":0.1
+                        "a_rest.hp.rate":0.1
                 }
          }
 
