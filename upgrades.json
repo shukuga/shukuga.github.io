@@ -8,6 +8,10 @@
                         "r_suit":5
                 },
                 "repeat":false,
+                "mod":{
+                        "hp.max":4,
+                        "stamina.max":4
+                },
                 "effect":"repairedsuit"
         },
         {
