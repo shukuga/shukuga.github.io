@@ -1,53 +1,53 @@
 [
 
 	{
-		"id":"evt_intro",
+		"id":"e_intro",
 		"name":"Prologue",
 		"require":"hp",
 		"desc":"You awaken on an unfamiliar world, surrounded by debris. Your space suit is damaged. Nothing else matters until you can stabilize your condition."
 	},
 	{
-		"id":"evt_podhome",
+		"id":"e_podhome",
 		"name":"Repressurized escape pod",
 		"desc":"You have turned your escape pod into a makeshift shelter from the alien element. It is only a small space where you can take off your helmet and plan your next move.",
 		"require":"g.escaperepair>0&&g.scrubbers>0",
 		"mod":{
 			"gold.max":5,
-			"rest.stamina.rate":0.2,
-			"rest.hp.rate":0.1
+			"a_rest.r_stamina.rate":0.2,
+			"a_rest.hp.rate":0.1
 		}
 	},
 	{
-		"id":"repairedsuit",
+		"id":"e_repairedsuit",
 		"name":"Intact Suit",
 		"desc":"With your suit intact you have a chance to breathe. You can remember the evacuation alarms. Were you the only one who didn't escape in time?",
-		"disable":["stabilize"]
+		"disable":["a_stabilize"]
 	},
 	{
-		"id":"evt_home1",
+		"id":"e_home1",
 		"name":"First home",
-		"require":"repairedsuit",
+		"require":"e_repairedsuit",
 		"pick":{
 			"slots.home":"h_suit1"
 		}
 	},
 	{
-		"id":"findmedicalbay",
+		"id":"e_findmedicalbay",
 		"name":"Destroyed Medical Bay",
 		"desc":"This is a small section of your ship that was dedicated to handling injuries. While most of the machinery is useless without the ship's system, some of the equipment can be repurposed.",
-		"require":"g.explorenorth>0"
+		"require":"g.a_explorenorth>0"
 	},
 	{
-		"id":"findmaintenancescrap",
+		"id":"e_findmaintenancescrap",
 		"name":"Maintenance Closet",
 		"desc":"Tools and materials used in basic ship repairs and maintinance. There may even be some literature on how to perform such repairs.",
-		"require":"g.explorewest>0"
+		"require":"g.a_explorewest>0"
 	},
 	{
-		"id":"findtunnel",
+		"id":"e_findtunnel",
 		"name":"Dark tunnel",
 		"desc":"",
-		"need":"g.flashlight>0",
-		"require":"g.explorescape>0"
+		"need":"g.f_flashlight>0",
+		"require":"g.a_explorescape>0"
 	}
 ]
