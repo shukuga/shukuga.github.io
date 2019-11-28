@@ -9,17 +9,17 @@
 	{
 		"id":"sect_skills",
 		"name":"skills",
-		"require":"e_repairedsuit"
+		"require":"repairedsuit"
 	},
 	{
 		"id":"sect_house",
 		"name":"equipment",
-		"require":"e_repairedsuit"
+		"require":"repairedsuit"
 	},
 	{
 		"id":"sect_raid",
 		"name":"adventure",
-		"require":"e_repairedsuit"
+		"require":"repairedsuit"
 	},
 	{
 		"id":"sect_player",
