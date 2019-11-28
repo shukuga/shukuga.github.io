@@ -8,7 +8,7 @@
                 "need":"g.r_suit<5",
                 "locked":false,
                 "cost":{
-                        "r_stamina":1
+                        "stamina":1
                 },
                 "effect":{
                         "r_suit":1
@@ -50,7 +50,7 @@
                 "verb":"Exploring",
                 "length":3,
                 "run":{
-                        "r_stamina":0.1
+                        "stamina":0.1
                 }    
         },
                         {
@@ -76,7 +76,7 @@
                 "locked":false,
                 "desc":"Collect useful objects",
                 "run":{
-                        "r_stamina":0.5,
+                        "stamina":0.5,
                         "hp":0.5
                 },
                 "every":{
@@ -110,7 +110,7 @@
                 "verb":"studying",
                 "desc":"Learn the basics of medicine",
                 "run":{
-                        "r_stamina":1
+                        "stamina":1
                 },
                 "effect":{
                         "r_research":1
@@ -124,7 +124,7 @@
                 "verb":"studying",
                 "desc":"Learn the basics of maintaining ship equipment",
                 "run":{
-                        "r_stamina":1
+                        "stamina":1
                 },
                 "effect":{
                         "r_research":1
@@ -138,7 +138,7 @@
                 "verb":"studying",
                 "desc":"Learn the basics of engineering",
                 "run":{
-                        "r_stamina":1
+                        "stamina":1
                 },
                 "effect":{
                         "r_research":1
@@ -152,7 +152,7 @@
                 "verb":"studying",
                 "desc":"Learn the basics of computer user",
                 "run":{
-                        "r_stamina":1
+                        "stamina":1
                 },
                 "effect":{
                         "r_research":1
@@ -167,9 +167,9 @@
                 "locked":false,
                 "owned":true,
                 "perpetual":true,
-                "fill":[ "r_stamina", "hp", "t_manas", "t_stress"],
+                "fill":[ "stamina", "hp", "t_manas", "t_stress"],
                 "effect":{
-                        "r_stamina":0.4,
+                        "stamina":0.4,
                         "t_manas":{
                                 "value":0.1
                         },
@@ -185,13 +185,13 @@
                 "verb":"ministrating",
                 "require":"g.u_firstaid>0&&g.s_medicine>0",
                 "perpetual":true,
-                "fill":[ "r_stamina", "hp", "t_manas", "t_stress"],
+                "fill":[ "stamina", "hp", "t_manas", "t_stress"],
                 "effect":{
                         "t_manas":{
                                 "skipLocked":true,
                                 "value":0.1
                         },
-                        "r_stamina":0.1,
+                        "stamina":0.1,
                         "hp":0.9,
                         "t_stress":-0.1
                 }
@@ -199,7 +199,7 @@
         {
                 "id":"a_focus",
                 "desc":"quicken your skills with magic energy.",
-                "require":"r_mana",
+                "require":"mana",
                 "need":"g.runner.hasType('skill')",
                 "every":{
                         "25":{
@@ -207,7 +207,7 @@
                         }
                 },
                 "cost":{
-                        "r_mana":1
+                        "mana":1
                 },
                 "effect":{
                         "runner.exp":1
