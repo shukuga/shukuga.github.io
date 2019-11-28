@@ -9,7 +9,7 @@
 	{
 		"id":"firstskill",
 		"name":"Your first skill",
-		"require":"sp>0"
+		"require":"g.sp>0"
 	},
 	{
 		"id":"evt_podhome",
