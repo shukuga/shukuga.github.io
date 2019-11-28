@@ -35,7 +35,9 @@
 		"require":"g.explorenorth>0"
 	},
         {
-                "id":"book1"
+                "id":"e_medicalbook",
+                "name":"Medical book",
+                "desc":"some light reading on physiology and medical techniques"
         },
 	{
 		"id":"findmaintenancescrap",
