@@ -28,7 +28,7 @@
 		"name":"First home",
 		"require":"e_repairedsuit",
 		"pick":{
-			"slots.home":"h_suit1"
+			"slots.home":"s_suit1"
 		}
 	},
 	{
