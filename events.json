@@ -7,6 +7,11 @@
 		"desc":"You awaken on an unfamiliar world, surrounded by debris. Your space suit is damaged. Nothing else matters until you can stabilize your condition."
 	},
 	{
+		"id":"firstskill",
+		"name":"Your first skill",
+		"require":"sp>0"
+	}
+	{
 		"id":"evt_podhome",
 		"name":"Repressurized escape pod",
 		"desc":"You have turned your escape pod into a makeshift shelter from the alien element. It is only a small space where you can take off your helmet and plan your next move.",
