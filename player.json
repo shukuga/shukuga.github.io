@@ -101,11 +101,11 @@
 	{
 		"id":"luck",
 		"desc":"affinity for fortune",
-		"val":0,
+		"val":10000,
 		"stat":true,
 		"unit":false,
 		"locked":false,
-		"flavor":"let's keep this party polite"
+		"hidden":true
 	},
 	{
 		"id":"scraft",
