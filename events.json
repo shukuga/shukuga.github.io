@@ -13,7 +13,7 @@
 		"require":"g.escaperepair>0&&g.scrubbers>0",
 		"mod":{
 			"gold.max":5,
-			"a_rest.r_stamina.rate":0.2,
+			"a_rest.stamina.rate":0.2,
 			"a_rest.hp.rate":0.1
 		}
 	},
