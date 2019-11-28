@@ -22,7 +22,7 @@
 		"level":1,
 		"desc":"Materials used in diagnostics or research",
 		"effect":{
-			"r_unease":"0~1",
+			"unease":"0~1",
 			"r_medicaldata":"0~1",
 			"r_medicalsupplies":"0~1",
 			"s_medicine.exp":0.1
