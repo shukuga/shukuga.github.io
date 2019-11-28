@@ -26,7 +26,8 @@
 			"medicaldata":"0~1",
 			"medicalsupplies":"0~1",
 			"medicine.exp":0.1
-		}
+		},
+                "result":"book1"
 	},
 	{
 		"id":"toolbox",
