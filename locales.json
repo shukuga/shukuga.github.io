@@ -1,48 +1,48 @@
 [
 {
-	"id":"l_medical",
+	"id":"loc_medical",
 	"name":"Medical bay wreckage",
 	"level":1,
 	"length":5,
 	"sym":"📖",
-	"require":"g.a_explorenorth>0",
+	"require":"g.explorenorth>0",
 	"desc":"",
 	"run":{
 		"stamina":0.2	
 	},
 	"loot":{
-		"a_medicalbook":1,
-		"r_medicalsupplies":"0~1",
-		"r_medicaldata":"0~1"
+		"medicalbook":1,
+		"medicalsupplies":"0~1",
+		"medicaldata":"0~1"
 	},
 	"encs":[
-		"n_rubble1",
-		"n_loosepapers1",
-		"n_medicalsamples"
+		"rubble1",
+		"loosepapers1",
+		"medicalsamples"
 	]
 },
 {
-	"id":"l_maintenance",
+	"id":"loc_maintenance",
 	"name":"Maintenance closet",
 	"length":5,
-	"require":"g.a_explorewest>0",
+	"require":"g.explorewest>0",
 	"desc":"",
 	"run":{
 		"stamina":0.2
 	},
 	"loot":{
 		"gold":"2~5",
-		"a_maintenancebook":1
+		"maintenancebook":1
 	},
 	"encs":[
-		"n_toolbox",
-		"n_loosepapers2"
+		"toolbox",
+		"loosepapers2"
 	]
 },
 {
-	"id":"l_escapepod",
+	"id":"loc_escapepod",
 	"name":"Area surrounding the escape pod",
-	"require":"g.a_exploreescape>0",
+	"require":"g.exploreescape>0",
 	"length":5,
 	"desc":"",
 	"run":{
@@ -52,24 +52,24 @@
 		"gold":"0~1"
 	},
 	"encs":[
-		"n_rubble1"
+		"rubble1"
 	]
 },
 {
-	"id":"l_mainframe",
+	"id":"loc_mainframe",
 	"name":"Mainframe",
-	"require":"g.a_exploretunnel>0&&g.f_flashlight>0",
+	"require":"g.exploretunnel>0&&g.flashlight>0",
 	"length":5,
 	"desc":"",
 	"run":{
 		"stamina":0.2
 	},
 	"loot":{
-		"a_computerbook":1
+		"computerbook":1
 	},
 	"encs":[
-		"n_rubble1",
-		"n_toolbox"
+		"rubble1",
+		"toolbox"
 	]
 }
 ]
