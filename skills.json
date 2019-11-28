@@ -1,7 +1,7 @@
 [
 	{
-		"id":"s_medicine",
-		"need":"g.a_medicalbook>0",
+		"id":"medicine",
+		"need":"g.medicalbook>0",
 		"desc":"How to take care of your squishy body",
 		"buy":{},
 		"max":2,
@@ -9,41 +9,41 @@
 			"stamina":0.5
 		},
 		"mod":{
-			"r_research.max":1,
-			"s_biology.rate":0.1
+			"research.max":1,
+			"biology.rate":0.1
 		}
 	},
 	{
-		"id":"s_biology",
-		"need":"g.s_medicine>1",
+		"id":"biology",
+		"need":"g.medicine>1",
 		"desc":"Biotechnology",
 		"buy":{},
 		"level":1,
 		"run":{
-			"r_medicalsupplies":1
+			"medicalsupplies":1
 		},
 		"mod":{
-			"r_research.max":1,
-			"s_medicine.max":0.2,
-			"r_medicalsupplies.max":10
+			"research.max":1,
+			"medicine.max":0.2,
+			"medicalsupplies.max":10
 		}
 	},
 	{
-		"id":"s_maintenance",
-		"need":"g.a_maintenancebook>0",
+		"id":"maintenance",
+		"need":"g.maintenancebook>0",
 		"desc":"Keeping objects in working order",
 		"buy":{},
 		"run":{
 			"stamina":0.5
 		},
 		"mod":{
-			"r_research.max":1,
-			"s_engineering.rate":0.1
+			"research.max":1,
+			"engineering.rate":0.1
 		}
 	},
 	{
-		"id":"s_engineering",
-		"need":"g.s_maintenance>1",
+		"id":"engineering",
+		"need":"g.maintenance>1",
 		"desc":"an absolutely vital skill for an engineer to craft complicated objects.",
 		"level":1,
 		"buy":{},
@@ -51,21 +51,21 @@
 			"stamina":0.5
 		},
 		"mod":{
-			"r_research.max":1,
-			"s_maintenance.max":-0.4
+			"research.max":1,
+			"maintenance.max":-0.4
 		}
 	},
 		{
-		"id":"s_computeruser",
-		"need":"g.a_computerbook>0",
+		"id":"computeruser",
+		"need":"g.computerbook>0",
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
 		"run":{
 			"stamina":0.5
 		},
 		"mod":{
-			"r_research.max":1,
-			"s_processing.max":1
+			"research.max":1,
+			"processing.max":1
 		}
 	}
 ]
