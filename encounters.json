@@ -1,42 +1,42 @@
 [
 	{
-		"id":"rubble1",
+		"id":"n_rubble1",
 		"name":"Dig through rubble",
 		"desc":"Find out what's at the bottom of this pile.",
 		"result":{
 			"gold":"0~1",
-			"electronics":"0~1"
+			"r_electronics":"0~1"
 		}
 	},
 	{
-		"id":"loosepapers",
+		"id":"n_loosepapers",
 		"name":"Loose papers",
 		"desc":"Information that's nearly useless without organization",
 		"effect":{
-			"medicaldata":"0~2"
+			"r_medicaldata":"0~2"
 		}
 	},
 	{
-		"id":"medicalsamples",
+		"id":"n_medicalsamples",
 		"name":"destroyed medical samples",
 		"level":1,
 		"desc":"Materials used in diagnostics or research",
 		"effect":{
-			"unease":"0~1",
-			"medicaldata":"0~1",
-			"medicalsupplies":"0~1",
-			"medicine.exp":0.1
+			"r_unease":"0~1",
+			"r_medicaldata":"0~1",
+			"r_medicalsupplies":"0~1",
+			"s_medicine.exp":0.1
 		}
 	},
 	{
-		"id":"toolbox",
+		"id":"n_toolbox",
 		"name":"mangled toolbox",
 		"desc":"a tree by a magic spring exhibits surprising qualities",
 		"effect":{
 			"gold":"0~2",
-			"electronics":"0~1",
-			"smallbatteries":"0~1",
-			"engineering.exp":0.1
+			"r_electronics":"0~1",
+			"r_smallbatteries":"0~1",
+			"s_engineering.exp":0.1
 		}
 	}
 ]
