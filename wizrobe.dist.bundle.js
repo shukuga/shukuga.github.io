@@ -10061,14 +10061,14 @@ var wizrobe = function(t) {
                 }],
                 staticClass: "hidable",
                 attrs: {
-                    "data-key": "stamina"
+                    "data-key": "r_stamina"
                 }
-            }, [i("td", [t._v("stamina")]), i("td", {
+            }, [i("td", [t._v("r_stamina")]), i("td", {
                 attrs: {
                     colspan: "2"
                 }
             }, [i("progbar", {
-                staticClass: "stamina",
+                staticClass: "r_stamina",
                 attrs: {
                     value: t.r_stamina.valueOf(),
                     max: t.r_stamina.max.value
@@ -10197,7 +10197,7 @@ var wizrobe = function(t) {
                     return this.state.restAction.running
                 },
                 stamina() {
-                    return this.state.getData("stamina")
+                    return this.state.getData("r_stamina")
                 }
             }
         },
