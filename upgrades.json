@@ -10,6 +10,7 @@
                 "repeat":false,
                 "mod":{
                         "hp.max":4,
+                        "dist":4,
                         "stamina.max":4
                 },
                 "effect":"repairedsuit"
