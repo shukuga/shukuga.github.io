@@ -61,7 +61,7 @@
 		"id":"dist",
 		"name":"distance",
 		"desc":"Maximum travel distance.",
-		"val":5,
+		"val":1,
 		"stat":true,
 		"locked":false
 	},
