@@ -29,14 +29,6 @@
 		"disable":["stabilize"]
 	},
 	{
-		"id":"evt_home1",
-		"name":"First home",
-		"require":"repairedsuit",
-		"pick":{
-			"slots.home":"h_suit1"
-		}
-	},
-	{
 		"id":"findmedicalbay",
 		"name":"Destroyed Medical Bay",
 		"desc":"This is a small section of your ship that was dedicated to handling injuries. While most of the machinery is useless without the ship's system, some of the equipment can be repurposed.",
