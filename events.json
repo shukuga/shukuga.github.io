@@ -34,6 +34,9 @@
 		"desc":"This is a small section of your ship that was dedicated to handling injuries. While most of the machinery is useless without the ship's system, some of the equipment can be repurposed.",
 		"require":"g.explorenorth>0"
 	},
+        {
+                "id":"book1"
+        },
 	{
 		"id":"findmaintenancescrap",
 		"name":"Maintenance Closet",
