@@ -73,7 +73,7 @@
                 "name":"floor space",
                 "desc":"Space Available",
                 "reverse":true,
-                "max":0
+                "max":5
         },
         {
                 "id":"mana",
