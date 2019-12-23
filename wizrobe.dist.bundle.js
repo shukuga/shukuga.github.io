@@ -605,6 +605,19 @@ var wizrobe = function(t) {
             }
             return null != t.type ? "resource" === t.type || "action" === t.type ? !t.locked : t.value > 0 : void 0
         },
+        applyEffect(t, e = 1) {
+            if ("object" == typeof t) {
+                if (Array.isArray(t)) {
+                    for (let i of t) this.applyEffect(i, e);
+                    return
+                }
+                let i, s;
+                for (let n in t) i = this.getData(n), s = t[n], null == i ? "title" === n ? this.state.player.addTitle(s) : "log" === n ? r.J.emit(r.r, s) : this.applyToTag(n, s, e) : ("number" == typeof s || s instanceof l.b ? i.amount(this, s * e) : !0 === s ? (i.doUnlock(this), i.onUse(this)) : s instanceof y.b ? s.roll(this.getData("luck").valueOf()) && i.amount(this, 1) : i.applyVars(s, e), i.dirty = !0)
+            } else if ("string" == typeof t) {
+                let i = this.getData(t);
+                void 0 !== i ? i.amount(this, e) : this.listGet(this.getTagList(t), e)
+            }
+        },
         applyToTag(t, e, i) {
             let s = this.state.getTagList(t);
             if (s)
@@ -2229,6 +2242,294 @@ var wizrobe = function(t) {
     }
 }, function(t, e, i) {
     "use strict";
+    class s {
+        toJSON() {
+            if (!this.empty) return {
+                name: this.name,
+                hid: this.hid,
+                level: this.level,
+                gclass: this.gclass,
+                title: this.title || void 0,
+                titles: this.titles || void 0,
+                gender: this.gender || void 0,
+                school: this.school || void 0,
+                fame: this.fame || void 0,
+                points: this.points || void 0
+            }
+        }
+        get name() {
+            return this._name
+        }
+        set name(t) {
+            this._name = t
+        }
+        get hid() {
+            return this._hid
+        }
+        set hid(t) {
+            this._hid = t
+        }
+        get level() {
+            return this._level
+        }
+        set level(t) {
+            this._level = t
+        }
+        get title() {
+            return this._title
+        }
+        set title(t) {
+            this._title = t
+        }
+        get fame() {
+            return this._fame
+        }
+        set fame(t) {
+            this._fame = t
+        }
+        get titles() {
+            return this._titles
+        }
+        set titles(t) {
+            this._titles = t
+        }
+        get gender() {
+            return this._gender
+        }
+        set gender(t) {
+            this._gender = t
+        }
+        get school() {
+            return this._school
+        }
+        set school(t) {
+            this._school = t
+        }
+        get points() {
+            return this._points
+        }
+        set points(t) {
+            this._points = t
+        }
+        constructor(t = null) {
+            t ? (Object.assign(this, t), t.empty || !t.name ? this.empty = !0 : this.empty = !1) : this.empty = !0, this.points || (this.points = 0), this.fame || (this.fame = 0), this.titles || (this.titles = 0), this.level || (this.level = 0)
+        }
+        update(t) {
+            this.name = t.name, this.level = t.level.valueOf(), this.hid = t.hid, this.title = t.title, this.titles = t.titles.length, this.fame = t.fame.valueOf(), this.gclass = t.gclass, this.empty = !1, console.log("chr pts: " + this.getPoints())
+        }
+        getPoints() {
+            return this.empty ? 0 : (isNaN(this.points) && console.warn(this.name + "points: NaN: " + this.points), isNaN(this.fame) && console.warn(this.name + "fame: NaN: " + this.fame), isNaN(this.titles) && console.warn(this.name + "titles: NaN: " + this.titles), isNaN(this.level) && console.warn(this.name + "level: NaN: " + this.level), this.points + this.fame + (this.titles + this.level) / 10)
+        }
+    }
+    var n = i(3),
+        r = i(31);
+    class a {
+        toJSON() {
+            return {
+                name: this.name,
+                chars: this.chars,
+                active: this.active,
+                items: this.items
+            }
+        }
+        get active() {
+            return this._active
+        }
+        set active(t) {
+            this._active = t
+        }
+        get name() {
+            return this._name
+        }
+        set name(t) {
+            this._name = t
+        }
+        get chars() {
+            return this._chars
+        }
+        set chars(t) {
+            for (let e = t.length - 1; e >= 0; e--) t[e] = new s(t[e]);
+            this._chars = t
+        }
+        get prestige() {
+            return this._prestige
+        }
+        set prestige(t) {
+            this._prestige = t
+        }
+        get items() {
+            return this._items
+        }
+        set items(t) {
+            this._items = t
+        }
+        get max() {
+            return this._max
+        }
+        set max(t) {
+            this._max = t instanceof n.a ? t : new n.a(t)
+        }
+        constructor(t = null) {
+            t && Object.assign(this, t), this.chars || (this.chars = []), this.active || (this.active = 0), this.name || (this.name = "Wizard's Hall"), this.max = 3;
+            let e = this.items.prestige;
+            e ? this.prestige = e : (console.warn("cannot find prestige data"), this.prestige = new r.a(0)), this.initChars()
+        }
+        dismiss(t) {
+            return !(t < 0 || t >= this.chars.length) && (this.chars[t].empty = !0, this.chars[t].name = null, this.chars[t].hid = null, !0)
+        }
+        calcPoints() {
+            let t = 0;
+            for (let e = this.chars.length - 1; e >= 0; e--) t += this.chars[e].getPoints();
+            this.prestige.value = t
+        }
+        initChars() {
+            let t = 0,
+                e = this.max.value;
+            for (let n = 0; n < e; n++) {
+                var i = this.chars[n];
+                void 0 === i ? this.chars.push(new s) : t += i.getPoints()
+            }
+            this.chars.length > this.max && (this.chars = this.chars.slice(0, Math.floor(e))), this.prestige.value = t
+        }
+        setActive(t) {
+            return t < 0 || t >= this.chars.length ? (console.warn("invalid char slot: " + t), !1) : (this.active = t, !0)
+        }
+        updateChar(t, e = -1) {
+            let i = this.getSlot(e);
+            i || (i = this.chars[e < 0 ? this.active : e] = new s), i.update(t)
+        }
+        setLevel(t, e = -1) {
+            let i = this.getSlot(e);
+            i && (i.level = t)
+        }
+        setName(t, e = -1) {
+            let i = this.getSlot(e);
+            i && (i.name = t)
+        }
+        hidSlot(t) {
+            return this.chars.findIndex(e => e.hid == t)
+        }
+        setTitle(t, e = -1) {
+            let i = this.getSlot(e);
+            i && (i.title = t)
+        }
+        getSlot(t = -1) {
+            return this.chars[t < 0 ? this.active : t]
+        }
+        findSlot(t) {
+            return this.chars.findIndex(t)
+        }
+        byName(t) {
+            return this.chars.findIndex(e => e.name === t)
+        }
+        rmChar(t) {
+            this.chars[t] = void 0
+        }
+    }
+    var o = i(11),
+        l = i(0),
+        h = i(50);
+    e.a = {
+        hall: null,
+        legacySave: () => "gameData",
+        loadHallData(t) {
+            let e = new h.a;
+            return e.load("hall").then(() => e.instance(t))
+        },
+        async loadHall() {
+            let t = window.localStorage.getItem("hall");
+            if (t) try {
+                t = JSON.parse(t)
+            } catch (t) {
+                console.error(t.message + "\n" + t.stack)
+            }
+            t = await this.loadHallData(t), this.hall = new a(t)
+        },
+        onCharLevel(t, e) {
+            this.hall.updateChar(t), this.saveHall()
+        },
+        updateChar(t, e = -1) {
+            this.hall.updateChar(t, e), this.saveHall()
+        },
+        setHallName(t) {
+            this.hall.name = t, this.saveHall()
+        },
+        setActive(t, e) {
+            this.hall.updateChar(e.player), this.saveActive(e), this.hall.setActive(t), this.saveHall()
+        },
+        getHallData() {
+            return this.hall.items
+        },
+        gameLoaded(t) {
+            let e = t.state.player,
+                i = this.hall.hidSlot(e.hid);
+            i >= 0 && this.hall.setActive(i), this.hall.updateChar(e), this.saveHall(), this.hall.calcPoints(), l.J.add(l.A, this.onCharLevel, this), l.J.add(l.h, this.updateChar, this), l.J.add(l.i, this.updateChar, this), l.J.add(l.f, this.updateChar, this)
+        },
+        clearAll() {
+            window.localStorage.clear()
+        },
+        clearActive() {
+            window.localStorage.setItem(this.activeLoc(), null)
+        },
+        dismiss(t) {
+            this.hall.dismiss(t) && (window.localStorage.setItem(this.charLoc(t), null), window.localStorage.setItem(this.settingsLoc(t), null), this.saveHall())
+        },
+        loadActive() {
+            try {
+                let t = window.localStorage,
+                    e = t.getItem(this.activeLoc());
+                return e || 0 !== this.hall.active || (console.log("NO Char. USING LEGACY"), e = t.getItem(this.legacySave())), e
+            } catch (t) {
+                return console.error(t.message + "\n" + t.stack), null
+            }
+        },
+        saveActive(t) {
+            try {
+                let e = window.localStorage,
+                    i = JSON.stringify(t);
+                return i && e.setItem(this.activeLoc(), i), this.saveSettings(), !0
+            } catch (t) {
+                return console.error(t.message + "\n" + t.stack), !1
+            }
+        },
+        loadSettings() {
+            try {
+                let t = window.localStorage.getItem(this.settingsLoc()),
+                    e = JSON.parse(t);
+                return o.a.setSettings(e), o.a.getAll()
+            } catch (t) {
+                console.error(t.message + "\n" + t.stack)
+            }
+        },
+        saveSettings() {
+            try {
+                let t = JSON.stringify(o.a);
+                t && window.localStorage.setItem(this.settingsLoc(), t)
+            } catch (t) {
+                console.error(t.message + "\n" + t.stack)
+            }
+        },
+        activeLoc() {
+            return "chars/" + this.hall.active
+        },
+        charLoc: t => "chars/" + t,
+        settingsLoc(t) {
+            return "settings/" + (void 0 === t ? this.hall.active : t)
+        },
+        saveHall() {
+            try {
+                let t = JSON.stringify(this.hall);
+                t && window.localStorage.setItem("hall", t)
+            } catch (t) {
+                console.error(t.message + "\n" + t.stack)
+            }
+        },
+        setName(t) {},
+        setLevel(t) {},
+        setTitle(t) {}
+    }
+}, function(t, e, i) {
+    "use strict";
     i.d(e, "a", (function() {
         return n
     })), i.d(e, "b", (function() {
@@ -2577,6 +2878,11 @@ var wizrobe = function(t) {
         return v
     }));
     class v {
+        constructor(t) {
+            this.state = t, this.groups = {}, this.luck = t.getData("luck"), this.initGroup(f.a, t.armors), this.initGroup(f.n, t.weapons), this.initGroup("materials", t.materials);
+            let e = this.initGroup(f.h, t.monsters);
+            e.makeFilter("biome"), e.makeFilter("kind")
+        }
         npc(t) {
             let e = new h.b(t);
             return e.value = 1, e.name = t.name, e.id = this.state.nextId(t.id), e
@@ -2601,6 +2907,13 @@ var wizrobe = function(t) {
             let i = t.material || e;
             return "number" != typeof i && i || (i = this.matForItem(t, i)), "string" == typeof i && (i = this.state.getData(i)), this.itemClone(t, i)
         }
+        getLoot(t, e = 1) {
+            if (e instanceof a.b) {
+                if (!e.roll(this.luck.value)) return null;
+                e = 1
+            } else e.value && (e = e.value);
+            return Array.isArray(t) ? t.flatMap ? t.flatMap(this.getLoot, this) : this.flatMap.call(t, this.getLoot, this) : "string" == typeof t && (t = this.state.getData(t)) instanceof p.a && !t.isRecipe && !t.instance ? this.getGData(t, e) : t ? t.pct && 100 * Math.random() > t.pct ? null : t.type === f.o || t.type === f.n || t.type === f.a ? this.fromData(t, t.level) : t.instance || t.isRecipe ? this.instance(t) : this.randLoot(t, e) : null
+        }
         flatMap(t, e) {
             let i = [],
                 s = this.length;
@@ -2610,6 +2923,17 @@ var wizrobe = function(t) {
                     s = s.flatMap(t, e);
                     for (let t = 0; t < s.length; t++) i.push(s[t])
                 } else i.push(t.call(e, s))
+            }
+            return i
+        }
+        randLoot(t, e) {
+            if ((100 + this.luck / 2) * Math.random() < 50) return null;
+            if (t.level) return this.fromLevel(t.level / 2, t.type, t.material);
+            if (t.max) return this.randBelow(t.max / 2, t.type, t.material);
+            let i = [];
+            for (let e in t) {
+                var s = this.getLoot(e, t[e]);
+                s && (Array.isArray(s) ? i = Object(c.j)(i, s) : i.push(s))
             }
             return i
         }
@@ -4401,8 +4725,478 @@ var wizrobe = function(t) {
         h = i(26),
         c = i(19),
         u = i(2);
-        var y = i(52),
+    class d {
+        get id() {
+            return u.k
+        }
+        toJSON() {
+            return {
+                locale: this.locale ? this.locale.id : void 0,
+                drops: this.drops,
+                combat: this.combat
+            }
+        }
+        get name() {
+            return this.locale ? this.locale.name : ""
+        }
+        get cost() {
+            return this.locale ? this.locale.cost : null
+        }
+        get run() {
+            return this.locale ? this.locale.run : null
+        }
+        get exp() {
+            return this.locale ? this.locale.exp : 0
+        }
+        set exp(t) {
+            t >= this.locale.length ? this.complete() : this.locale.exp = t
+        }
+        percent() {
+            return this.locale ? this.locale.percent() : 0
+        }
+        maxed() {
+            return !this.locale || this.locale.maxed()
+        }
+        canRun(t) {
+            return null != this.locale && this.locale.canRun(t)
+        }
+        canUse() {
+            return this.locale && !this.locale.maxed()
+        }
+        set dungeon(t) {
+            this.locale = t
+        }
+        get length() {
+            return this.locale ? this.locale.length : 0
+        }
+        get combat() {
+            return this._combat
+        }
+        set combat(t) {
+            this._combat = t instanceof h.a ? t : new h.a(t)
+        }
+        get enc() {
+            return this._combat
+        }
+        set enc(t) {}
+        get done() {
+            return this.exp === this.length
+        }
+        constructor(t = null) {
+            t && Object.assign(this, t), this.drops = this._drops || new a, this._combat = this._combat || new h.a, this.running = this.running || !1, this.type = u.k, this.locale = this.locale || null
+        }
+        revive(t) {
+            this.state = t, this.player = t.player, o.J.add(o.o, this.enemyDied, this), o.J.add(o.z, this.spellAttack, this), o.J.add(o.g, this.charDied, this), "string" == typeof this.locale && (this.locale = t.getData(this.locale)), this.locale || (this.running = !1), this._combat.revive(t)
+        }
+        charDied(t) {
+            t === this.player && this.running && (this.player.luck > 100 * Math.random() && (this.player.hp.value = Math.ceil(.05 * this.player.hp.max), o.J.emit(o.q, "Lucky Recovery", this.player.name + " has a close call.")), this.emitDefeat())
+        }
+        emitDefeat() {
+            o.J.emit(o.l, null), o.J.emit(o.a, this, this.locale && this.player.level > this.locale.level && this.player.retreat > 0)
+        }
+        update(t) {
+            null == this.locale || this.done || (this._combat.complete ? (this.advance(), this.done || this.nextEnc()) : this._combat.update(t))
+        }
+        addNpc(t) {
+            this.running && this._combat.addNpc(t)
+        }
+        spellAttack(t) {
+            this.locale && this.running && this._combat.spellAttack(t)
+        }
+        nextEnc() {
+            this.player.delay = Object(c.b)(this.player.speed), this.combat.setEnemies(this.locale.getEnemy(), this.exp / this.length)
+        }
+        enemyDied(t, e) {
+            if (this.player.exp += Math.max(1.5 * t.level - this.player.level, 1), t.template && t.template.id) {
+                let e = this.state.getData(t.template.id);
+                e && e.value++
+            }
+            t.result && l.c.applyEffect(t.result), t.loot ? l.c.getLoot(t.loot, l.c.state.drops) : l.c.getLoot({
+                max: t.level,
+                pct: 30
+            }, l.c.state.drops)
+        }
+        advance() {
+            this.exp += 1
+        }
+        complete() {
+            this.locale.exp = this.locale.length, this.locale.dirty = !0, this.locale.loot && l.c.getLoot(this.locale.loot, l.c.state.drops), this.locale.result && l.c.applyEffect(this.locale.result), this.locale.value++;
+            var t = Math.max(1 + this.player.level - this.locale.level, 1);
+            this.player.exp += this.locale.level * (15 + this.locale.length) / (.8 * t), o.J.emit(o.c, this, !1), this.locale = null
+        }
+        enter(t) {
+            this.player.timer = this.player.delay, null != t && (t != this.locale && this.combat.begin(), t.exp >= t.length && (t.exp = 0)), this.locale = t, this.combat.complete && this.nextEnc()
+        }
+        hasTag(t) {
+            return t === u.k
+        }
+    }
+    i(6);
+    class p {
+        toJSON() {
+            return {
+                id: this.id,
+                item: this.item,
+                multi: this.multi,
+                max: this.max
+            }
+        }
+        get item() {
+            return this._item
+        }
+        set item(t) {
+            this._item = t
+        }
+        constructor(t = null) {
+            t && Object.assign(this, t), this.max = this.max || 1, this.item = this.item || (this.max > 1 ? [] : null), this.multi = Array.isArray(this.item), this.name = this._name || this.id
+        }
+        freeSpace() {
+            let t = this.max;
+            if (!this.item) return t;
+            if (1 === t) return 0;
+            if (!Array.isArray(this.item)) return 0;
+            for (let e = this.item.length - 1; e >= 0; e--) t -= this.item[e].numslots || 1;
+            return t
+        }
+        equip(t) {
+            let e = t.numslots || 1;
+            if (e > this.max) return !1;
+            if (!0 === this.multi) return this.addMult(t, e);
+            if (this.item) {
+                let e = this.item;
+                return this.item = t, e
+            }
+            return this.item = t, !0
+        }
+        addMult(t, e) {
+            if (this.item.find(e => e.id === t.id)) return !1;
+            this.item.push(t);
+            for (let t = this.item.length - 2; t >= 0; t--)
+                if ((e += this.item[t].numslots || 1) > this.max) return this.item.splice(0, t + 1);
+            return !0
+        }
+        find(t) {
+            return null === this.item ? null : this.multi ? this.item.find(e => e.id === t) : this.item.id === t ? this.item : null
+        }
+        has(t) {
+            return !1 === this.multi ? this.item === t : this.item.includes(t)
+        }
+        remove(t) {
+            if (this.item === t) return this.item = null, t;
+            if (null == t) return t = this.item, this.item = null, t;
+            if (this.multi) {
+                let e = this.item.indexOf(t);
+                return !(e < 0) && this.item.splice(e, 1)[0]
+            }
+            return !1
+        }
+        revive(t) {
+            if (null !== this.item && void 0 !== this.item)
+                if (Array.isArray(this.item)) {
+                    let i = {},
+                        s = this.item;
+                    for (let n = s.length - 1; n >= 0; n--) {
+                        var e = Object(r.b)(t, s[n]);
+                        e && !0 !== i[e.id] ? (s[n] = e, i[e.id] = !0) : s.splice(n, 1)
+                    }
+                } else this.item = Object(r.b)(t, this.item)
+        }
+        hands() {
+            return null != this.item && this.item.hands || 0
+        }
+        empty() {
+            return null === this.item || Array.isArray(this.item) && 0 === this.item.length
+        }
+    }
+    class f {
+        get slots() {
+            return this._slots
+        }
+        set slots(t) {
+            for (let i in t) {
+                var e = t[i];
+                e instanceof p || (t[i] = new p(e))
+            }
+            this._slots = t
+        }
+        constructor(t = null) {
+            t && Object.assign(this, t)
+        }
+        find(t) {
+            for (let i in this.slots) {
+                var e = this.slots[i].find(t);
+                if (e) return e
+            }
+            return null
+        }
+        get(t) {
+            if (void 0 !== (t = this.slots[t])) return t.item
+        }
+        freeSpace(t) {
+            return void 0 === (t = this.slots[t]) ? 0 : t.freeSpace()
+        }
+        remove(t, e = null) {
+            return "string" == typeof(e = e || t.slot) && (e = this.slots[e]), !!e && e.remove(t)
+        }
+        revive(t) {
+            for (let e in this.slots) this.slots[e].revive(t)
+        }
+        setSlot(t, e = null) {
+            if (null === (e = e || t.slot) || !this.slots.hasOwnProperty(e)) return !1;
+            return this.slots[e].equip(t)
+        }* slotNames() {
+            for (let t in this.slots) yield t
+        }*[Symbol.iterator]() {
+            for (let e in this.slots) {
+                var t = this.slots[e].item;
+                if (Array.isArray(t))
+                    for (let e = t.length - 1; e >= 0; e--) t[e] && (yield t[e]);
+                else t && (yield t)
+            }
+        }
+    }
+    class m extends f {
+        toJSON() {
+            return {
+                slots: this.slots
+            }
+        }
+        constructor(t = null) {
+            super(t), this.slots = this._slots || {
+                left: new p({
+                    id: "left"
+                }),
+                right: new p({
+                    id: "right"
+                }),
+                head: new p({
+                    id: "head"
+                }),
+                hands: new p({
+                    id: "hands"
+                }),
+                back: new p({
+                    id: "back"
+                }),
+                waist: new p({
+                    id: "waist"
+                }),
+                neck: new p({
+                    id: "neck",
+                    max: 3
+                }),
+                fingers: new p({
+                    id: "fingers",
+                    max: 4
+                }),
+                chest: new p({
+                    id: "chest"
+                }),
+                shins: new p({
+                    id: "shins"
+                }),
+                feet: new p({
+                    id: "feet"
+                })
+            }
+        }
+        remove(t, e = null) {
+            return "weapon" === t.type ? this.removeWeap(t) : super.remove(t, e)
+        }
+        removeWeap(t) {
+            return this.slots.right.remove(t) || this.slots.left.remove(t)
+        }
+        replaceCount(t) {
+            let e = "weapon" === t.type ? this.freeSpace("right") + this.freeSpace("left") : this.freeSpace(t.slot);
+            return Math.max((t.numslots || 1) - e, 0)
+        }
+        equip(t, e = null) {
+            if ("weapon" === t.type) return this.equipWeap(t);
+            if (null === (e = e || t.slot) || !this.slots.hasOwnProperty(e)) return !1;
+            return this.slots[e].equip(t)
+        }
+        getWeapon() {
+            return !1 === this.slots.right.empty() ? this.slots.right.item : this.slots.left.item
+        }
+        equipWeap(t) {
+            let e = this.slots.right,
+                i = this.slots.left;
+            if (2 === t.hands) {
+                let s = e.equip(t),
+                    n = i.remove();
+                return s && n ? [s, n] : s || n
+            }
+            if (e.empty()) return console.log("setting right."), e.equip(t), !(i.hands() > 1) || i.remove();
+            if (i.empty()) return console.log("setting left."), i.equip(t), !(e.hands() > 1) || e.remove();
+            return console.log("NEITHER EMPTY. switch hands."), e.equip(i.equip(t))
+        }
+    }
+    var v = i(16);
+    class g extends a {
+        get maxAllies() {
+            return this._maxAllies
+        }
+        set maxAllies(t) {
+            this._maxAllies = t instanceof s.a ? t : new s.a(t, "maxAllies", !0)
+        }
+        get allyTotal() {
+            return this._allyTotal
+        }
+        set allyTotal(t) {
+            this._allyTotal = t
+        }
+        get active() {
+            return this._active
+        }
+        set active(t) {
+            this._active = t
+        }
+        constructor(t = null) {
+            super(t), this.type = this.id = "minions", this.max || (this.max = 0), this._active = []
+        }
+        update(t) {
+            for (let i = this.items.length - 1; i >= 0; i--) {
+                var e = this.items[i];
+                !1 === e.active && e.alive && e.rest(t)
+            }
+        }
+        add(t) {
+            super.add(t), t.team = v.a, t.active && this.setActive(t)
+        }
+        getList(t) {
+            return this.items.filter(e => t.includes(e.id))
+        }
+        setActive(t, e = !0) {
+            if (!0 === e) {
+                if (!t.alive || t.level + this.allyTotal > this.maxAllies) return t.active = !1, !1;
+                this.active.includes(t) || (this.allyTotal += t.level, this.active.push(t))
+            } else {
+                let e = this.active.indexOf(t);
+                e >= 0 && (this.allyTotal -= t.level, this.active.splice(e, 1))
+            }
+            t.active = e
+        }
+        revive(t) {
+            super.revive(t), this.maxAllies || (this.maxAllies = Math.floor(t.player.level / 5));
+            let e = 0;
+            for (let t = this.items.length - 1; t >= 0; t--) {
+                var i = this.items[t];
+                i.type === u.i ? (i.active && (e += i.level, this._active.push(i)), i.team = v.a) : this.items.splice(t, 1)
+            }
+            this.calcUsed(), this.allyTotal = e, o.J.add(o.e, this.died, this), o.J.add(o.b, this.resetActives, this)
+        }
+        resetActives() {
+            for (let t = this.active.length - 1; t >= 0; t--) this.active[t].active && this.active[t].alive || this.setActive(this.active[t], !1)
+        }
+        remove(t) {
+            super.remove(t), console.log("removing minion: " + t.id), this.setActive(t, !1)
+        }
+        died(t) {}
+    }
+    var y = i(52),
         _ = i(27);
+    class b {
+        get id() {
+            return u.d
+        }
+        toJSON() {
+            let t = this.enc;
+            return {
+                locale: this.locale ? this.locale.id : void 0,
+                enc: t ? {
+                    id: t.id,
+                    exp: t.exp,
+                    recipe: t.recipe,
+                    template: t.template ? "string" == typeof t.template ? t.template : t.template.id : void 0
+                } : void 0
+            }
+        }
+        get name() {
+            return this.locale ? this.locale.name : ""
+        }
+        get cost() {
+            return this.locale ? this.locale.cost : null
+        }
+        get run() {
+            return this.locale ? this.locale.run : null
+        }
+        get exp() {
+            return this.locale ? this.locale.exp : 0
+        }
+        set exp(t) {
+            t >= this.locale.length ? this.complete() : this.locale.exp = t
+        }
+        percent() {
+            return this.locale ? this.locale.percent() : 0
+        }
+        maxed() {
+            return !this.locale || this.locale.maxed()
+        }
+        canUse() {
+            return this.locale && !this.locale.maxed()
+        }
+        canRun(t) {
+            return this.locale && this.locale.canRun(t)
+        }
+        get encs() {
+            return this.locale ? this.locale.encs : null
+        }
+        get length() {
+            return this.locale ? this.locale.length : 0
+        }
+        get enc() {
+            return this._enc
+        }
+        set enc(t) {
+            this._enc = t
+        }
+        get done() {
+            return this.exp === this.length
+        }
+        constructor(t = null) {
+            t && Object.assign(this, t), this.running = this.running || !1, this.type = u.d, this._enc = this._enc || null, this.locale = this.locale || null
+        }
+        revive(t) {
+            this.state = t, this.player = t.player, this.spelllist = t.getData("spelllist"), "string" == typeof this.locale && (this.locale = t.getData(this.locale)), this._enc && (this.enc = Object(r.b)(t, this._enc)), !this.enc || this.enc instanceof _.a || (console.warn("bad encounter: " + (this.enc ? this.enc.id : this.enc)), this.enc = null), this.locale || (this.running = !1)
+        }
+        tryCast() {
+            return !!this.spelllist.canUse(l.c) && this.spelllist.onUse(l.c)
+        }
+        update(t) {
+            null == this.locale || this.done || (this.enc || this.nextEnc(), this.enc && (this.player.timer -= t, this.player.timer <= 0 && (this.player.timer += Object(c.b)(this.player.speed), this.spelllist.count > 0 && this.tryCast()), this.enc.update(t), this.player.defeated() ? (o.J.emit(o.l, this), o.J.emit(o.a, this, !0)) : this.enc.done && (this.encDone(this.enc), this.advance())))
+        }
+        nextEnc() {
+            if (this.locale) {
+                this.player.delay = Object(c.b)(this.player.speed);
+                var t = this.locale.getEnc();
+                if ("string" == typeof t) {
+                    var e = l.c.instance(t);
+                    e ? (o.J.emit(o.n, e.name, e.desc), this._enc = e, e.exp = 0) : console.warn("MISSING ENCOUNTER: " + t)
+                }
+            }
+        }
+        encDone(t) {
+            if (this.player.exp += .75 + Math.max(t.level - this.player.level, 0), t.template && t.template.id) {
+                let e = this.state.getData(t.template.id);
+                e && e.value++
+            } else t.value++;
+            t.result && l.c.applyEffect(t.result), t.loot && l.c.getLoot(t.loot, l.c.state.drops), this.enc = null
+        }
+        advance() {
+            this.exp += 1
+        }
+        complete() {
+            this.locale.exp = this.locale.length, this.locale.dirty = !0, this.locale.loot && l.c.getLoot(this.locale.loot, l.c.state.drops), this.locale.result && l.c.applyEffect(this.locale.result), this.locale.value++;
+            var t = Math.max(1 + this.player.level - this.locale.level, 1);
+            this.player.exp += this.locale.level * (15 + this.locale.length) / (.8 * t), this.enc = null, o.J.emit(o.c, this, !1), this.locale = null
+        }
+        enter(t) {
+            this.player.timer = this.player.delay, null != t && (t != this.locale && (this.enc = null), t.exp >= t.length && (t.exp = 0)), this.locale = t
+        }
+        hasTag(t) {
+            return t === u.d
+        }
+    }
     var x = i(4);
     const w = "top",
         k = "rand",
@@ -4552,9 +5346,106 @@ var wizrobe = function(t) {
         }
     }
     Object(n.c)(C, n.a);
+    class j extends a {
+        constructor(t = null) {
+            super(t), this.id = "userSpells", this.name = "crafted spells"
+        }
+        revive(t) {
+            super.revive(t), this.state = t
+        }
+        remove(t) {
+            o.J.emit(o.m, t), super.remove(t)
+        }
+        create(t, e = null) {
+            let i = new C;
+            return i.school = "crafted", i.items = t, i.id = this.state.nextId("spell"), i.type = "spell", i.name = e || "new spell", i.computeCost(), this.state.addItem(i), this.add(i), i
+        }
+    }
     var T = i(49);
-
+    class I extends T.a {
+        toJSON() {
+            if (this._item || this.recipe) return this.recipe ? {
+                item: this.item.id,
+                recipe: this.recipe
+            } : this._item.id
+        }
+        get name() {
+            return super.item ? super.item.name : this.recipe || ""
+        }
+        get item() {
+            return super.item
+        }
+        set item(t) {
+            super.item = t, t && "object" == typeof t ? t.id !== this.recipe && (this.recipe = t.recipe || null) : this.recipe = null
+        }
+        get recipe() {
+            return this._recipe
+        }
+        set recipe(t) {
+            this._recipe = t
+        }
+        constructor(t = null) {
+            super(), t ? "string" == typeof t ? (this.item = t, this.recipe = null) : "object" == typeof t && (this.item = t.item, this.recipe = t.recipe) : (this.item = null, this.recipe = null)
+        }
+        getTarget(t) {
+            return this.item && !this.recipe ? this.item : this.item && this.item.value > 0 && (!this.recipe || this.recipe !== this.item.id) ? this.item : this.recipe ? t.state.findInstance(this.recipe, !0) : null
+        }
+        onUse(t) {
+            let e = this.getTarget(t);
+            null != e && e.value > 0 && e.onUse(t)
+        }
+        revive(t) {
+            if (this.item) {
+                var e = t.findData(this.item, !1);
+                if (e) return void(this.item = e)
+            }
+            if (this.recipe) {
+                let e = this.recipe;
+                this.item = t.findInstance(e, !0) || t.getData(e)
+            }
+        }
+    }
     const N = 10;
+    class M {
+        toJSON() {
+            return {
+                slots: this.slots
+            }
+        }
+        get slots() {
+            return this._slots
+        }
+        set slots(t) {
+            if (null == t) return;
+            let e = [];
+            for (let i = 0; i < N; i++) e[i] = new I(t[i]);
+            this._slots = e
+        }
+        constructor(t = null) {
+            Array.isArray(t) ? this.slots = t : t ? (Object.assign(this, t), t.slots || (this.slots = [])) : this.slots = []
+        }
+        revive(t) {
+            for (let e = this._slots.length - 1; e >= 0; e--) this._slots[e].revive(t)
+        }
+        remove(t) {
+            for (let i in this.slots) {
+                var e = this.slots[i];
+                e && e.item && e.id === t && this.clear(i)
+            }
+        }
+        clear(t) {
+            this.slots[t].item = null
+        }
+        setSlot(t, e) {
+            if ((!t || t.type !== u.l) && e >= 0 && e <= 9) {
+                let i = e > 0 ? e - 1 : 9;
+                this.slots[i].item = t
+            }
+        }
+        getSlot(t) {
+            return this._slots[t > 0 ? t - 1 : 9]
+        }
+    }
     class L {
         toJSON() {
             return {
@@ -4628,6 +5519,13 @@ var wizrobe = function(t) {
         nextIdNum() {
             return this.NEXT_ID++
         }
+        constructor(t) {
+            Object.assign(this, t), this.NEXT_ID = this.NEXT_ID || 0, this.initSlots(), this.bars = new L(t.bars || {
+                bars: [t.quickbar]
+            }), this.initMaterials(this.materials), this.inventory = new a(this.items.inv || t.inventory || {
+                max: 3
+            }), this.items.inv = this.inventory, this.inventory.removeDupes = !0, this.drops = new a, this.minions = this.items.minions = new g(this.items.minions || null), this.equip = new m(t.equip), this.initStats(), this.raid = new d(t.raid), this.explore = new b(t.explore), this.runner = this.items.runner = new y.b(this.items.runner), this.prepItems(), this.userSpells = this.items.userSpells = new j(this.items.userSpells), this.items.spelllist = this.spelllist = new A(this.items.spelllist), this.revive(), this.readyItems(), this.spelllist.calcUsed(), this.playerStats = this.player.getResources(), this.tagLists = this.makeLists(this.items)
+        }
         initStats() {
             this.sellRate = this.sellRate || new s.a(.5, "sellRate")
         }
@@ -4655,6 +5553,11 @@ var wizrobe = function(t) {
         suitTest(t, e, i) {
             var s = i.slots.suit;
             return t.space.valueOf() <= t.space.max.delValue(e.mod.space.max.bonus - (s ? s.mod.space.max.bonus : 0))
+        }
+        initMaterials(t) {
+            let e = {};
+            for (let i = t.length - 1; i >= 0; i--) e[t[i].id] = t[i];
+            this.matsById = e
         }
         mergeItems(t, e) {
             let i;
@@ -10002,7 +10905,27 @@ var wizrobe = function(t) {
             this.lastSave = null, this.game = r.c, this.listen("save-file", this.saveFile, this), this.listen("load-file", this.loadFile, this), this.listen("load", this.loadSave, this), this.listen("reset", this.reset, this), this.listen("stat", this.doStat, this), this.listen("save-settings", st.a.saveSettings, st.a), this.listen("set-char", this.setChar, this), this.listen("dismiss-char", this.dismissChar, this), this.listen("save", this.save), this.listen("autosave", this.save), this.listen("setting", this.onSetting, this), this.loadProfile()
         },
         methods: {
-           
+            doStat(t, e) {
+                window.kong && window.kong.stats.submit(t, e)
+            },
+            setChar(t) {
+                st.a.setActive(t, this.game.state), this.loadSave()
+            },
+            dismissChar(t) {
+                st.a.dismiss(t)
+            },
+            loadProfile() {
+                console.warn("LOADING PROFILE"), st.a.loadHall().then(() => this.loadSave())
+            },
+            loadSave() {
+                try {
+                    console.warn("LOADING SAVE");
+                    let t = st.a.loadActive();
+                    t || console.log("no data saved."), this.setStateJSON(t)
+                } catch (t) {
+                    console.error(t.message + "\n" + t.stack)
+                }
+            },
             gameLoaded(t) {
                 t || console.warn("gameloaded(): NULL");
                 let e = st.a.loadSettings();
