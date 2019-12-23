@@ -5519,13 +5519,6 @@ var wizrobe = function(t) {
         nextIdNum() {
             return this.NEXT_ID++
         }
-        constructor(t) {
-            Object.assign(this, t), this.NEXT_ID = this.NEXT_ID || 0, this.initSlots(), this.bars = new L(t.bars || {
-                bars: [t.quickbar]
-            }), this.initMaterials(this.materials), this.inventory = new a(this.items.inv || t.inventory || {
-                max: 3
-            }), this.items.inv = this.inventory, this.inventory.removeDupes = !0, this.drops = new a, this.minions = this.items.minions = new g(this.items.minions || null), this.equip = new m(t.equip), this.initStats(), this.raid = new d(t.raid), this.explore = new b(t.explore), this.runner = this.items.runner = new y.b(this.items.runner), this.prepItems(), this.userSpells = this.items.userSpells = new j(this.items.userSpells), this.items.spelllist = this.spelllist = new A(this.items.spelllist), this.revive(), this.readyItems(), this.spelllist.calcUsed(), this.playerStats = this.player.getResources(), this.tagLists = this.makeLists(this.items)
-        }
         initStats() {
             this.sellRate = this.sellRate || new s.a(.5, "sellRate")
         }
@@ -5553,11 +5546,6 @@ var wizrobe = function(t) {
         suitTest(t, e, i) {
             var s = i.slots.suit;
             return t.space.valueOf() <= t.space.max.delValue(e.mod.space.max.bonus - (s ? s.mod.space.max.bonus : 0))
-        }
-        initMaterials(t) {
-            let e = {};
-            for (let i = t.length - 1; i >= 0; i--) e[t[i].id] = t[i];
-            this.matsById = e
         }
         mergeItems(t, e) {
             let i;
