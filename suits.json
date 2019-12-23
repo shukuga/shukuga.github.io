@@ -1,13 +1,35 @@
 [
 	{
 		"id":"h_suit1",
-		"name":"EVA suit",
+		"name":"Escape pod suit",
 		"desc":"Not intended for long-term or rugged use",
 		"require":"evasuit",
 		"mod":{
 			"space.max":5,
 			"gold.max":5,
 			"dist":1
+		}
+	},
+		{
+		"id":"h_suit2",
+		"name":"EVA suit",
+		"desc":"Withstands the harsh space environment",
+		"require":"evasuit",
+		"mod":{
+			"space.max":10,
+			"gold.max":5,
+			"dist":5
+		}
+	},
+		{
+		"id":"h_suit1",
+		"name":"Systems interface suit",
+		"desc":"Best equipped for direct computer access",
+		"require":"evasuit",
+		"mod":{
+			"space.max":15,
+			"gold.max":5,
+			"dist":3
 		}
 	}
 ]
