@@ -70,7 +70,7 @@
 	},
 	{
 		"id":"dataanalysis",
-		"name":"Data analysis"
+		"name":"Data analysis",
 		"need":"g.computeruser>4",
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
