@@ -55,9 +55,23 @@
 			"maintenance.max":-0.4
 		}
 	},
-		{
+	{
 		"id":"computeruser",
 		"need":"g.computerbook>0",
+		"desc":"Computers run the world, so you need to run them",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1,
+			"processing.max":1
+		}
+	},
+	{
+		"id":"dataanalysis",
+		"name":"Data analysis"
+		"need":"g.computeruser>4",
 		"desc":"Sythesizing large amounts of information doesn't come naturally",
 		"buy":{},
 		"run":{
@@ -66,6 +80,54 @@
 		"mod":{
 			"research.max":1,
 			"processing.max":1
+		}
+	},
+	{
+		"id":"cybernetics",
+		"need":"g.biology>10",
+		"desc":"Robot, meet body. Body, meet robot",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
+		}
+	},
+	{
+		"id":"cloning",
+		"need":"g.biology>10",
+		"desc":"",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
+		}
+	},
+		{
+		"id":"rocketry",
+		"need":"g.engineering>5&&g.physics>5",
+		"desc":"Give me a lever and I will move the world. Give me a rocket and I'll escape it.",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
+		}
+	},
+		{
+		"id":"physics",
+		"need":"g.engineering>2",
+		"desc":"",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
 		}
 	}
 ]
