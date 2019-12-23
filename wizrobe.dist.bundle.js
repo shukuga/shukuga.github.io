@@ -605,19 +605,6 @@ var wizrobe = function(t) {
             }
             return null != t.type ? "resource" === t.type || "action" === t.type ? !t.locked : t.value > 0 : void 0
         },
-        applyEffect(t, e = 1) {
-            if ("object" == typeof t) {
-                if (Array.isArray(t)) {
-                    for (let i of t) this.applyEffect(i, e);
-                    return
-                }
-                let i, s;
-                for (let n in t) i = this.getData(n), s = t[n], null == i ? "title" === n ? this.state.player.addTitle(s) : "log" === n ? r.J.emit(r.r, s) : this.applyToTag(n, s, e) : ("number" == typeof s || s instanceof l.b ? i.amount(this, s * e) : !0 === s ? (i.doUnlock(this), i.onUse(this)) : s instanceof y.b ? s.roll(this.getData("luck").valueOf()) && i.amount(this, 1) : i.applyVars(s, e), i.dirty = !0)
-            } else if ("string" == typeof t) {
-                let i = this.getData(t);
-                void 0 !== i ? i.amount(this, e) : this.listGet(this.getTagList(t), e)
-            }
-        },
         applyToTag(t, e, i) {
             let s = this.state.getTagList(t);
             if (s)
@@ -2878,11 +2865,6 @@ var wizrobe = function(t) {
         return v
     }));
     class v {
-        constructor(t) {
-            this.state = t, this.groups = {}, this.luck = t.getData("luck"), this.initGroup(f.a, t.armors), this.initGroup(f.n, t.weapons), this.initGroup("materials", t.materials);
-            let e = this.initGroup(f.h, t.monsters);
-            e.makeFilter("biome"), e.makeFilter("kind")
-        }
         npc(t) {
             let e = new h.b(t);
             return e.value = 1, e.name = t.name, e.id = this.state.nextId(t.id), e
@@ -2907,13 +2889,6 @@ var wizrobe = function(t) {
             let i = t.material || e;
             return "number" != typeof i && i || (i = this.matForItem(t, i)), "string" == typeof i && (i = this.state.getData(i)), this.itemClone(t, i)
         }
-        getLoot(t, e = 1) {
-            if (e instanceof a.b) {
-                if (!e.roll(this.luck.value)) return null;
-                e = 1
-            } else e.value && (e = e.value);
-            return Array.isArray(t) ? t.flatMap ? t.flatMap(this.getLoot, this) : this.flatMap.call(t, this.getLoot, this) : "string" == typeof t && (t = this.state.getData(t)) instanceof p.a && !t.isRecipe && !t.instance ? this.getGData(t, e) : t ? t.pct && 100 * Math.random() > t.pct ? null : t.type === f.o || t.type === f.n || t.type === f.a ? this.fromData(t, t.level) : t.instance || t.isRecipe ? this.instance(t) : this.randLoot(t, e) : null
-        }
         flatMap(t, e) {
             let i = [],
                 s = this.length;
@@ -2923,17 +2898,6 @@ var wizrobe = function(t) {
                     s = s.flatMap(t, e);
                     for (let t = 0; t < s.length; t++) i.push(s[t])
                 } else i.push(t.call(e, s))
-            }
-            return i
-        }
-        randLoot(t, e) {
-            if ((100 + this.luck / 2) * Math.random() < 50) return null;
-            if (t.level) return this.fromLevel(t.level / 2, t.type, t.material);
-            if (t.max) return this.randBelow(t.max / 2, t.type, t.material);
-            let i = [];
-            for (let e in t) {
-                var s = this.getLoot(e, t[e]);
-                s && (Array.isArray(s) ? i = Object(c.j)(i, s) : i.push(s))
             }
             return i
         }
@@ -4789,7 +4753,8 @@ var wizrobe = function(t) {
             this.state = t, this.player = t.player, o.J.add(o.o, this.enemyDied, this), o.J.add(o.z, this.spellAttack, this), o.J.add(o.g, this.charDied, this), "string" == typeof this.locale && (this.locale = t.getData(this.locale)), this.locale || (this.running = !1), this._combat.revive(t)
         }
         charDied(t) {
-            t === this.player && this.running && (this.player.luck > 100 * Math.random() && (this.player.hp.value = Math.ceil(.05 * this.player.hp.max), o.J.emit(o.q, "Lucky Recovery", this.player.name + " has a close call.")), this.emitDefeat())
+            t === this.player && this.running && (this.player.
+                                                  > 100 * Math.random() && (this.player.hp.value = Math.ceil(.05 * this.player.hp.max), o.J.emit(o.q, "Ly Recovery", this.player.name + " has a close call.")), this.emitDefeat())
         }
         emitDefeat() {
             o.J.emit(o.l, null), o.J.emit(o.a, this, this.locale && this.player.level > this.locale.level && this.player.retreat > 0)
@@ -4829,206 +4794,6 @@ var wizrobe = function(t) {
         }
         hasTag(t) {
             return t === u.k
-        }
-    }
-    i(6);
-    class p {
-        toJSON() {
-            return {
-                id: this.id,
-                item: this.item,
-                multi: this.multi,
-                max: this.max
-            }
-        }
-        get item() {
-            return this._item
-        }
-        set item(t) {
-            this._item = t
-        }
-        constructor(t = null) {
-            t && Object.assign(this, t), this.max = this.max || 1, this.item = this.item || (this.max > 1 ? [] : null), this.multi = Array.isArray(this.item), this.name = this._name || this.id
-        }
-        freeSpace() {
-            let t = this.max;
-            if (!this.item) return t;
-            if (1 === t) return 0;
-            if (!Array.isArray(this.item)) return 0;
-            for (let e = this.item.length - 1; e >= 0; e--) t -= this.item[e].numslots || 1;
-            return t
-        }
-        equip(t) {
-            let e = t.numslots || 1;
-            if (e > this.max) return !1;
-            if (!0 === this.multi) return this.addMult(t, e);
-            if (this.item) {
-                let e = this.item;
-                return this.item = t, e
-            }
-            return this.item = t, !0
-        }
-        addMult(t, e) {
-            if (this.item.find(e => e.id === t.id)) return !1;
-            this.item.push(t);
-            for (let t = this.item.length - 2; t >= 0; t--)
-                if ((e += this.item[t].numslots || 1) > this.max) return this.item.splice(0, t + 1);
-            return !0
-        }
-        find(t) {
-            return null === this.item ? null : this.multi ? this.item.find(e => e.id === t) : this.item.id === t ? this.item : null
-        }
-        has(t) {
-            return !1 === this.multi ? this.item === t : this.item.includes(t)
-        }
-        remove(t) {
-            if (this.item === t) return this.item = null, t;
-            if (null == t) return t = this.item, this.item = null, t;
-            if (this.multi) {
-                let e = this.item.indexOf(t);
-                return !(e < 0) && this.item.splice(e, 1)[0]
-            }
-            return !1
-        }
-        revive(t) {
-            if (null !== this.item && void 0 !== this.item)
-                if (Array.isArray(this.item)) {
-                    let i = {},
-                        s = this.item;
-                    for (let n = s.length - 1; n >= 0; n--) {
-                        var e = Object(r.b)(t, s[n]);
-                        e && !0 !== i[e.id] ? (s[n] = e, i[e.id] = !0) : s.splice(n, 1)
-                    }
-                } else this.item = Object(r.b)(t, this.item)
-        }
-        hands() {
-            return null != this.item && this.item.hands || 0
-        }
-        empty() {
-            return null === this.item || Array.isArray(this.item) && 0 === this.item.length
-        }
-    }
-    class f {
-        get slots() {
-            return this._slots
-        }
-        set slots(t) {
-            for (let i in t) {
-                var e = t[i];
-                e instanceof p || (t[i] = new p(e))
-            }
-            this._slots = t
-        }
-        constructor(t = null) {
-            t && Object.assign(this, t)
-        }
-        find(t) {
-            for (let i in this.slots) {
-                var e = this.slots[i].find(t);
-                if (e) return e
-            }
-            return null
-        }
-        get(t) {
-            if (void 0 !== (t = this.slots[t])) return t.item
-        }
-        freeSpace(t) {
-            return void 0 === (t = this.slots[t]) ? 0 : t.freeSpace()
-        }
-        remove(t, e = null) {
-            return "string" == typeof(e = e || t.slot) && (e = this.slots[e]), !!e && e.remove(t)
-        }
-        revive(t) {
-            for (let e in this.slots) this.slots[e].revive(t)
-        }
-        setSlot(t, e = null) {
-            if (null === (e = e || t.slot) || !this.slots.hasOwnProperty(e)) return !1;
-            return this.slots[e].equip(t)
-        }* slotNames() {
-            for (let t in this.slots) yield t
-        }*[Symbol.iterator]() {
-            for (let e in this.slots) {
-                var t = this.slots[e].item;
-                if (Array.isArray(t))
-                    for (let e = t.length - 1; e >= 0; e--) t[e] && (yield t[e]);
-                else t && (yield t)
-            }
-        }
-    }
-    class m extends f {
-        toJSON() {
-            return {
-                slots: this.slots
-            }
-        }
-        constructor(t = null) {
-            super(t), this.slots = this._slots || {
-                left: new p({
-                    id: "left"
-                }),
-                right: new p({
-                    id: "right"
-                }),
-                head: new p({
-                    id: "head"
-                }),
-                hands: new p({
-                    id: "hands"
-                }),
-                back: new p({
-                    id: "back"
-                }),
-                waist: new p({
-                    id: "waist"
-                }),
-                neck: new p({
-                    id: "neck",
-                    max: 3
-                }),
-                fingers: new p({
-                    id: "fingers",
-                    max: 4
-                }),
-                chest: new p({
-                    id: "chest"
-                }),
-                shins: new p({
-                    id: "shins"
-                }),
-                feet: new p({
-                    id: "feet"
-                })
-            }
-        }
-        remove(t, e = null) {
-            return "weapon" === t.type ? this.removeWeap(t) : super.remove(t, e)
-        }
-        removeWeap(t) {
-            return this.slots.right.remove(t) || this.slots.left.remove(t)
-        }
-        replaceCount(t) {
-            let e = "weapon" === t.type ? this.freeSpace("right") + this.freeSpace("left") : this.freeSpace(t.slot);
-            return Math.max((t.numslots || 1) - e, 0)
-        }
-        equip(t, e = null) {
-            if ("weapon" === t.type) return this.equipWeap(t);
-            if (null === (e = e || t.slot) || !this.slots.hasOwnProperty(e)) return !1;
-            return this.slots[e].equip(t)
-        }
-        getWeapon() {
-            return !1 === this.slots.right.empty() ? this.slots.right.item : this.slots.left.item
-        }
-        equipWeap(t) {
-            let e = this.slots.right,
-                i = this.slots.left;
-            if (2 === t.hands) {
-                let s = e.equip(t),
-                    n = i.remove();
-                return s && n ? [s, n] : s || n
-            }
-            if (e.empty()) return console.log("setting right."), e.equip(t), !(i.hands() > 1) || i.remove();
-            if (i.empty()) return console.log("setting left."), i.equip(t), !(e.hands() > 1) || e.remove();
-            return console.log("NEITHER EMPTY. switch hands."), e.equip(i.equip(t))
         }
     }
     var v = i(16);
