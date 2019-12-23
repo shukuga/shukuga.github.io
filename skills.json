@@ -129,5 +129,57 @@
 		"mod":{
 			"research.max":1
 		}
+	},
+		},
+		{
+		"id":"lasers",
+		"need":"g.engineering>3&&g.physics>3",
+		"desc":"",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
+		}
+	},
+		},
+		{
+		"id":"excavation",
+		"need":"g.engineering>5",
+		"desc":"",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
+		},
+		},
+		{
+		"id":"fuels",
+		"need":"g.engineering>2&&g.chemistry>3",
+		"desc":"",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
+		},
+		},
+		{
+		"id":"chemistry",
+		"need":"g.physics>1",
+		"desc":"",
+		"buy":{},
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1
+		}
+	}
+	}
 	}
 ]
