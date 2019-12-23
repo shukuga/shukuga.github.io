@@ -106,7 +106,7 @@
 			"research.max":1
 		}
 	},
-		{
+	{
 		"id":"rocketry",
 		"need":"g.engineering>5&&g.physics>5",
 		"desc":"Give me a lever and I will move the world. Give me a rocket and I'll escape it.",
@@ -118,7 +118,7 @@
 			"research.max":1
 		}
 	},
-		{
+	{
 		"id":"physics",
 		"need":"g.engineering>2",
 		"desc":"",
@@ -130,7 +130,6 @@
 			"research.max":1
 		}
 	},
-		},
 		{
 		"id":"lasers",
 		"need":"g.engineering>3&&g.physics>3",
@@ -143,8 +142,7 @@
 			"research.max":1
 		}
 	},
-		},
-		{
+	{
 		"id":"excavation",
 		"need":"g.engineering>5",
 		"desc":"",
@@ -154,9 +152,9 @@
 		},
 		"mod":{
 			"research.max":1
-		},
-		},
-		{
+		}
+	},
+	{
 		"id":"fuels",
 		"need":"g.engineering>2&&g.chemistry>3",
 		"desc":"",
@@ -166,9 +164,9 @@
 		},
 		"mod":{
 			"research.max":1
-		},
-		},
-		{
+		}
+	},
+	{
 		"id":"chemistry",
 		"need":"g.physics>1",
 		"desc":"",
@@ -179,7 +177,5 @@
 		"mod":{
 			"research.max":1
 		}
-	}
-	}
 	}
 ]
