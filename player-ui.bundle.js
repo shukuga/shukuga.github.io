@@ -43,7 +43,7 @@
                     on: {
                         click: t.select
                     }
-                }, [t._v(t._s(t.cur ? t.cur.name : "Escape suit"))]) : t._e()])]) : t._e()
+                }, [t._v(t._s(t.cur ? t.cur.name : "h_suit1"))]) : t._e()])]) : t._e()
             };
             r._withStripped = !0;
             var i = a(1),
