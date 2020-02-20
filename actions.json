@@ -7,6 +7,7 @@
                 "verb":"Repairing",
                 "need":"g.r_suit<5",
                 "locked":false,
+                "length":5
                 "cost":{
                         "stamina":0.5,
                         "hp":0.1
@@ -70,7 +71,6 @@
         },
         {
                 "id":"scavenge",
-                "perpetual":true,
                 "verb":"Scavenging",
                 "locked":false,
                 "desc":"Collect useful objects",
