@@ -2,7 +2,7 @@
         {
                 "id":"finishsuit",
                 "name":"Finalize suit repairs",
-                "desc":"With a last readjustment your life-saving equipment is ready to use",
+                "desc":"With a last re-adjustment your life-saving equipment is fully functional",
                 "require":"g.r_suit>0",
                 "cost":{
                         "r_suit":5
@@ -28,7 +28,7 @@
          {
                 "id":"firstaid",
                 "name":"Assemble First Aid Kit",
-                "desc":"A complete set of supplies to help you return to a healthier state",
+                "desc":"A complete set of supplies to help treat any injuries you've suffered",
                 "require":"g.explorenorth>0&&g.medicine>0",
                 "cost":{
                         "medicalsupplies":10
