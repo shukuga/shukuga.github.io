@@ -7,7 +7,7 @@
                 "verb":"Repairing",
                 "need":"g.r_suit<5",
                 "locked":false,
-                "length":5
+                "length":5,
                 "cost":{
                         "stamina":0.5,
                         "hp":0.1
