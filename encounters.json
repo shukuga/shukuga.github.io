@@ -2,10 +2,19 @@
 	{
 		"id":"rubble1",
 		"name":"Dig through rubble",
-		"desc":"Find out what's at the bottom of this pile.",
+		"desc":"Mostly useless.",
 		"result":{
 			"gold":"0~1",
 			"electronics":"0~1"
+		}
+	},
+	{
+		"id":"rubble2",
+		"name":"Dig through rubble",
+		"desc":"Some items of use.",
+		"result":{
+			"gold":"0~2",
+			"electronics":"0~3"
 		}
 	},
 	{
@@ -13,7 +22,7 @@
 		"name":"Loose papers",
 		"desc":"Information that's nearly useless without organization",
 		"effect":{
-			"medicaldata":"0~2"
+			"medicaldata":"0~3"
 		}
 	},
 	{
@@ -32,10 +41,11 @@
 	{
 		"id":"toolbox",
 		"name":"mangled toolbox",
-		"desc":"a tree by a magic spring exhibits surprising qualities",
+		"desc":"a collection of tools, most of which were destroyed in the crash",
 		"effect":{
 			"gold":"0~2",
 			"electronics":"0~1",
+			"tool components":"0~2",
 			"smallbatteries":"0~1",
 			"engineering.exp":0.1
 		}
