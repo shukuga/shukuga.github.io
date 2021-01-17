@@ -28,7 +28,7 @@
 		"desc":"With your suit intact you have a chance to breathe. You can remember the evacuation alarms. Were you the only one who didn't escape in time?",
 		"disable":["stabilize"]
 		"mod":{
-			r_suit.hidden:"true"
+			"r_suit":"5"
 	}
 	},
 	{
