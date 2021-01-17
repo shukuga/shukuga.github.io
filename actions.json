@@ -9,7 +9,7 @@
                 "locked":false,
                 "length":5,
                 "cost":{
-                        "stamina":-0.5
+                        "stamina":0.5
                 },
                 "effect":{
                         "r_suit":1
