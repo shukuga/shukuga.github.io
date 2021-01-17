@@ -10,6 +10,7 @@
                 "id":"r_suit",
                 "name":"Suit integrity",
                 "desc":"Integrity of your space suit",
+                "reverse":true,
                 "locked":false,
                 "hidden":true,
                 "value":1,
@@ -50,6 +51,11 @@
         },
                  {
                 "id":"electronics",
+                "desc":"robot bones.",
+                "max":10
+        },
+        {
+                "id":"tool components",
                 "desc":"robot bones.",
                 "max":10
         },
