@@ -16,7 +16,7 @@
 		"medicaldata":"0~1"
 	},
 	"encs":[
-		"rubble1",
+		"rubble2",
 		"loosepapers1",
 		"medicalsamples"
 	]
@@ -68,7 +68,7 @@
 		"computerbook":1
 	},
 	"encs":[
-		"rubble1",
+		"rubble2",
 		"toolbox"
 	]
 }
