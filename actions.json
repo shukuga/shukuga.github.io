@@ -92,7 +92,6 @@
                 {
                 "id":"Refine Scrap",
                 "need":"gold>10",
-                "locked":false,
                 "desc":"Not all the glitters is gold",
                 "cost":{
                         "stamina":0.5,
