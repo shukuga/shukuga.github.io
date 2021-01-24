@@ -89,6 +89,27 @@
                         
                 }
         },
+                {
+                "id":"Refine Scrap",
+                "locked":false,
+                "desc":"Not all the glitters is gold",
+                "cost":{
+                        "stamina":0.5,
+                        "gold":5
+                },
+                "every":{
+                        "100":{
+                                "effect.electronics":1
+                        },
+                        "200":{
+                                "effect.smallbatteries":0~1
+                        }
+                },
+                "effect":{
+                        "electronics":0~1
+                        
+                }
+        },
         {      "id":"escaperepair",
                 "name":"Airproof escape pod",
                 "repeat":false,
