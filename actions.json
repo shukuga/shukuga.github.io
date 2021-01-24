@@ -102,11 +102,11 @@
                                 "effect.electronics":1
                         },
                         "200":{
-                                "effect.smallbatteries":0~1
+                                "effect.smallbatteries":"0~1"
                         }
                 },
                 "effect":{
-                        "electronics":0~1
+                        "electronics":"0~1"
                         
                 }
         },
